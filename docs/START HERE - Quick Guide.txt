@@ -1,0 +1,51 @@
+EQ LEGENDS ACHIEVEMENT COMPANION - START HERE
+Current tile-tracker edition
+
+1. Extract the entire ZIP. Run EQ Legends Achievement Companion.exe.
+   Keep its data folder beside it in a writable location.
+
+2. Click Configuration. Browse to your character's achievement TXT export,
+   then Load / Refresh. Include all categories and completion states when
+   exporting from the game if you want a full dashboard.
+
+3. For live tracking, browse to your combat log in the game's Logs folder:
+   eqlog_Character_Server.txt. In game, enter /log on.
+   Check Enable live updates. Independently choose Show popups + sounds.
+   Click Save live settings. Keep the Companion running.
+
+4. Click Configuration again to hide setup. Each tile groups the achievement,
+   farming zone, mobs, remaining count and exported progress. Click a tile
+   to investigate or edit research. A narrow tracker grows to show details;
+   Shrink returns it to its compact width. Resize to one or several columns.
+
+5. Recent progress first promotes matching tiles with a brief animation.
+   Show filters opens category, region and zone choices; several selections
+   are allowed. Filters still apply to live updates. More includes CSV export,
+   research audit and route summary. Table restores the grid for cell copying.
+   Right-click a tile to copy its achievement summary.
+
+6. Transparency is in Configuration: enable it and choose 15-100% opacity.
+   15% keeps the tracker faintly visible; 100% is fully visible. Progress can
+   briefly restore full opacity before returning to your chosen setting.
+
+7. Sound / popup options offers position, volume and test buttons. Popups
+   appear 5% down the primary screen. Completion celebrations offer an original
+   short fantasy-style tune and a small fireworks burst. Volume 0 mutes sound.
+   Use windowed or borderless game mode for the overlay.
+
+8. Export achievements again periodically. The Companion automatically reads
+   the updated file. Live kill counts are estimates; exported counters remain
+   the source for the main tracker. Group/raid kills without your personal kill
+   message may not be estimated. Old log history is not replayed. Changing only
+   popup preferences does not clear estimates.
+
+9. In the detail panel, choose a preferred location and Save research. Add
+   alternatives and check evidence before farming. Personal notes do not alter
+   tracker values. Research is local and does not sync between guildmates.
+   Some locations/faction details remain unverified; see the source-review files.
+
+10. Back up your data folder before upgrading. It will contain your settings,
+    personal notes and cached export after use. Share this original ZIP rather
+    than your used folder. Do not overwrite your research.json during upgrades.
+
+Windows with .NET Framework 4.x WPF support is required.

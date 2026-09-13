@@ -1,0 +1,2382 @@
+[
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockbard",
+    "Text": "Quest contact: Cilin Spellsinger in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Bard_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Bard_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Cilin Spellsinger (Bard tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockbeastlord",
+    "Text": "Quest contact: Animist Kratho in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Beastlord_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Beastlord_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Animist Kratho (Beastlord tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockberserker",
+    "Text": "Quest contact: Stragen The Hewer in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Berserker_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Berserker_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Stragen The Hewer (Berserker tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockcleric",
+    "Text": "Quest contact: Josin Faithbringer in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Cleric_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Cleric_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Josin Faithbringer (Cleric tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockdruid",
+    "Text": "Quest contact: Strandar Pinemist in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Druid_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Druid_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Strandar Pinemist (Druid tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockenchanter",
+    "Text": "Quest contact: Enchanter Jolas in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Enchanter_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Enchanter_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Enchanter Jolas (Enchanter tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockmagician",
+    "Text": "Quest contact: Magus Frinon in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Magician_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Magician_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Magus Frinon (Magician tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockmonk",
+    "Text": "Quest contact: Holwin in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Monk_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Monk_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Holwin (Monk tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlocknecromancer",
+    "Text": "Quest contact: Drakis Bloodcaster in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Necromancer_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Necromancer_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Drakis Bloodcaster (Necromancer tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockpaladin",
+    "Text": "Quest contact: Dason Goldblade in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Paladin_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Paladin_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Dason Goldblade (Paladin tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockranger",
+    "Text": "Quest contact: Ranger Spirit in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Ranger_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Ranger_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Ranger Spirit (Ranger tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockrogue",
+    "Text": "Quest contact: Thalik Silenthand in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Rogue_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Rogue_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Thalik Silenthand (Rogue tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockshadowknight",
+    "Text": "Quest contact: Sarkis Ebonblade in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Shadow_Knight_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Shadow_Knight_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Sarkis Ebonblade (Shadow Knight tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockshaman",
+    "Text": "Quest contact: Medicine Man Veetra in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Shaman_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Shaman_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Medicine Man Veetra (Shaman tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockwarrior",
+    "Text": "Quest contact: Torgon Blademaster in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Warrior_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Warrior_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Torgon Blademaster (Warrior tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialclasses|primaryclassunlockwizard",
+    "Text": "Quest contact: Wizard Schrock in the Plane of Sky quest chamber. Match the reward items in your TXT to the class test table linked below; it lists the required runes and quest items. Confirm the test dialogue before handing items in. Keep quest NPCs available for other players.",
+    "Sources": "https://eqlwiki.com/Wizard_Plane_of_Sky_Tests",
+    "Gaps": "Individual drop availability and encounter access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Via": "",
+        "Region": "Planes",
+        "Evidence": "Class quest page reviewed 2026-09-11: https://eqlwiki.com/Wizard_Plane_of_Sky_Tests",
+        "Portal": "",
+        "Mobs": "Wizard Schrock (Wizard tests)",
+        "Faction": "Quest route; do not farm quest NPCs"
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialdeity|deityunlockagnostic",
+    "Text": "Start Renouncing Your Faith with the Emissary of Zebuxoruk in Oasis of Marr. The wiki walkthrough calls for defeating Cazic Thule in Plane of Fear and Innoruuk in Plane of Hate. Accept the task before arranging the encounters; check your task window and export for credit.",
+    "Sources": "https://eqlwiki.com/Renouncing_Your_Faith",
+    "Gaps": "Current raid access and task credit rules",
+    "Destinations": [
+      {
+        "Zone": "Oasis of Marr",
+        "Mobs": "Emissary of Zebuxoruk (task start)",
+        "Evidence": "https://eqlwiki.com/Renouncing_Your_Faith",
+        "Region": "Antonica",
+        "Faction": "Task conversation",
+        "Kind": "Required stop"
+      },
+      {
+        "Zone": "Plane of Fear",
+        "Mobs": "Cazic Thule (task target)",
+        "Evidence": "https://eqlwiki.com/Renouncing_Your_Faith",
+        "Region": "Planes",
+        "Faction": "Verify encounter consequences",
+        "Kind": "Required stop"
+      },
+      {
+        "Zone": "Plane of Hate",
+        "Mobs": "Innoruuk (task target)",
+        "Evidence": "https://eqlwiki.com/Renouncing_Your_Faith",
+        "Region": "Planes",
+        "Faction": "Verify encounter consequences",
+        "Kind": "Required stop"
+      }
+    ]
+  },
+  {
+    "Key": "generalkeys|bonecraftedkey",
+    "Text": "At amiable or better, say need keyz to the guard to receive the Paineel elevator key. Improve Heretics through Warrens kobolds if needed. Request the key; do not kill the guard for it.",
+    "Sources": "https://eqlwiki.com/Guard_Lecknar",
+    "Gaps": "Confirm key acquisition registers in the achievement export",
+    "Destinations": [
+      {
+        "Zone": "Paineel",
+        "Region": "Odus",
+        "Mobs": "Guard Lecknar or Guard Korlack: request key",
+        "Faction": "No kill required; amiable Heretics access required",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Guard_Lecknar",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "generalkeys|holekey",
+    "Text": "The wiki lists Rallia Hapera in Paineel at (941, 770) as the merchant for this key. Check merchant access and your current price before buying. The key is an acquisition objective, not a required mob kill.",
+    "Sources": "https://eqlwiki.com/Hole_Key",
+    "Gaps": "Current merchant access and acquisition credit",
+    "Destinations": [
+      {
+        "Zone": "Paineel",
+        "Mobs": "Rallia Hapera (key merchant)",
+        "Evidence": "https://eqlwiki.com/Hole_Key",
+        "Region": "Odus",
+        "Faction": "Merchant access depends on standing"
+      }
+    ]
+  },
+  {
+    "Key": "generalkeys|islandsofskykeys",
+    "Text": "Track each named key in the TXT separately. Use the linked Plane of Sky Keys guide to plan island progression and Sirran the Lunatic turn-ins. Confirm current Legends key handling before leaving an island.",
+    "Sources": "https://eqlwiki.com/Plane_of_Sky_Keys",
+    "Gaps": "Current key persistence and island access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Mobs": "Island keys / Sirran the Lunatic",
+        "Evidence": "https://eqlwiki.com/Plane_of_Sky_Keys",
+        "Region": "Planes",
+        "Faction": "Quest route"
+      }
+    ]
+  },
+  {
+    "Key": "generalkeys|efreetiskey",
+    "Text": "The Sky class-test guide directs you to the Key Master on island 1 for the free Efreeti`s Key. With it, use the northern teleport pad near (1600, 520) to reach the quest chamber. The guide says the key is saved to the character.",
+    "Sources": "https://eqlwiki.com/Bard_Plane_of_Sky_Tests",
+    "Gaps": "Verify current key acquisition credit",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Faction": "Key purchase / travel",
+        "Mobs": "Key Master (island 1)",
+        "Evidence": "https://eqlwiki.com/Bard_Plane_of_Sky_Tests",
+        "Region": "Planes"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|arcanescientists",
+    "Text": "Give Rephas Rat Ears, then return the Grilled Rat Ears for another faction reward.",
+    "Sources": "https://eqlwiki.com/Rat_Ear_Pie_Quest",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Qeynos Hills",
+        "Region": "Antonica",
+        "Mobs": "Rats: Rat Ears (return the grilled ears too); turn in: Rephas (Qeynos Hills)",
+        "Faction": "Turn-in effects: Lowers Opal Darkbriar and The Freeport Militia; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Rat_Ear_Pie_Quest",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|ashenorder",
+    "Text": "Carry Phin Esrinap's note to Konem Matse in Qeynos Hills, then return the invoice to Phin. Both exchanges grant faction.",
+    "Sources": "https://eqlwiki.com/Note_for_Konem",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Qeynos",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Phin Esrinap; deliver to Konem Matse (Qeynos Hills); turn in: Phin Esrinap (return invoice) (North Qeynos)",
+        "Faction": "Turn-in effects: No losses listed for these exchanges; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Konem",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|bloodsabers",
+    "Text": "Give Guard Shilster five gold for Black Burrow Stout and faction. He can wander between the northeast area and the South Karana bridge.",
+    "Sources": "https://eqlwiki.com/Guard_Shilster%27s_Stout",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Karana",
+        "Region": "Karanas",
+        "Mobs": "Pay 5 gold; no item drop required; turn in: Guard Shilster (North Karana)",
+        "Faction": "Turn-in effects: Lowers Guards of Qeynos; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Guard_Shilster%27s_Stout",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|carsonmccabe",
+    "Text": "Take Harkin's message to Janam in West Freeport; return his reply to Harkin.",
+    "Sources": "https://eqlwiki.com/Note_for_Janam",
+    "Gaps": "Source conflicts on minimum faction: dubious versus indifferent",
+    "Destinations": [
+      {
+        "Zone": "East Freeport",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Harkin; deliver to Janam (West Freeport); turn in: Harkin Duskfoot (return reply) (East Freeport)",
+        "Faction": "Turn-in effects: No losses listed; NPC access may be hostile; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Janam",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|circleofunseenhands",
+    "Text": "Give Guard Shilster five gold for Black Burrow Stout and faction. He can wander between the northeast area and the South Karana bridge.",
+    "Sources": "https://eqlwiki.com/Guard_Shilster%27s_Stout",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Karana",
+        "Region": "Karanas",
+        "Mobs": "Pay 5 gold; no item drop required; turn in: Guard Shilster (North Karana)",
+        "Faction": "Turn-in effects: Lowers Guards of Qeynos; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Guard_Shilster%27s_Stout",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|clericsoftunare",
+    "Text": "Give muffins to Pandos Flintside upstairs in West Freeport Hogcaller`s Inn. The walkthrough lists gains to the four elf factions and a Crushbone Orcs loss. Check safe access to the inn and NPC before bringing supplies.",
+    "Sources": "https://eqlwiki.com/Muffin_for_Pandos",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Muffin_for_Pandos",
+        "Faction": "Crushbone Orcs loss; four elf faction gains",
+        "Mobs": "Pandos Flintside (muffins)",
+        "Region": "",
+        "Zone": "West Freeport"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|clericsofunderfoot",
+    "Text": "Give Gunlok Jure four Bone Chips. The quest page requires indifferent; it also raises Kazon Stormhammer and Miners Guild 249.",
+    "Sources": "https://eqlwiki.com/Bone_Chips_%28Kaladim%29",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "East Commonlands",
+        "Region": "Antonica",
+        "Mobs": "Decaying skeletons: 4 Bone Chips; turn in: Gunlok Jure (North Kaladim)",
+        "Faction": "Turn-in effects: No losses listed for this turn-in; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Bone_Chips_%28Kaladim%29",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|clurg",
+    "Text": "Buy the quest bag from Jarlen Meadowgreen in South Karana for two gold, then give it to Innkeep Morpa in Feerrott. Repeat the delivery.",
+    "Sources": "https://eqlwiki.com/The_Bread_Shipment_(Feerrott)",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "South Karana",
+        "Region": "Karanas",
+        "Mobs": "Buy Bag of Bread Loaves from Jarlen Meadowgreen for 2 gold; turn in: Innkeep Morpa (The Feerrott)",
+        "Faction": "Turn-in effects: No losses listed for the delivery; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/The_Bread_Shipment_(Feerrott)",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|coalitionoftradefolk",
+    "Text": "Take Harkin's message to Janam in West Freeport; return his reply to Harkin.",
+    "Sources": "https://eqlwiki.com/Note_for_Janam",
+    "Gaps": "Source conflicts on minimum faction: dubious versus indifferent",
+    "Destinations": [
+      {
+        "Zone": "East Freeport",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Harkin; deliver to Janam (West Freeport); turn in: Harkin Duskfoot (return reply) (East Freeport)",
+        "Faction": "Turn-in effects: No losses listed; NPC access may be hostile; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Janam",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|coalitionoftradefolkunderground",
+    "Text": "Take Harkin's message to Janam in West Freeport; return his reply to Harkin.",
+    "Sources": "https://eqlwiki.com/Note_for_Janam",
+    "Gaps": "Source conflicts on minimum faction: dubious versus indifferent",
+    "Destinations": [
+      {
+        "Zone": "East Freeport",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Harkin; deliver to Janam (West Freeport); turn in: Harkin Duskfoot (return reply) (East Freeport)",
+        "Faction": "Turn-in effects: No losses listed; NPC access may be hostile; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Janam",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|corruptqeynosguards",
+    "Text": "Take Harkin's message to Janam in West Freeport; return his reply to Harkin.",
+    "Sources": "https://eqlwiki.com/Note_for_Janam",
+    "Gaps": "Source conflicts on minimum faction: dubious versus indifferent",
+    "Destinations": [
+      {
+        "Zone": "East Freeport",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Harkin; deliver to Janam (West Freeport); turn in: Harkin Duskfoot (return reply) (East Freeport)",
+        "Faction": "Turn-in effects: No losses listed; NPC access may be hostile; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Janam",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|craftkeepers",
+    "Text": "The Painting: the repeatable opening step gives Palatos Kynarn four Capt. Orlin`s Spiced Ales in East Freeport. It raises these Erudin factions but lowers Heretics. Plan this around any Heretics unlock work.",
+    "Sources": "https://eqlwiki.com/The_Painting",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/The_Painting",
+        "Faction": "Heretics loss",
+        "Mobs": "Palatos Kynarn (four spiced ales)",
+        "Region": "",
+        "Zone": "East Freeport"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|craknekwarriors",
+    "Text": "Turn in Human Flesh or High Elf Flesh from the named cycle in Innothule Swamp or Rathe Mountains. Ordinary racial Parts are not accepted.",
+    "Sources": "https://eqlwiki.com/Feeding_Dooga",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Rathe Mountains",
+        "Region": "Antonica",
+        "Mobs": "Jyle Windstorm: High Elf Flesh; ordinary High Elf Parts do not work; turn in: Chef Dooga (Oggok)",
+        "Faction": "Turn-in effects: Lowers Kazon Stormhammer; collection kills have separate effects; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Feeding_Dooga",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|crimsonhands",
+    "Text": "The Heretic Battle quest page lists these faction gains from killing Elial Brook. No item turn-in is required for these gains. For Kerra Isle, do not turn the bones in to Markus: that exchange reverses the Kerra gain.",
+    "Sources": "https://eqlwiki.com/Heretic_Battle",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Toxxulia Forest",
+        "Region": "Odus",
+        "Mobs": "Elial Brook (faction from kill)",
+        "Faction": "Killing Elial lowers Heretics",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Heretic_Battle",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|dabashers",
+    "Text": "Give Nanrum three Fire Beetle Eyes. Legends patch notes confirm Da Bashers quests also raise Grobb Merchants.",
+    "Sources": "https://eqlwiki.com/Grobb\nhttps://eqlwiki.com/Patch_notes",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "West Karana",
+        "Region": "Karanas",
+        "Mobs": "Fire beetles: 3 Fire Beetle Eyes; turn in: Basher Nanrum (Grobb)",
+        "Faction": "Turn-in effects: Lowers Broken Skull Clan; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Grobb\nhttps://eqlwiki.com/Patch_notes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|darkbargainers",
+    "Text": "Give Red Wine to Lokar To`Biath in Neriak Third Gate. The walkthrough lists gains to all three Neriak factions and no opposing loss. Check access and one turn-in before buying in bulk.",
+    "Sources": "https://eqlwiki.com/Bottle_of_Red_Wine",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Bottle_of_Red_Wine",
+        "Faction": "Wiki lists gains without opposing loss; verify in Legends",
+        "Mobs": "Lokar To`Biath (Red Wine turn-in)",
+        "Region": "",
+        "Zone": "Neriak - Third Gate"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|darkones",
+    "Text": "Bring Deathfist Slashed Belts to Bregna in Grobb. Obtain belts from Deathfist orcs in either Commonlands zone; killing those orcs alone is not this faction reward. Alternative: Kaglari accepts two Bone Chips and two Froglok Tadpole Flesh for Majik Power; the quest page requires amiable.",
+    "Sources": "https://eqlwiki.com/Alanna%27s_Race_Unlock_Guide#Troll\nhttps://eqlwiki.com/Majik_Power",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "East Commonlands",
+        "Region": "Antonica",
+        "Mobs": "Deathfist orcs: Deathfist Slashed Belts; turn in: Bregna (Grobb)",
+        "Faction": "Turn-in effects: Turn-ins lower Frogloks of Guk; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Alanna%27s_Race_Unlock_Guide#Troll",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      },
+      {
+        "Zone": "Innothule Swamp",
+        "Region": "Antonica",
+        "Mobs": "Froglok tadpoles: 2 Tadpole Flesh; also obtain 2 Bone Chips from skeletons; turn in: Kaglari (combine as instructed) (Grobb)",
+        "Faction": "Turn-in effects: Lowers Frogloks of Guk; check separate kill effects for the collection target.",
+        "Evidence": "https://eqlwiki.com/Majik_Power — requires amiable; reviewed 2026-09-11",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|darkreflection",
+    "Text": "The wiki lists clockwork scrubber kills as raising Dark Reflection. This NPC record predates Legends; check presence and the first faction message before farming. City guards may assist.",
+    "Sources": "https://eqlwiki.com/Clockwork_scrubber",
+    "Gaps": "Legacy NPC record: current Legends spawn and faction credit require confirmation",
+    "Destinations": [
+      {
+        "Zone": "Ak'Anon",
+        "Region": "Faydwer",
+        "Mobs": "Clockwork scrubbers (legacy source candidate)",
+        "Faction": "Lowers Eldritch Collective, Gem Choppers and King Ak`Anon",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Clockwork_scrubber",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|deepmuses",
+    "Text": "The Deep Muses faction page lists Berinsan as a target that raises this faction; the Steamfont zone list places him there at level 8. Confirm the first faction message before repeating.",
+    "Sources": "https://eqlwiki.com/Deep_Muses\nhttps://eqlwiki.com/Steamfont_Mountains",
+    "Gaps": "NPC faction details could not be corroborated; verify all changes on first kill",
+    "Destinations": [
+      {
+        "Zone": "Steamfont Mountains",
+        "Region": "Faydwer",
+        "Mobs": "Berinsan (source-listed faction candidate)",
+        "Faction": "Exact current faction losses unverified; do not assume no faction hit",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Deep_Muses\nhttps://eqlwiki.com/Steamfont_Mountains",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|deeppockets",
+    "Text": "Give Joogl bandages for faction. Check his reaction before approaching.",
+    "Sources": "https://eqlwiki.com/Bandages_for_Honeybugger",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Misty Thicket",
+        "Region": "Antonica",
+        "Mobs": "Buy Bandages; no mob kill required; turn in: Joogl Honeybugger (Misty Thicket)",
+        "Faction": "Turn-in effects: Lowers Coalition of Tradefolk Underground; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Bandages_for_Honeybugger",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|deepwaterknights",
+    "Text": "The Heretic Battle quest page lists these faction gains from killing Elial Brook. No item turn-in is required for these gains. For Kerra Isle, do not turn the bones in to Markus: that exchange reverses the Kerra gain.",
+    "Sources": "https://eqlwiki.com/Heretic_Battle",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Toxxulia Forest",
+        "Region": "Odus",
+        "Mobs": "Elial Brook (faction from kill)",
+        "Faction": "Killing Elial lowers Heretics",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Heretic_Battle",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|dismalrage",
+    "Text": "Give Xelha four Bone Chips. The quest reports acceptance even below amiable, when she will not offer dialogue.",
+    "Sources": "https://eqlwiki.com/Assist_the_Great_Xelha",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "East Commonlands",
+        "Region": "Antonica",
+        "Mobs": "Decaying skeletons: 4 Bone Chips; turn in: Xelha Nevagon (East Freeport)",
+        "Faction": "Turn-in effects: Lowers Knights of Truth; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Assist_the_Great_Xelha",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|dreadguardinner",
+    "Text": "Give Red Wine to Lokar To`Biath in Neriak Third Gate. The walkthrough lists gains to all three Neriak factions and no opposing loss. Check access and one turn-in before buying in bulk.",
+    "Sources": "https://eqlwiki.com/Bottle_of_Red_Wine",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Bottle_of_Red_Wine",
+        "Faction": "Wiki lists gains without opposing loss; verify in Legends",
+        "Mobs": "Lokar To`Biath (Red Wine turn-in)",
+        "Region": "",
+        "Zone": "Neriak - Third Gate"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|dreadguardouter",
+    "Text": "Give Red Wine to Lokar To`Biath in Neriak Third Gate. The walkthrough lists gains to all three Neriak factions and no opposing loss. Check access and one turn-in before buying in bulk.",
+    "Sources": "https://eqlwiki.com/Bottle_of_Red_Wine",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Bottle_of_Red_Wine",
+        "Faction": "Wiki lists gains without opposing loss; verify in Legends",
+        "Mobs": "Lokar To`Biath (Red Wine turn-in)",
+        "Region": "",
+        "Zone": "Neriak - Third Gate"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|ebonmask",
+    "Text": "Request the quest bag, combine three Snake Scales and three Snake Fangs, then return it. The page lists apprehensive access but its dialogue calls the scales skins; verify the combine.",
+    "Sources": "https://eqlwiki.com/Moss_Snakes",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Nektulos Forest",
+        "Region": "Antonica",
+        "Mobs": "Moss snakes: 3 Snake Scales + 3 Snake Fangs (quest bag); turn in: Hekzin G`Zule (Neriak Third Gate)",
+        "Faction": "Turn-in effects: Lowers Guards of Qeynos, Wolves of the North, Guardians of the Vale and Carson McCabe; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Moss_Snakes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|eldritchcollective",
+    "Text": "Bring two Minotaur Horns from Steamfont to Larkon. The page requires indifferent.",
+    "Sources": "https://eqlwiki.com/Minotaur_Horns",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Steamfont Mountains",
+        "Region": "Faydwer",
+        "Mobs": "Minotaurs: 2 Minotaur Horns; turn in: Larkon Theardor (Ak'Anon)",
+        "Faction": "Turn-in effects: Lowers Dark Reflection and The Dead; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Minotaur_Horns",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|emeraldwarriors",
+    "Text": "Give Lady Shae White Wine at Hogcaller's Inn. The page also lists a Red Wine exchange.",
+    "Sources": "https://eqlwiki.com/Red_Wine_to_Lady_Shae",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "West Freeport",
+        "Region": "Antonica",
+        "Mobs": "Buy White Wine; no mob kill required; turn in: Lady Shae (West Freeport)",
+        "Faction": "Turn-in effects: Lowers Indigo Brotherhood; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Red_Wine_to_Lady_Shae",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|faydarkschampions",
+    "Text": "Give muffins to Pandos Flintside upstairs in West Freeport Hogcaller`s Inn. The walkthrough lists gains to the four elf factions and a Crushbone Orcs loss. Check safe access to the inn and NPC before bringing supplies.",
+    "Sources": "https://eqlwiki.com/Muffin_for_Pandos",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Muffin_for_Pandos",
+        "Faction": "Crushbone Orcs loss; four elf faction gains",
+        "Mobs": "Pandos Flintside (muffins)",
+        "Region": "",
+        "Zone": "West Freeport"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|gatecallers",
+    "Text": "Kill Elial Brook for Bones and give them to Markus Jaevins in Erudin Palace for additional Gate Callers standing.",
+    "Sources": "https://eqlwiki.com/Heretic_Battle",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Toxxulia Forest",
+        "Region": "Odus",
+        "Mobs": "Elial Brook: Bones; turn in: Markus Jaevins (Erudin Palace)",
+        "Faction": "Kill lowers Heretics; turn-in also lowers Heretics and Kerra Isle",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Heretic_Battle",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|gemchoppers",
+    "Text": "Return two Rusted Black Boxes from Steamfont rogue clockworks to Manik.",
+    "Sources": "https://eqlwiki.com/Rusted_Black_Boxes",
+    "Gaps": "Source conflicts on minimum faction; check dialogue before handing in",
+    "Destinations": [
+      {
+        "Zone": "Steamfont Mountains",
+        "Region": "Faydwer",
+        "Mobs": "Rogue clockworks: 2 Rusted Black Boxes; turn in: Manik Compolten (Ak'Anon)",
+        "Faction": "Turn-in effects: Lowers Clan Grikbar and Dark Reflection; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Rusted_Black_Boxes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|greenbloodknights",
+    "Text": "Turn in Human Flesh or High Elf Flesh from the named cycle in Innothule Swamp or Rathe Mountains. Ordinary racial Parts are not accepted.",
+    "Sources": "https://eqlwiki.com/Feeding_Dooga",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Rathe Mountains",
+        "Region": "Antonica",
+        "Mobs": "Jyle Windstorm: High Elf Flesh; ordinary High Elf Parts do not work; turn in: Chef Dooga (Oggok)",
+        "Faction": "Turn-in effects: Lowers Kazon Stormhammer; collection kills have separate effects; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Feeding_Dooga",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|grobbmerchants",
+    "Text": "Give Nanrum three Fire Beetle Eyes. Legends patch notes confirm Da Bashers quests also raise Grobb Merchants.",
+    "Sources": "https://eqlwiki.com/Grobb\nhttps://eqlwiki.com/Patch_notes",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "West Karana",
+        "Region": "Karanas",
+        "Mobs": "Fire beetles: 3 Fire Beetle Eyes; turn in: Basher Nanrum (Grobb)",
+        "Faction": "Turn-in effects: Lowers Broken Skull Clan; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Grobb\nhttps://eqlwiki.com/Patch_notes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|guardiansofthevale",
+    "Text": "Give Joogl bandages for faction. Check his reaction before approaching.",
+    "Sources": "https://eqlwiki.com/Bandages_for_Honeybugger",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Misty Thicket",
+        "Region": "Antonica",
+        "Mobs": "Buy Bandages; no mob kill required; turn in: Joogl Honeybugger (Misty Thicket)",
+        "Faction": "Turn-in effects: Lowers Coalition of Tradefolk Underground; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Bandages_for_Honeybugger",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|guardsofqeynos",
+    "Text": "Carry Phin Esrinap's note to Konem Matse in Qeynos Hills, then return the invoice to Phin. Both exchanges grant faction.",
+    "Sources": "https://eqlwiki.com/Note_for_Konem",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Qeynos",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Phin Esrinap; deliver to Konem Matse (Qeynos Hills); turn in: Phin Esrinap (return invoice) (North Qeynos)",
+        "Faction": "Turn-in effects: No losses listed for these exchanges; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Konem",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|guktanelders",
+    "Text": "Give Zok two Phosphorous Powder, obtained in Lower Guk.",
+    "Sources": "https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Lower Guk",
+        "Region": "Antonica",
+        "Mobs": "Undead rares and high-level frogloks: 2 Phosphorous Powder; turn in: Zok Zribb (Rathe Mountains)",
+        "Faction": "Turn-in effects: No losses listed for this exchange; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|guktansuppliers",
+    "Text": "Give Zok two Phosphorous Powder, obtained in Lower Guk.",
+    "Sources": "https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Lower Guk",
+        "Region": "Antonica",
+        "Mobs": "Undead rares and high-level frogloks: 2 Phosphorous Powder; turn in: Zok Zribb (Rathe Mountains)",
+        "Faction": "Turn-in effects: No losses listed for this exchange; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|heretics",
+    "Text": "The Warrens zone guide lists kobold kills as raising Heretics. Use kobolds, not the prisoners, and check faction messages for the exact type fought.",
+    "Sources": "https://eqlwiki.com/The_Warrens",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Warrens",
+        "Region": "Odus",
+        "Mobs": "Kobolds",
+        "Faction": "Kobold faction losses; exact changes vary by target",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/The_Warrens",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|highcounciloferudin",
+    "Text": "The Painting: the repeatable opening step gives Palatos Kynarn four Capt. Orlin`s Spiced Ales in East Freeport. It raises these Erudin factions but lowers Heretics. Plan this around any Heretics unlock work.",
+    "Sources": "https://eqlwiki.com/The_Painting",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/The_Painting",
+        "Faction": "Heretics loss",
+        "Mobs": "Palatos Kynarn (four spiced ales)",
+        "Region": "",
+        "Zone": "East Freeport"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|highcouncilofgukta",
+    "Text": "Give Zok two Phosphorous Powder, obtained in Lower Guk.",
+    "Sources": "https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Lower Guk",
+        "Region": "Antonica",
+        "Mobs": "Undead rares and high-level frogloks: 2 Phosphorous Powder; turn in: Zok Zribb (Rathe Mountains)",
+        "Faction": "Turn-in effects: No losses listed for this exchange; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|highguardoferudin",
+    "Text": "The Painting: the repeatable opening step gives Palatos Kynarn four Capt. Orlin`s Spiced Ales in East Freeport. It raises these Erudin factions but lowers Heretics. Plan this around any Heretics unlock work.",
+    "Sources": "https://eqlwiki.com/The_Painting",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/The_Painting",
+        "Faction": "Heretics loss",
+        "Mobs": "Palatos Kynarn (four spiced ales)",
+        "Region": "",
+        "Zone": "East Freeport"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|indigobrotherhood",
+    "Text": "Collect four Orc Pawn Picks from Deathfist pawns in the Commonlands or Nektulos Forest, then give them to Trizam in the warrior guild.",
+    "Sources": "https://eqlwiki.com/Orc_Pawn_Picks",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "East Commonlands",
+        "Region": "Antonica",
+        "Mobs": "Deathfist pawns: 4 Orc Pawn Picks; turn in: Trizam N`Tan (Neriak Commons)",
+        "Faction": "Turn-in effects: Lowers Emerald Warriors, Steel Warriors and Primordial Malice; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Orc_Pawn_Picks",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|kazonstormhammer",
+    "Text": "Give Trantor two Tumpy Tonics for faction. Obtain or brew the tonics before travelling.",
+    "Sources": "https://eqlwiki.com/Tumpy_Tonics",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Kaladim",
+        "Region": "Faydwer",
+        "Mobs": "Obtain or brew 2 Tumpy Tonics; no mob kill required; turn in: Trantor Everhot (North Kaladim)",
+        "Faction": "Turn-in effects: Lowers Craknek Warriors; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Tumpy_Tonics",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|keepersoftheart",
+    "Text": "Give Niola four Bat Wings. The quest page requires indifferent faction.",
+    "Sources": "https://eqlwiki.com/Bat_Wings",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Greater Faydark",
+        "Region": "Faydwer",
+        "Mobs": "Bats: 4 Bat Wings; turn in: Niola Impholder (Southern Felwithe)",
+        "Faction": "Turn-in effects: Lowers The Dead; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Bat_Wings",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|kelethinmerchants",
+    "Text": "Give Lady Shae White Wine at Hogcaller's Inn. The page also lists a Red Wine exchange.",
+    "Sources": "https://eqlwiki.com/Red_Wine_to_Lady_Shae",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "West Freeport",
+        "Region": "Antonica",
+        "Mobs": "Buy White Wine; no mob kill required; turn in: Lady Shae (West Freeport)",
+        "Faction": "Turn-in effects: Lowers Indigo Brotherhood; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Red_Wine_to_Lady_Shae",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|kerraisle",
+    "Text": "The Heretic Battle quest page lists these faction gains from killing Elial Brook. No item turn-in is required for these gains. For Kerra Isle, do not turn the bones in to Markus: that exchange reverses the Kerra gain.",
+    "Sources": "https://eqlwiki.com/Heretic_Battle",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Toxxulia Forest",
+        "Region": "Odus",
+        "Mobs": "Elial Brook (faction from kill)",
+        "Faction": "Killing Elial lowers Heretics",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Heretic_Battle",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|kingakanon",
+    "Text": "Return two Rusted Black Boxes from Steamfont rogue clockworks to Manik.",
+    "Sources": "https://eqlwiki.com/Rusted_Black_Boxes",
+    "Gaps": "Source conflicts on minimum faction; check dialogue before handing in",
+    "Destinations": [
+      {
+        "Zone": "Steamfont Mountains",
+        "Region": "Faydwer",
+        "Mobs": "Rogue clockworks: 2 Rusted Black Boxes; turn in: Manik Compolten (Ak'Anon)",
+        "Faction": "Turn-in effects: Lowers Clan Grikbar and Dark Reflection; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Rusted_Black_Boxes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|kingtearisthex",
+    "Text": "Give muffins to Pandos Flintside upstairs in West Freeport Hogcaller`s Inn. The walkthrough lists gains to the four elf factions and a Crushbone Orcs loss. Check safe access to the inn and NPC before bringing supplies.",
+    "Sources": "https://eqlwiki.com/Muffin_for_Pandos",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Muffin_for_Pandos",
+        "Faction": "Crushbone Orcs loss; four elf faction gains",
+        "Mobs": "Pandos Flintside (muffins)",
+        "Region": "",
+        "Zone": "West Freeport"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|knightsofthunder",
+    "Text": "Turn in Bandit Sashes from Karana bandits. These turn-ins have different faction consequences from killing the bandits.",
+    "Sources": "https://eqlwiki.com/Bandit_Sashes",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "West Karana",
+        "Region": "Karanas",
+        "Mobs": "Bandits: Bandit Sashes; turn in: Chesgard Sydwen (South Qeynos)",
+        "Faction": "Turn-in effects: Lowers Bloodsabers; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Bandit_Sashes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|knightsoftruth",
+    "Text": "Give Groflah a Tumpy Tonic at the Seafarers Roost. His bar appearance is time-dependent.",
+    "Sources": "https://eqlwiki.com/Tonics_for_Groflah",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "East Freeport",
+        "Region": "Antonica",
+        "Mobs": "Obtain or brew a Tumpy Tonic; no mob kill required; turn in: Groflah Steadirt (night-time appearance) (East Freeport)",
+        "Faction": "Turn-in effects: No losses listed for this turn-in; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Tonics_for_Groflah",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|lorekeepersofgukta",
+    "Text": "Give Zok two Phosphorous Powder, obtained in Lower Guk.",
+    "Sources": "https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Lower Guk",
+        "Region": "Antonica",
+        "Mobs": "Undead rares and high-level frogloks: 2 Phosphorous Powder; turn in: Zok Zribb (Rathe Mountains)",
+        "Faction": "Turn-in effects: No losses listed for this exchange; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsofakanon",
+    "Text": "Return two Rusted Black Boxes from Steamfont rogue clockworks to Manik.",
+    "Sources": "https://eqlwiki.com/Rusted_Black_Boxes",
+    "Gaps": "Source conflicts on minimum faction; check dialogue before handing in",
+    "Destinations": [
+      {
+        "Zone": "Steamfont Mountains",
+        "Region": "Faydwer",
+        "Mobs": "Rogue clockworks: 2 Rusted Black Boxes; turn in: Manik Compolten (Ak'Anon)",
+        "Faction": "Turn-in effects: Lowers Clan Grikbar and Dark Reflection; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Rusted_Black_Boxes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsoferudin",
+    "Text": "Collect seven different Dusty Kobold Scrolls from Lorekeeper Roggik in the Warrens. Combine them in the quest case and return the collection to Weltria in the library.",
+    "Sources": "https://eqlwiki.com/The_Lorekeeper%27s_Scrolls",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Warrens",
+        "Region": "Odus",
+        "Mobs": "Lorekeeper Roggik: 7 different Dusty Kobold Scrolls (combine in quest case); turn in: Weltria Ostriss (Erudin)",
+        "Faction": "Turn-in effects: No losses listed for turn-in; farming effects require separate review; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/The_Lorekeeper%27s_Scrolls",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsoffelwithe",
+    "Text": "Give Lady Shae White Wine at Hogcaller's Inn. The page also lists a Red Wine exchange.",
+    "Sources": "https://eqlwiki.com/Red_Wine_to_Lady_Shae",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "West Freeport",
+        "Region": "Antonica",
+        "Mobs": "Buy White Wine; no mob kill required; turn in: Lady Shae (West Freeport)",
+        "Faction": "Turn-in effects: Lowers Indigo Brotherhood; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Red_Wine_to_Lady_Shae",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsofhalas",
+    "Text": "Collect a Lion Meat Shipment from Einhorst or Misla McMannus in the West Karana fishing village and deliver it to Teria O`Danos in Halas. The updated walkthrough lists positive gains for all four Halas factions, including Rogues of the White Rose.",
+    "Sources": "https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "Karanas",
+        "Zone": "West Karana",
+        "Kind": "Required stop"
+      },
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "",
+        "Zone": "Halas",
+        "Kind": "Required stop"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsofkaladim",
+    "Text": "Give Trantor two Tumpy Tonics for faction. Obtain or brew the tonics before travelling.",
+    "Sources": "https://eqlwiki.com/Tumpy_Tonics",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Kaladim",
+        "Region": "Faydwer",
+        "Mobs": "Obtain or brew 2 Tumpy Tonics; no mob kill required; turn in: Trantor Everhot (North Kaladim)",
+        "Faction": "Turn-in effects: Lowers Craknek Warriors; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Tumpy_Tonics",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsofoggok",
+    "Text": "Buy the quest bag from Jarlen Meadowgreen in South Karana for two gold, then give it to Innkeep Morpa in Feerrott. Repeat the delivery.",
+    "Sources": "https://eqlwiki.com/The_Bread_Shipment_(Feerrott)",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "South Karana",
+        "Region": "Karanas",
+        "Mobs": "Buy Bag of Bread Loaves from Jarlen Meadowgreen for 2 gold; turn in: Innkeep Morpa (The Feerrott)",
+        "Faction": "Turn-in effects: No losses listed for the delivery; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/The_Bread_Shipment_(Feerrott)",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsofqeynos",
+    "Text": "Give Groflah a Tumpy Tonic at the Seafarers Roost. His bar appearance is time-dependent.",
+    "Sources": "https://eqlwiki.com/Tonics_for_Groflah",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "East Freeport",
+        "Region": "Antonica",
+        "Mobs": "Obtain or brew a Tumpy Tonic; no mob kill required; turn in: Groflah Steadirt (night-time appearance) (East Freeport)",
+        "Faction": "Turn-in effects: No losses listed for this turn-in; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Tonics_for_Groflah",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|merchantsofrivervale",
+    "Text": "Give Joogl bandages for faction. Check his reaction before approaching.",
+    "Sources": "https://eqlwiki.com/Bandages_for_Honeybugger",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Misty Thicket",
+        "Region": "Antonica",
+        "Mobs": "Buy Bandages; no mob kill required; turn in: Joogl Honeybugger (Misty Thicket)",
+        "Faction": "Turn-in effects: Lowers Coalition of Tradefolk Underground; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Bandages_for_Honeybugger",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|minersguild249",
+    "Text": "Give Trantor two Tumpy Tonics for faction. Obtain or brew the tonics before travelling.",
+    "Sources": "https://eqlwiki.com/Tumpy_Tonics",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Kaladim",
+        "Region": "Faydwer",
+        "Mobs": "Obtain or brew 2 Tumpy Tonics; no mob kill required; turn in: Trantor Everhot (North Kaladim)",
+        "Faction": "Turn-in effects: Lowers Craknek Warriors; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Tumpy_Tonics",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|minersguild628",
+    "Text": "Give Jeet four Giant Rat Pelts for Rat Patrol. The page reports a failed attempt at indifferent; confirm access first.",
+    "Sources": "https://eqlwiki.com/Rat_Patrol",
+    "Gaps": "Minimum faction conflict: indifferent listed, but a failure at indifferent is reported",
+    "Destinations": [
+      {
+        "Zone": "North Kaladim",
+        "Region": "Faydwer",
+        "Mobs": "Giant rats: 4 Giant Rat Pelts; turn in: Jeet (North Kaladim)",
+        "Faction": "Turn-in effects: Lowers Circle of Unseen Hands, Butcherblock Bandits and Ebon Mask; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Rat_Patrol",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|newsebilisexpedition",
+    "Text": "Give Iktra small pieces or small bricks of High Quality Ore. Metal Bits only work up to amiable, so do not use them for the whole achievement.",
+    "Sources": "https://eqlwiki.com/Supplies_for_the_New_Sebilisian_Expedition\nhttps://eqlwiki.com/Patch_notes",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Solusek's Eye",
+        "Region": "Antonica",
+        "Mobs": "Goblins: High Quality Ore; alternatively break down Fine Steel weapons at a forge; turn in: Crusader Iktra (North Ro)",
+        "Faction": "Turn-in effects: No losses listed for ore turn-ins; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Supplies_for_the_New_Sebilisian_Expedition\nhttps://eqlwiki.com/Patch_notes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|oggokguards",
+    "Text": "Buy the quest bag from Jarlen Meadowgreen in South Karana for two gold, then give it to Innkeep Morpa in Feerrott. Repeat the delivery.",
+    "Sources": "https://eqlwiki.com/The_Bread_Shipment_(Feerrott)",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "South Karana",
+        "Region": "Karanas",
+        "Mobs": "Buy Bag of Bread Loaves from Jarlen Meadowgreen for 2 gold; turn in: Innkeep Morpa (The Feerrott)",
+        "Faction": "Turn-in effects: No losses listed for the delivery; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/The_Bread_Shipment_(Feerrott)",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|paladinsofunderfoot",
+    "Text": "Begin with Dru at amiable or better. Complete the Chalice of Conquest chain through Rathe Mountains, Lake Rathetear, Kaladim, Halas and Dagnor's Cauldron. Return the awarded Cape of Underfoot to Dru for this faction. This is a lengthy paladin quest, not a quick repeatable farm.",
+    "Sources": "https://eqlwiki.com/Chalice_of_Conquest_Quest",
+    "Gaps": "Check paladin access, repeatability and current quest steps. Faction page also describes an alias to Miners Guild 249; separate export achievement credit needs confirmation.",
+    "Destinations": [
+      {
+        "Zone": "Butcherblock Mountains",
+        "Region": "Antonica",
+        "Mobs": "Dru Razbind: Chalice of Conquest quest",
+        "Faction": "Intermediate exchange lowers Dark Reflection and The Dead; collection kills have additional effects",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Chalice_of_Conquest_Quest",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|priestsofinnoruuk",
+    "Text": "Collect four Woven Grass Amulets from Nektulos halfling druids and give them to Perrir. The source lists cleric/shaman access and describes indifferent access.",
+    "Sources": "https://eqlwiki.com/Innoruuk_Symbol_Quests",
+    "Gaps": "Verify repeatability and class/faction access before farming a large batch",
+    "Destinations": [
+      {
+        "Zone": "Nektulos Forest",
+        "Region": "Antonica",
+        "Mobs": "Halfling druids: 4 Woven Grass Amulets; turn in: Perrir Zexus (Neriak Third Gate)",
+        "Faction": "Turn-in effects: Lowers Clerics of Tunare, Priests of Life, Priests of Marr and Primordial Malice; kill effects are additional; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Innoruuk_Symbol_Quests",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|priestsoflife",
+    "Text": "Turn in Bandit Sashes from Karana bandits. These turn-ins have different faction consequences from killing the bandits.",
+    "Sources": "https://eqlwiki.com/Bandit_Sashes",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "West Karana",
+        "Region": "Karanas",
+        "Mobs": "Bandits: Bandit Sashes; turn in: Chesgard Sydwen (South Qeynos)",
+        "Faction": "Turn-in effects: Lowers Bloodsabers; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Bandit_Sashes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|priestsofmarr",
+    "Text": "Request the quest sack, combine four Fresh Piranha in it and return it to Celsar. The source also lists Surefall Glade piranhas as a collection option without kill faction changes.",
+    "Sources": "https://eqlwiki.com/Piranha_Hunting",
+    "Gaps": "Quest and zone pages place Celsar in North Freeport; faction index says West Freeport. Verify current placement and access.",
+    "Destinations": [
+      {
+        "Zone": "Surefall Glade",
+        "Region": "Antonica",
+        "Mobs": "Piranhas: 4 Fresh Piranha (combine in quest sack); turn in: Celsar Vestagon (North Freeport)",
+        "Faction": "Turn-in effects: Turn-in lowers Dismal Rage and The Freeport Militia; Freeport piranha kills also lower Opal Darkbriar; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Piranha_Hunting",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|priestsofmischief",
+    "Text": "The faction page documents a Legends change adding Priests of Mischief credit to Runnyeye and Pickclaw goblin kills.",
+    "Sources": "https://eqlwiki.com/Priests_of_Mischief",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Runnyeye",
+        "Region": "Antonica",
+        "Mobs": "Runnyeye and Pickclaw goblins",
+        "Faction": "Goblin faction losses; exact effects depend on target",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Priests_of_Mischief",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|protectorsofgukta",
+    "Text": "Give Zok two Phosphorous Powder, obtained in Lower Guk.",
+    "Sources": "https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Lower Guk",
+        "Region": "Antonica",
+        "Mobs": "Undead rares and high-level frogloks: 2 Phosphorous Powder; turn in: Zok Zribb (Rathe Mountains)",
+        "Faction": "Turn-in effects: No losses listed for this exchange; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Phosphorous_Powder_for_Zok_Zribb",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|roguesofthewhiterose",
+    "Text": "Collect a Lion Meat Shipment from Einhorst or Misla McMannus in the West Karana fishing village and deliver it to Teria O`Danos in Halas. The updated walkthrough lists positive gains for all four Halas factions, including Rogues of the White Rose.",
+    "Sources": "https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "Karanas",
+        "Zone": "West Karana",
+        "Kind": "Required stop"
+      },
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "",
+        "Zone": "Halas",
+        "Kind": "Required stop"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|shadowknightsofnightkeep",
+    "Text": "Bring Deathfist Slashed Belts to Bregna in Grobb. Obtain belts from Deathfist orcs in either Commonlands zone; killing those orcs alone is not this faction reward. Alternative: Kaglari accepts two Bone Chips and two Froglok Tadpole Flesh for Majik Power; the quest page requires amiable.",
+    "Sources": "https://eqlwiki.com/Alanna%27s_Race_Unlock_Guide#Troll\nhttps://eqlwiki.com/Majik_Power",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "East Commonlands",
+        "Region": "Antonica",
+        "Mobs": "Deathfist orcs: Deathfist Slashed Belts; turn in: Bregna (Grobb)",
+        "Faction": "Turn-in effects: Turn-ins lower Frogloks of Guk; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Alanna%27s_Race_Unlock_Guide#Troll",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      },
+      {
+        "Zone": "Innothule Swamp",
+        "Region": "Antonica",
+        "Mobs": "Froglok tadpoles: 2 Tadpole Flesh; also obtain 2 Bone Chips from skeletons; turn in: Kaglari (combine as instructed) (Grobb)",
+        "Faction": "Turn-in effects: Lowers Frogloks of Guk; check separate kill effects for the collection target.",
+        "Evidence": "https://eqlwiki.com/Majik_Power — requires amiable; reviewed 2026-09-11",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|shamenofjustice",
+    "Text": "Collect a Lion Meat Shipment from Einhorst or Misla McMannus in the West Karana fishing village and deliver it to Teria O`Danos in Halas. The updated walkthrough lists positive gains for all four Halas factions, including Rogues of the White Rose.",
+    "Sources": "https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "Karanas",
+        "Zone": "West Karana",
+        "Kind": "Required stop"
+      },
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "",
+        "Zone": "Halas",
+        "Kind": "Required stop"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|shamenofwar",
+    "Text": "Give Zulort four Froglok Tadpole Flesh. The source requires better than indifferent and lists shaman access.",
+    "Sources": "https://eqlwiki.com/Froglock_Tadpole_Fleshies",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Innothule Swamp",
+        "Region": "Antonica",
+        "Mobs": "Froglok tadpoles: 4 Froglok Tadpole Flesh; turn in: Zulort (Oggok)",
+        "Faction": "Turn-in effects: No losses listed for turn-in; collecting flesh has separate effects; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Froglock_Tadpole_Fleshies",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|silentfistclan",
+    "Text": "Carry Phin Esrinap's note to Konem Matse in Qeynos Hills, then return the invoice to Phin. Both exchanges grant faction.",
+    "Sources": "https://eqlwiki.com/Note_for_Konem",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Qeynos",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Phin Esrinap; deliver to Konem Matse (Qeynos Hills); turn in: Phin Esrinap (return invoice) (North Qeynos)",
+        "Faction": "Turn-in effects: No losses listed for these exchanges; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Konem",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|soldiersoftunare",
+    "Text": "Give muffins to Pandos Flintside upstairs in West Freeport Hogcaller`s Inn. The walkthrough lists gains to the four elf factions and a Crushbone Orcs loss. Check safe access to the inn and NPC before bringing supplies.",
+    "Sources": "https://eqlwiki.com/Muffin_for_Pandos",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Muffin_for_Pandos",
+        "Faction": "Crushbone Orcs loss; four elf faction gains",
+        "Mobs": "Pandos Flintside (muffins)",
+        "Region": "",
+        "Zone": "West Freeport"
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|songweavers",
+    "Text": "Give Sylia four Spiderling Silks in the Kelethin bard guild. The source requires amiable and lists bard access.",
+    "Sources": "https://eqlwiki.com/Spiderling_Silks",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Greater Faydark",
+        "Region": "Faydwer",
+        "Mobs": "Widow hatchlings: 4 Spiderling Silks; turn in: Sylia Windlehands (Kelethin, Greater Faydark)",
+        "Faction": "Turn-in effects: No losses listed for turn-in; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Spiderling_Silks",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|steelwarriors",
+    "Text": "Request the quest sack, combine four Fresh Piranha in it and return it to Celsar. The source also lists Surefall Glade piranhas as a collection option without kill faction changes.",
+    "Sources": "https://eqlwiki.com/Piranha_Hunting",
+    "Gaps": "Quest and zone pages place Celsar in North Freeport; faction index says West Freeport. Verify current placement and access.",
+    "Destinations": [
+      {
+        "Zone": "Surefall Glade",
+        "Region": "Antonica",
+        "Mobs": "Piranhas: 4 Fresh Piranha (combine in quest sack); turn in: Celsar Vestagon (North Freeport)",
+        "Faction": "Turn-in effects: Turn-in lowers Dismal Rage and The Freeport Militia; Freeport piranha kills also lower Opal Darkbriar; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Piranha_Hunting",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|stormguard",
+    "Text": "Give Trantor two Tumpy Tonics for faction. Obtain or brew the tonics before travelling.",
+    "Sources": "https://eqlwiki.com/Tumpy_Tonics",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "North Kaladim",
+        "Region": "Faydwer",
+        "Mobs": "Obtain or brew 2 Tumpy Tonics; no mob kill required; turn in: Trantor Everhot (North Kaladim)",
+        "Faction": "Turn-in effects: Lowers Craknek Warriors; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Tumpy_Tonics",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|stormreapers",
+    "Text": "Goblin warriors are listed as raising Storm Reapers. Check the first kill message before committing to a long faction grind.",
+    "Sources": "https://eqlwiki.com/A_Goblin_Warrior",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Misty Thicket",
+        "Region": "Antonica",
+        "Mobs": "Goblin warriors",
+        "Faction": "Lowers Clan Runnyeye",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/A_Goblin_Warrior",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|thedead",
+    "Text": "At amiable or better, obtain the quest box, combine ten Fire Beetle Eyes inside, then return it to Noxhil.",
+    "Sources": "https://eqlwiki.com/Fire_Beetle_Eyes",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Nektulos Forest",
+        "Region": "Antonica",
+        "Mobs": "Fire beetles: 10 Fire Beetle Eyes (combine in quest box); turn in: Noxhil V`Sek (Neriak Third Gate)",
+        "Faction": "Turn-in effects: Lowers King Naythox Thex, Keepers of the Art, Eldritch Collective and Primordial Malice; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Fire_Beetle_Eyes",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|thefreeportmilitia",
+    "Text": "Take Harkin's message to Janam in West Freeport; return his reply to Harkin.",
+    "Sources": "https://eqlwiki.com/Note_for_Janam",
+    "Gaps": "Source conflicts on minimum faction: dubious versus indifferent",
+    "Destinations": [
+      {
+        "Zone": "East Freeport",
+        "Region": "Antonica",
+        "Mobs": "Collect note from Harkin; deliver to Janam (West Freeport); turn in: Harkin Duskfoot (return reply) (East Freeport)",
+        "Faction": "Turn-in effects: No losses listed; NPC access may be hostile; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Note_for_Janam",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|thespurned",
+    "Text": "Bring the head from Master Whoopal in Nektulos Forest to Draxiz as part of the Innoruuk symbol quest. This is a quest-item method, not a city kill farm.",
+    "Sources": "https://eqlwiki.com/Innoruuk_Symbol_Quests",
+    "Gaps": "Verify repeatability and class/faction access before farming a large batch",
+    "Destinations": [
+      {
+        "Zone": "Nektulos Forest",
+        "Region": "Antonica",
+        "Mobs": "Master Whoopal: Halfling Druid Master Head; turn in: Draxiz N`Ryt (Neriak Commons)",
+        "Faction": "Turn-in effects: Turn-in lowers The Dead; halfling kills have additional losses; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Innoruuk_Symbol_Quests",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|tunaresscouts",
+    "Text": "Request the pouch, fill it with six Pixie Dust, combine, and return it to Expin. The quest is listed for rogues; verify access with your loadout.",
+    "Sources": "https://eqlwiki.com/Pixie_Dust_%28Kelethin_Rogue%29",
+    "Gaps": "Current NPC access and repeatable turn-in credit",
+    "Destinations": [
+      {
+        "Zone": "Greater Faydark",
+        "Region": "Faydwer",
+        "Mobs": "Pixies: 6 Pixie Dust (combine in quest pouch); turn in: Expin (Kelethin, Greater Faydark)",
+        "Faction": "Turn-in effects: No losses listed for turn-in; pixie kills need separate faction check; check separate kill effects for the collection target.",
+        "Evidence": "Legends wiki quest method reviewed 2026-09-11: https://eqlwiki.com/Pixie_Dust_%28Kelethin_Rogue%29",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestprogression|wolvesofthenorth",
+    "Text": "Collect a Lion Meat Shipment from Einhorst or Misla McMannus in the West Karana fishing village and deliver it to Teria O`Danos in Halas. The updated walkthrough lists positive gains for all four Halas factions, including Rogues of the White Rose.",
+    "Sources": "https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+    "Gaps": "Verify current turn-in acceptance and faction changes before repeating",
+    "Destinations": [
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "Karanas",
+        "Zone": "West Karana",
+        "Kind": "Required stop"
+      },
+      {
+        "Evidence": "Wiki walkthrough reviewed 2026-09-11: https://eqlwiki.com/Lion_Meat_Shipment_Quest",
+        "Faction": "Wiki lists four positive Halas faction changes",
+        "Mobs": "Shipment: McMannus village to Teria O`Danos",
+        "Region": "",
+        "Zone": "Halas",
+        "Kind": "Required stop"
+      }
+    ]
+  },
+  {
+    "Key": "everquestkeys|bonecraftedkey",
+    "Text": "At amiable or better, say need keyz to the guard to receive the Paineel elevator key. Improve Heretics through Warrens kobolds if needed. Request the key; do not kill the guard for it.",
+    "Sources": "https://eqlwiki.com/Guard_Lecknar",
+    "Gaps": "Confirm key acquisition registers in the achievement export",
+    "Destinations": [
+      {
+        "Zone": "Paineel",
+        "Region": "Odus",
+        "Mobs": "Guard Lecknar or Guard Korlack: request key",
+        "Faction": "No kill required; amiable Heretics access required",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Guard_Lecknar",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "everquestkeys|holekey",
+    "Text": "The wiki lists Rallia Hapera in Paineel at (941, 770) as the merchant for this key. Check merchant access and your current price before buying. The key is an acquisition objective, not a required mob kill.",
+    "Sources": "https://eqlwiki.com/Hole_Key",
+    "Gaps": "Current merchant access and acquisition credit",
+    "Destinations": [
+      {
+        "Zone": "Paineel",
+        "Mobs": "Rallia Hapera (key merchant)",
+        "Evidence": "https://eqlwiki.com/Hole_Key",
+        "Region": "Odus",
+        "Faction": "Merchant access depends on standing"
+      }
+    ]
+  },
+  {
+    "Key": "everquestkeys|islandsofskykeys",
+    "Text": "Track each named key in the TXT separately. Use the linked Plane of Sky Keys guide to plan island progression and Sirran the Lunatic turn-ins. Confirm current Legends key handling before leaving an island.",
+    "Sources": "https://eqlwiki.com/Plane_of_Sky_Keys",
+    "Gaps": "Current key persistence and island access",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Mobs": "Island keys / Sirran the Lunatic",
+        "Evidence": "https://eqlwiki.com/Plane_of_Sky_Keys",
+        "Region": "Planes",
+        "Faction": "Quest route"
+      }
+    ]
+  },
+  {
+    "Key": "everquestkeys|efreetiskey",
+    "Text": "The Sky class-test guide directs you to the Key Master on island 1 for the free Efreeti`s Key. With it, use the northern teleport pad near (1600, 520) to reach the quest chamber. The guide says the key is saved to the character.",
+    "Sources": "https://eqlwiki.com/Bard_Plane_of_Sky_Tests",
+    "Gaps": "Verify current key acquisition credit",
+    "Destinations": [
+      {
+        "Zone": "Plane of Sky",
+        "Faction": "Key purchase / travel",
+        "Mobs": "Key Master (island 1)",
+        "Evidence": "https://eqlwiki.com/Bard_Plane_of_Sky_Tests",
+        "Region": "Planes"
+      }
+    ]
+  },
+  {
+    "Gaps": "Conflicting faction evidence; do not assume safe",
+    "Sources": "https://eqlwiki.com/Trooper_Kraer\nhttps://eqlwiki.com/New_Sebilisian_Expedition",
+    "Destinations": [],
+    "Text": "Trooper Kraer is listed in New Sebilis Expedition at (485, -144), but the NPC page says no factions while the faction page lists a -100 New Sebilisian Expedition loss. This is not a faction-safe recommendation.",
+    "Key": "slayerskill|icky"
+  },
+  {
+    "Gaps": "Race / Slayer credit conflict; test before farming",
+    "Sources": "https://eqlwiki.com/Rathe_Mountains",
+    "Destinations": [],
+    "Text": "Ankhefenmut and Zazamoukh are map-listed in Rathe Mountains, but Zazamoukh is classified as Griffin on the zone NPC table. A sphinx appearance or map label does not prove credit for this objective.",
+    "Key": "slayerskill|puzzling"
+  },
+  {
+    "Gaps": "Repeatable target selection and encounter access",
+    "Sources": "https://eqlwiki.com/Plane_of_Sky",
+    "Destinations": [],
+    "Text": "Plane of Sky remains the destination for Djinns and Efreetis. The zone list includes Noble Dojorn. Plan encounter access and available targets with your group; do not treat the class quest NPCs as a recommended repeatable camp.",
+    "Key": "slayerskill|mygoldenboots"
+  },
+  {
+    "Gaps": "Exact named NPC faction behavior",
+    "Sources": "https://eqlwiki.com/Western_Plains_of_Karana",
+    "Destinations": [],
+    "Text": "The West Karana map places the ogre shrine at map marker 18, associated with Chief Goonda. The player observed no faction hit from the ogres they fought. That observation does not verify Chief Goonda himself.",
+    "Key": "slayerskill|getstupid"
+  },
+  {
+    "Gaps": "Current population and faction-safe target selection",
+    "Sources": "https://eqlwiki.com/Kerra_Island",
+    "Destinations": [],
+    "Text": "The Kerra Island page includes legacy Kerran population listings. Do not confuse this zone with Erud`s Crossing. A current repeatable camp that preserves Kerran unlock factions has not been established.",
+    "Key": "slayerskill|notakerrantheworld"
+  },
+  {
+    "Gaps": "Current spawn and counter credit",
+    "Sources": "https://eqlwiki.com/Estate_of_Unrest",
+    "Destinations": [],
+    "Text": "The Unrest NPC table places a reanimated hand on the third floor, at approximately (572, -15). Use the named hand rather than assuming every undead mob counts.",
+    "Key": "slayerskill|roundofapplause"
+  },
+  {
+    "Gaps": "Current camp population and counter credit",
+    "Sources": "https://eqlwiki.com/Cazic_Thule",
+    "Destinations": [],
+    "Text": "The Cazic-Thule zone page lists hulking gorillas between the maze and Archon Pyramid, with additional spawns near the throne room. These are zone gorillas, not a raid encounter with the god Cazic Thule.",
+    "Key": "slayerskill|bettergetabarrel"
+  },
+  {
+    "Gaps": "Exact current spawn positions and counter credit",
+    "Sources": "https://eqlwiki.com/Patch_notes_May_22_2026",
+    "Destinations": [],
+    "Text": "The May 22 Legends patch notes say Rathe Mountains worm spawns were replaced with leeches. This supports Rathe Mountains as a destination; the exact present-day camp and credit still need checking.",
+    "Key": "slayerskill|leechykeen"
+  },
+  {
+    "Key": "slayerconquest|dontbugme",
+    "Text": "Fire beetles provide a beetle target listed in this objective. The source lists West Karana among their zones.",
+    "Sources": "https://eqlwiki.com/A_Fire_Beetle",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "West Karana",
+        "Region": "Karanas",
+        "Mobs": "Fire beetles",
+        "Faction": "No faction changes listed",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/A_Fire_Beetle",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerconquest|strangeweather",
+    "Text": "White wolves are an option for the wolf portion of this shared counter.",
+    "Sources": "https://eqlwiki.com/A_white_wolf",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Everfrost Peaks",
+        "Region": "Antonica",
+        "Mobs": "White wolves",
+        "Faction": "No faction changes listed",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/A_white_wolf",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerspecial|thehounds",
+    "Text": "White wolves match the wolf target group. This is a low-level option.",
+    "Sources": "https://eqlwiki.com/A_white_wolf",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Everfrost Peaks",
+        "Region": "Antonica",
+        "Mobs": "White wolves",
+        "Faction": "No faction changes listed",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/A_white_wolf",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerconquest|thezookeeper",
+    "Text": "Use grizzly bears for the bear target group. Other listed animal families are alternatives for the same counter.",
+    "Sources": "https://eqlwiki.com/A_Grizzly_Bear",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "North Karana",
+        "Region": "Karanas",
+        "Mobs": "Grizzly bears",
+        "Faction": "No faction changes listed",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/A_Grizzly_Bear",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerspecial|gooooooooooooooolem",
+    "Text": "Golem candidates are documented in the throne-room area and maze. Dungeon access and nearby lizards affect the practical difficulty.",
+    "Sources": "https://eqlwiki.com/Cazic_Thule",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Cazic-Thule",
+        "Region": "Antonica",
+        "Mobs": "Stone golem; clay golem",
+        "Faction": "Individual golem faction effects still unverified; nearby lizards have faction",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Cazic_Thule",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerconquest|yourgodhasfoundyoulacking",
+    "Text": "The Avatar of Fear is a documented deity-avatar candidate. Confirm one counter increment before planning repeated kills.",
+    "Sources": "https://eqlwiki.com/Avatar_of_Fear",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Cazic-Thule",
+        "Region": "Antonica",
+        "Mobs": "Avatar of Fear",
+        "Faction": "Lowers Allize Taeew; raises Allize Volew",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Avatar_of_Fear",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerspecial|dragonbane",
+    "Text": "A true-dragon encounter option, not an ordinary trash-mob farm. Check raid access and respawn rules before scheduling repeated kills.",
+    "Sources": "https://eqlwiki.com/Lord_Nagafen",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Nagafen's Lair",
+        "Region": "Antonica",
+        "Mobs": "Lord Nagafen",
+        "Faction": "Lowers Nagafen and Vox; raises Solusek Mining Co",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Lord_Nagafen",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerconquest|herebedragons",
+    "Text": "Documented dragon option; a raid encounter. Lesser-dragon alternatives may be more efficient once their counter credit is checked.",
+    "Sources": "https://eqlwiki.com/Lord_Nagafen",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Nagafen's Lair",
+        "Region": "Antonica",
+        "Mobs": "Lord Nagafen",
+        "Faction": "Lowers Nagafen and Vox; raises Solusek Mining Co",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Lord_Nagafen",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerspecial|slayerofmysticalhorses",
+    "Text": "Quillmane is a pegasus option. It requires a placeholder cycle and is an opportunistic target rather than a dense farming camp.",
+    "Sources": "https://eqlwiki.com/Quillmane",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "South Karana",
+        "Region": "Karanas",
+        "Mobs": "Quillmane (pegasus)",
+        "Faction": "No faction changes listed for Quillmane; placeholders vary",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Quillmane",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "untappedpotentialraces|raceunlockkerran",
+    "Text": "Request the named task from a class guildmaster and follow its individual subquests. This unlock uses a task rather than the usual maximum-faction checklist.",
+    "Sources": "https://eqlwiki.com/Aid_the_Kerrans_of_Kerra_Isle",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Kerra Island",
+        "Region": "Odus",
+        "Mobs": "Class guildmasters: Aid the Kerrans of Kerra Isle",
+        "Faction": "Quest access depends on Kerra Isle standing and character modifiers",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Aid_the_Kerrans_of_Kerra_Isle",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerspecial|youcallthatadragon",
+    "Text": "Fae drakes match the Drixie target group in this achievement. Their location is also supported by your earlier Lesser Faydark farming observation.",
+    "Sources": "https://eqlwiki.com/Lesser_Faydark",
+    "Gaps": "Confirm achievement counter credit and current access",
+    "Destinations": [
+      {
+        "Zone": "Lesser Faydark",
+        "Region": "Faydwer",
+        "Mobs": "Fae drakes (Drixies)",
+        "Faction": "Exact current faction changes need checking on first kill",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/Lesser_Faydark",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  },
+  {
+    "Key": "slayerconquest|tableflipper",
+    "Text": "A mimic is listed in the Runnyeye bank area and matches the mimic family in this counter. Its wiki record dates from 2020; treat this as a candidate until current presence and credit are checked. A single spawn may be slow for 5,000 kills.",
+    "Sources": "https://eqlwiki.com/A_mimic_%28Clan_RunnyEye%29",
+    "Gaps": "Legacy source: verify current Legends spawn, counter increment and respawn rate",
+    "Destinations": [
+      {
+        "Zone": "Runnyeye",
+        "Region": "Antonica",
+        "Mobs": "Bank-area mimic (legacy source candidate)",
+        "Faction": "No faction changes listed for the mimic; nearby goblins differ",
+        "Evidence": "Source-listed target; confirm Legends counter credit. https://eqlwiki.com/A_mimic_%28Clan_RunnyEye%29",
+        "Kind": "Alternative",
+        "Selected": false,
+        "PortRoute": "",
+        "Portal": "",
+        "Via": ""
+      }
+    ]
+  }
+]

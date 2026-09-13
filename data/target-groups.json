@@ -1,0 +1,702 @@
+[
+  {
+    "Key": "slayerskill|ohthehumanity",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Humans"
+      }
+    ],
+    "Name": "Oh the Humanity!"
+  },
+  {
+    "Key": "slayerskill|barbarous",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Barbarians"
+      }
+    ],
+    "Name": "Barbarous"
+  },
+  {
+    "Key": "slayerskill|hardlyeruditeofyou",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Erudites"
+      }
+    ],
+    "Name": "Hardly Erudite of You"
+  },
+  {
+    "Key": "slayerskill|woodyoucouldyou",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Wood Elves"
+      }
+    ],
+    "Name": "Wood You Could You?"
+  },
+  {
+    "Key": "slayerskill|highlyuncivilized",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "High Elves"
+      }
+    ],
+    "Name": "Highly Uncivilized"
+  },
+  {
+    "Key": "slayerskill|lovewillteirthemapart",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Dark Elves"
+      }
+    ],
+    "Name": "Love Will Teir Them Apart"
+  },
+  {
+    "Key": "slayerskill|now49999",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Half Elves"
+      }
+    ],
+    "Name": "Now .49999%"
+  },
+  {
+    "Key": "slayerskill|axemenoquestions",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Dwarves"
+      }
+    ],
+    "Name": "Axe Me No Questions"
+  },
+  {
+    "Key": "slayerskill|fuzzyfeet",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Halflings"
+      }
+    ],
+    "Name": "Fuzzyfeet"
+  },
+  {
+    "Key": "slayerskill|aclockworkgnome",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Gnomes"
+      }
+    ],
+    "Name": "A Clockwork Gnome"
+  },
+  {
+    "Key": "slayerskill|heresyergrozmok",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Trolls"
+      }
+    ],
+    "Name": "Here's Yer Grozmok"
+  },
+  {
+    "Key": "slayerskill|getstupid",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Ogres"
+      }
+    ],
+    "Name": "Get Stupid"
+  },
+  {
+    "Key": "slayerskill|icky",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Iksars"
+      }
+    ],
+    "Name": "Icky!"
+  },
+  {
+    "Key": "slayerskill|itsafrogeatfrogworld",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Frogloks and Tadpoles."
+      }
+    ],
+    "Name": "It's a Frog Eat Frog World"
+  },
+  {
+    "Key": "slayerskill|notakerrantheworld",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Kerrans"
+      }
+    ],
+    "Name": "Not a Kerran the World!"
+  },
+  {
+    "Key": "slayerskill|batcountry",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Bats and Werebats."
+      }
+    ],
+    "Name": "Bat Country!"
+  },
+  {
+    "Key": "slayerskill|ratkiller",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Rats and Molerats."
+      }
+    ],
+    "Name": "Rat Killer"
+  },
+  {
+    "Key": "slayerskill|armadilloedanddangerous",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Armadillos"
+      }
+    ],
+    "Name": "Armadilloed and Dangerous"
+  },
+  {
+    "Key": "slayerskill|itstinks",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Skunks"
+      }
+    ],
+    "Name": "It Stinks!"
+  },
+  {
+    "Key": "slayerskill|youdirtyratman",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Ratmen"
+      }
+    ],
+    "Name": "You Dirty Ratman!"
+  },
+  {
+    "Key": "slayerskill|beetlemania",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Beetles, Insects, Lightcrawlers, Shik'Nars, and Underbulks."
+      }
+    ],
+    "Name": "Beetlemania"
+  },
+  {
+    "Key": "slayerskill|leechykeen",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Leeches, Ticks, and Vacuum Worms."
+      }
+    ],
+    "Name": "Leechy Keen"
+  },
+  {
+    "Key": "slayerskill|shoofly",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Butterflies, Flies, Malarians, Mosquitoes, Tsetsians, and Wasps."
+      }
+    ],
+    "Name": "Shoo fly!"
+  },
+  {
+    "Key": "slayerskill|getthebroom",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Scorpions and Spiders."
+      }
+    ],
+    "Name": "Get the Broom!"
+  },
+  {
+    "Key": "slayerskill|snakeinthegrass",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Snakes"
+      }
+    ],
+    "Name": "Snake in the Grass"
+  },
+  {
+    "Key": "slayerskill|abonetopickwithyou",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Skeletons"
+      }
+    ],
+    "Name": "A Bone to Pick With You"
+  },
+  {
+    "Key": "slayerskill|stakedinner",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Vampires"
+      }
+    ],
+    "Name": "Stake Dinner"
+  },
+  {
+    "Key": "slayerskill|hideyourbrains",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Hags, Ghouls, and Zombies."
+      }
+    ],
+    "Name": "Hide Your Brains!"
+  },
+  {
+    "Key": "slayerskill|mummydearest",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Mummies"
+      }
+    ],
+    "Name": "Mummy Dearest"
+  },
+  {
+    "Key": "slayerskill|ghoulonthehill",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Ghouls"
+      }
+    ],
+    "Name": "Ghoul On the Hill"
+  },
+  {
+    "Key": "slayerskill|roundofapplause",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Animated Hands"
+      }
+    ],
+    "Name": "Round of Applause"
+  },
+  {
+    "Key": "slayerskill|ghostsoffrostfellpast",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Banshees, Ghosts, Spectres, Spirits, and Wisps."
+      }
+    ],
+    "Name": "Ghosts of Frostfell Past"
+  },
+  {
+    "Key": "slayerskill|newtricks",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Chokidais, Drolvargs, Hynids, Rotdogs, Scaled Wolves, Sonic Wolves, Werewolves, Wolves, and Worgs."
+      }
+    ],
+    "Name": "New Tricks"
+  },
+  {
+    "Key": "slayerskill|gotyourtongue",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Cats, Lions, Pumas, Sabertooths, Scarlet Cheetahs, Tigers, Topiary Lions, and Wrulons."
+      }
+    ],
+    "Name": "Got Your Tongue?"
+  },
+  {
+    "Key": "slayerskill|featherbrainedplan",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Aviaks, Blood Ravens, Cockatrices, Hawks, and Parrots."
+      }
+    ],
+    "Name": "Featherbrained Plan"
+  },
+  {
+    "Key": "slayerskill|bettergetabarrel",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Gorillas, Holgresh, and Yetis."
+      }
+    ],
+    "Name": "Better Get a Barrel"
+  },
+  {
+    "Key": "slayerskill|bearwithme",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Bears, Kodiaks, Owlbears, and Pandas."
+      }
+    ],
+    "Name": "Bear With Me"
+  },
+  {
+    "Key": "slayerskill|theelephantintheroom",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Elephants and Mammoths."
+      }
+    ],
+    "Name": "The Elephant in the Room"
+  },
+  {
+    "Key": "slayerskill|thesebootsweremadefor",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Alligators, Basilisks, and Crocodiles."
+      }
+    ],
+    "Name": "These Boots Were Made For..."
+  },
+  {
+    "Key": "slayerskill|plentyoffishinthesea",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Fishes, Piranhas, Seahorses, Sharks, Swordfishes, and Wetfang Minnows."
+      }
+    ],
+    "Name": "Plenty of Fish In the Sea"
+  },
+  {
+    "Key": "slayerskill|orcweaponsyourbloodwillspill",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Orcs and Wereorcs."
+      }
+    ],
+    "Name": "Orc Weapons, Your Blood Will Spill!"
+  },
+  {
+    "Key": "slayerskill|newfrontiers",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Goblins and Nightmare Goblins."
+      }
+    ],
+    "Name": "New Frontiers"
+  },
+  {
+    "Key": "slayerskill|themoreyougnoll",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Gnolls"
+      }
+    ],
+    "Name": "The More You Gnoll!"
+  },
+  {
+    "Key": "slayerskill|worldwarrensthree",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Kobolds"
+      }
+    ],
+    "Name": "World Warrens Three"
+  },
+  {
+    "Key": "slayerskill|alliztaeew",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Lizard Men"
+      }
+    ],
+    "Name": "Alliz Tae Ew"
+  },
+  {
+    "Key": "slayerskill|reextinction",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Kedge"
+      }
+    ],
+    "Name": "Re-Extinction"
+  },
+  {
+    "Key": "slayerskill|aquaticallure",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Nagas, Mermaids, Nymphs, and Sirens."
+      }
+    ],
+    "Name": "Aquatic Allure"
+  },
+  {
+    "Key": "slayerskill|isaidargyle",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Gargoyles"
+      }
+    ],
+    "Name": "I Said Argyle!"
+  },
+  {
+    "Key": "slayerskill|yourenotscaringanyone",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Scarecrows and Totems."
+      }
+    ],
+    "Name": "You're Not Scaring Anyone"
+  },
+  {
+    "Key": "slayerskill|lumberer",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Treants"
+      }
+    ],
+    "Name": "Lumberer"
+  },
+  {
+    "Key": "slayerskill|mushroomhunting",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Sporalis"
+      }
+    ],
+    "Name": "Mushroom Hunting"
+  },
+  {
+    "Key": "slayerskill|stopdragonthisout",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Dracoliches, Water Dragons, and Witherans."
+      }
+    ],
+    "Name": "Stop Dragon This Out"
+  },
+  {
+    "Key": "slayerskill|youkeepdragonmeintothis",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Drakes, Drixies, and Fay Drakes."
+      }
+    ],
+    "Name": "You Keep Dragon Me Into This"
+  },
+  {
+    "Key": "slayerskill|asmallgiantproblem",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Giants"
+      }
+    ],
+    "Name": "A Small Giant Problem"
+  },
+  {
+    "Key": "slayerskill|fairicide",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Dryads, Fairies, and Pixies."
+      }
+    ],
+    "Name": "Fairicide"
+  },
+  {
+    "Key": "slayerskill|forthehive",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Bixies"
+      }
+    ],
+    "Name": "For the Hive!"
+  },
+  {
+    "Key": "slayerskill|jumjummery",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Brownies"
+      }
+    ],
+    "Name": "Jumjummery"
+  },
+  {
+    "Key": "slayerskill|selfcentaured",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Centaurs"
+      }
+    ],
+    "Name": "Self Centaured"
+  },
+  {
+    "Key": "slayerskill|amazing",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Minotaurs and Tizmak."
+      }
+    ],
+    "Name": "Amazing!"
+  },
+  {
+    "Key": "slayerskill|novacancy",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Griffons, Griffennes, and Griffins."
+      }
+    ],
+    "Name": "No Vacancy"
+  },
+  {
+    "Key": "slayerskill|puzzling",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Sphinxes"
+      }
+    ],
+    "Name": "Puzzling"
+  },
+  {
+    "Key": "slayerskill|mygoldenboots",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Djinns and Efreetis."
+      }
+    ],
+    "Name": "My Golden Boots"
+  },
+  {
+    "Key": "slayerskill|impatient",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Imps and Mephits."
+      }
+    ],
+    "Name": "Imp-atient"
+  },
+  {
+    "Key": "slayerskill|elementary",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Elementals"
+      }
+    ],
+    "Name": "Elementary"
+  },
+  {
+    "Key": "slayerskill|spinmerightround",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Dervishes"
+      }
+    ],
+    "Name": "Spin Me Right Round"
+  },
+  {
+    "Key": "slayerskill|terroribletentacles",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Tentacle Terrors"
+      }
+    ],
+    "Name": "Terrorible Tentacles"
+  },
+  {
+    "Key": "slayerskill|denizensoffear",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Amygdalans"
+      }
+    ],
+    "Name": "Denizens of Fear"
+  },
+  {
+    "Key": "slayerskill|eyeseewhatyoudidthere",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Evil Eyes"
+      }
+    ],
+    "Name": "Eye See What You Did There!"
+  },
+  {
+    "Key": "slayerskill|cubic",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Gelatinous Cubes"
+      }
+    ],
+    "Name": "Cubic"
+  },
+  {
+    "Key": "slayerskill|gnometestedsteamworkapproved",
+    "Category": "Slayer: Skill",
+    "Requirements": [
+      {
+        "Text": "Clockwork: Beetles, Boars, Dragons, Rats, Snakes, Spiders, Gnomeworks, Copters, and Tin Soldiers."
+      }
+    ],
+    "Name": "Gnome Tested, Steamwork Approved!"
+  }
+]

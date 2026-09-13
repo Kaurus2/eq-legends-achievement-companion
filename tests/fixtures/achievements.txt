@@ -1,0 +1,229 @@
+Slayer: Skill
+I	Oh the Humanity!
+I		Humans	0/100
+Slayer: Skill
+I	Barbarous
+I		Barbarians	0/100
+Slayer: Skill
+I	Hardly Erudite of You
+I		Erudites	0/100
+Slayer: Skill
+I	Wood You Could You?
+I		Wood Elves	0/100
+Slayer: Skill
+I	Highly Uncivilized
+I		High Elves	0/100
+Slayer: Skill
+I	Love Will Teir Them Apart
+I		Dark Elves	0/100
+Slayer: Skill
+I	Now .49999%
+I		Half Elves	0/100
+Slayer: Skill
+I	Axe Me No Questions
+I		Dwarves	0/100
+Slayer: Skill
+I	Fuzzyfeet
+I		Halflings	0/100
+Slayer: Skill
+I	A Clockwork Gnome
+I		Gnomes	0/100
+Slayer: Skill
+I	Here's Yer Grozmok
+I		Trolls	0/100
+Slayer: Skill
+I	Get Stupid
+I		Ogres	0/100
+Slayer: Skill
+I	Icky!
+I		Iksars	0/100
+Slayer: Skill
+I	It's a Frog Eat Frog World
+I		Frogloks and Tadpoles.	0/100
+Slayer: Skill
+I	Not a Kerran the World!
+I		Kerrans	0/100
+Slayer: Skill
+I	Bat Country!
+I		Bats and Werebats.	0/100
+Slayer: Skill
+I	Rat Killer
+I		Rats and Molerats.	0/100
+Slayer: Skill
+I	Armadilloed and Dangerous
+I		Armadillos	0/100
+Slayer: Skill
+I	It Stinks!
+I		Skunks	0/100
+Slayer: Skill
+I	You Dirty Ratman!
+I		Ratmen	0/100
+Slayer: Skill
+I	Beetlemania
+I		Beetles, Insects, Lightcrawlers, Shik'Nars, and Underbulks.	0/100
+Slayer: Skill
+I	Leechy Keen
+I		Leeches, Ticks, and Vacuum Worms.	0/100
+Slayer: Skill
+I	Shoo fly!
+I		Butterflies, Flies, Malarians, Mosquitoes, Tsetsians, and Wasps.	0/100
+Slayer: Skill
+I	Get the Broom!
+I		Scorpions and Spiders.	0/100
+Slayer: Skill
+I	Snake in the Grass
+I		Snakes	0/100
+Slayer: Skill
+I	A Bone to Pick With You
+I		Skeletons	0/100
+Slayer: Skill
+I	Stake Dinner
+I		Vampires	0/100
+Slayer: Skill
+I	Hide Your Brains!
+I		Hags, Ghouls, and Zombies.	0/100
+Slayer: Skill
+I	Mummy Dearest
+I		Mummies	0/100
+Slayer: Skill
+I	Ghoul On the Hill
+I		Ghouls	0/100
+Slayer: Skill
+I	Round of Applause
+I		Animated Hands	0/100
+Slayer: Skill
+I	Ghosts of Frostfell Past
+I		Banshees, Ghosts, Spectres, Spirits, and Wisps.	0/100
+Slayer: Skill
+I	New Tricks
+I		Chokidais, Drolvargs, Hynids, Rotdogs, Scaled Wolves, Sonic Wolves, Werewolves, Wolves, and Worgs.	0/100
+Slayer: Skill
+I	Got Your Tongue?
+I		Cats, Lions, Pumas, Sabertooths, Scarlet Cheetahs, Tigers, Topiary Lions, and Wrulons.	0/100
+Slayer: Skill
+I	Featherbrained Plan
+I		Aviaks, Blood Ravens, Cockatrices, Hawks, and Parrots.	0/100
+Slayer: Skill
+I	Better Get a Barrel
+I		Gorillas, Holgresh, and Yetis.	0/100
+Slayer: Skill
+I	Bear With Me
+I		Bears, Kodiaks, Owlbears, and Pandas.	0/100
+Slayer: Skill
+I	The Elephant in the Room
+I		Elephants and Mammoths.	0/100
+Slayer: Skill
+I	These Boots Were Made For...
+I		Alligators, Basilisks, and Crocodiles.	0/100
+Slayer: Skill
+I	Plenty of Fish In the Sea
+I		Fishes, Piranhas, Seahorses, Sharks, Swordfishes, and Wetfang Minnows.	0/100
+Slayer: Skill
+I	Orc Weapons, Your Blood Will Spill!
+I		Orcs and Wereorcs.	0/100
+Slayer: Skill
+I	New Frontiers
+I		Goblins and Nightmare Goblins.	0/100
+Slayer: Skill
+I	The More You Gnoll!
+I		Gnolls	0/100
+Slayer: Skill
+I	World Warrens Three
+I		Kobolds	0/100
+Slayer: Skill
+I	Alliz Tae Ew
+I		Lizard Men	0/100
+Slayer: Skill
+I	Re-Extinction
+I		Kedge	0/100
+Slayer: Skill
+I	Aquatic Allure
+I		Nagas, Mermaids, Nymphs, and Sirens.	0/100
+Slayer: Skill
+I	I Said Argyle!
+I		Gargoyles	0/100
+Slayer: Skill
+I	You're Not Scaring Anyone
+I		Scarecrows and Totems.	0/100
+Slayer: Skill
+I	Lumberer
+I		Treants	0/100
+Slayer: Skill
+I	Mushroom Hunting
+I		Sporalis	0/100
+Slayer: Skill
+I	Stop Dragon This Out
+I		Dracoliches, Water Dragons, and Witherans.	0/100
+Slayer: Skill
+I	You Keep Dragon Me Into This
+I		Drakes, Drixies, and Fay Drakes.	0/100
+Slayer: Skill
+I	A Small Giant Problem
+I		Giants	0/100
+Slayer: Skill
+I	Fairicide
+I		Dryads, Fairies, and Pixies.	0/100
+Slayer: Skill
+I	For the Hive!
+I		Bixies	0/100
+Slayer: Skill
+I	Jumjummery
+I		Brownies	0/100
+Slayer: Skill
+I	Self Centaured
+I		Centaurs	0/100
+Slayer: Skill
+I	Amazing!
+I		Minotaurs and Tizmak.	0/100
+Slayer: Skill
+I	No Vacancy
+I		Griffons, Griffennes, and Griffins.	0/100
+Slayer: Skill
+I	Puzzling
+I		Sphinxes	0/100
+Slayer: Skill
+I	My Golden Boots
+I		Djinns and Efreetis.	0/100
+Slayer: Skill
+I	Imp-atient
+I		Imps and Mephits.	0/100
+Slayer: Skill
+I	Elementary
+I		Elementals	0/100
+Slayer: Skill
+I	Spin Me Right Round
+I		Dervishes	0/100
+Slayer: Skill
+I	Terrorible Tentacles
+I		Tentacle Terrors	0/100
+Slayer: Skill
+I	Denizens of Fear
+I		Amygdalans	0/100
+Slayer: Skill
+I	Eye See What You Did There!
+I		Evil Eyes	0/100
+Slayer: Skill
+I	Cubic
+I		Gelatinous Cubes	0/100
+Slayer: Skill
+I	Gnome Tested, Steamwork Approved!
+I		Clockwork: Beetles, Boars, Dragons, Rats, Snakes, Spiders, Gnomeworks, Copters, and Tin Soldiers.	0/100
+
+
+EverQuest: Progression
+I	Dark Ones
+I		Raise faction	0/100
+I	Knights of Thunder
+I		Raise faction	0/100
+Untapped Potential: Races
+I	Race Unlock - Iksar
+I		Get maximum faction with New Sebilisian Expedition.
+I	Race Unlock - Half Elf
+I		This achievement will autocomplete when you unlock Human or Wood Elf as a race.
+
+
+
+EverQuest: Progression
+I	New Sebilis Expedition
+I		New Sebilisian Expedition
+

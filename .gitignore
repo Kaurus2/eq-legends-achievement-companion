@@ -1,0 +1,13 @@
+# Local player data and generated output
+/data/settings.json
+/data/last-valid-export.txt
+/data/backups/
+*.log
+/test-output/
+/test-results.txt
+/error.log
+/preview.png
+/RESEARCH-AUDIT.md
+*.exe
+*.zip
+*.tmp
