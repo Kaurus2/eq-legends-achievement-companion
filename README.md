@@ -48,3 +48,6 @@ Live estimates do not replace the manually generated achievement export counters
 Release ZIPs contain the executable, shared data and user documentation only.
 Source remains in this repository; binaries are distributed as release assets.
 No license has been selected; this private repository does not grant public reuse.
+
+## Focus-aware transparency
+The tracker is fully visible while focused. Switching to the game applies your saved 15-100% opacity. Live progress may brighten it temporarily; it remains fully visible while you use it.

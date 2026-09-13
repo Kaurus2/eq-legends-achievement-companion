@@ -25,7 +25,8 @@ Current tile-tracker edition
    Right-click a tile to copy its achievement summary.
 
 6. Transparency is in Configuration: enable it and choose 15-100% opacity.
-   15% keeps the tracker faintly visible; 100% is fully visible. Progress can
+   While using the app it stays fully visible. Switching away applies your chosen opacity.
+   15% is faintly visible; 100% is fully visible. Progress can
    briefly restore full opacity before returning to your chosen setting.
 
 7. Sound / popup options offers position, volume and test buttons. Popups
@@ -49,3 +50,4 @@ Current tile-tracker edition
     than your used folder. Do not overwrite your research.json during upgrades.
 
 Windows with .NET Framework 4.x WPF support is required.
+
