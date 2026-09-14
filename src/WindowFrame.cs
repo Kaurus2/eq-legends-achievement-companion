@@ -21,7 +21,19 @@ public partial class MainWindow {
   Action<string,string,Action> add=(caption,tip,action)=>{var b=new Button{Content=caption,ToolTip=tip,Width=34,Height=28,Margin=new Thickness(0,2,2,2),Padding=new Thickness(0)};WindowChrome.SetIsHitTestVisibleInChrome(b,true);b.Click+=(s,e)=>action();buttons.Children.Add(b);};
   add("−","Minimize",()=>WindowState=WindowState.Minimized);add("□","Maximize / restore",()=>WindowState=WindowState==WindowState.Maximized?WindowState.Normal:WindowState.Maximized);add("×","Close",()=>Close());
   var oldParent=characterPicker.Parent as Panel;if(oldParent!=null)oldParent.Children.Remove(characterPicker);
-  characterPicker.MinWidth=60;characterPicker.Margin=new Thickness(8,2,4,2);WindowChrome.SetIsHitTestVisibleInChrome(characterPicker,true);bar.Children.Add(characterPicker);
+    characterPicker.MinWidth=100;characterPicker.MaxWidth=180;characterPicker.Width=180;characterPicker.HorizontalAlignment=HorizontalAlignment.Left;
+  characterPicker.Margin=new Thickness(4,2,8,2);WindowChrome.SetIsHitTestVisibleInChrome(characterPicker,true);
+  var captionArea=new DockPanel{Background=Brushes.Transparent};
+  var appName=new TextBlock{Text="EQ Legends Achievement Companion",Foreground=Palette.Gold,FontWeight=FontWeights.SemiBold,FontSize=12,Margin=new Thickness(10,0,8,0),VerticalAlignment=VerticalAlignment.Center,TextTrimming=TextTrimming.CharacterEllipsis,ToolTip="EQ Legends Achievement Companion — drag here to move"};
+  captionArea.Children.Add(appName);bar.Children.Add(captionArea);
+  bool? compactHeader=null;
+  Action arrangeHeader=()=>{
+   bool compact=Width<700;if(compactHeader==compact)return;compactHeader=compact;
+   var parent=characterPicker.Parent as Panel;if(parent!=null)parent.Children.Remove(characterPicker);
+   if(compact){trackerToolbar.Children.Insert(0,characterPicker);appName.Text="EQ Legends";}
+   else{DockPanel.SetDock(characterPicker,Dock.Right);captionArea.Children.Insert(0,characterPicker);appName.Text="EQ Legends Achievement Companion";}
+  };
+  SizeChanged+=(s,e)=>arrangeHeader();arrangeHeader();
   var opacityRow=new StackPanel{Orientation=Orientation.Horizontal,Margin=new Thickness(0,0,8,3)};
   opacityRow.Children.Add(new TextBlock{Text="Opacity",VerticalAlignment=VerticalAlignment.Center,Margin=new Thickness(0,0,4,0)});
   frameOpacitySlider.Width=72;frameOpacitySlider.VerticalAlignment=VerticalAlignment.Center;opacityRow.Children.Add(frameOpacitySlider);opacityRow.Children.Add(opacityPercent);trackerToolbar.Children.Insert(0,opacityRow);
