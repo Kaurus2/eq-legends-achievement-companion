@@ -27,6 +27,29 @@ public class ProgressToast:Window {
  var area=SystemParameters.WorkArea;Width=Math.Min(560,area.Width-24);Height=94;string corner=options.Corner??"Top center";Left=corner=="Top center"?area.Left+(area.Width-Width)/2:corner.Contains("left")?area.Left+12:area.Right-Width-12;Top=corner.Contains("Bottom")?area.Bottom-Height-12:Math.Max(area.Top,SystemParameters.PrimaryScreenHeight*.05);Show();hide.Start();sparks.Children.Clear();if(n.Complete&&options.Celebrations&&SystemParameters.ClientAreaAnimation)Fireworks();Play(options.Volume,n.Complete&&options.Celebrations);}
  void Fireworks(){for(int k=0;k<16;k++){double angle=k*Math.PI/8;var dot=new Ellipse{Width=3,Height=3,Fill=k%2==0?Brushes.Gold:Brushes.DarkOrange};Canvas.SetLeft(dot,Width-45);Canvas.SetTop(dot,40);var t=new TranslateTransform();dot.RenderTransform=t;sparks.Children.Add(dot);t.BeginAnimation(TranslateTransform.XProperty,new DoubleAnimation(0,Math.Cos(angle)*35,TimeSpan.FromMilliseconds(850)));t.BeginAnimation(TranslateTransform.YProperty,new DoubleAnimation(0,Math.Sin(angle)*32,TimeSpan.FromMilliseconds(850)));dot.BeginAnimation(UIElement.OpacityProperty,new DoubleAnimation(1,0,TimeSpan.FromMilliseconds(850)));}}
  static void Play(int volume,bool fanfare){if(volume<=0)return;if(Interlocked.CompareExchange(ref playing,1,0)!=0)return;ThreadPool.QueueUserWorkItem(_=>{try{string key=volume+"|"+fanfare;byte[] bytes;if(!sounds.TryGetValue(key,out bytes)){bytes=MakeSound(volume,fanfare);sounds[key]=bytes;}using(var stream=new MemoryStream(bytes))using(var player=new System.Media.SoundPlayer(stream)){player.Load();player.PlaySync();}}catch{}finally{Interlocked.Exchange(ref playing,0);}});}
- static byte[] MakeSound(int volume,bool fanfare){int rate=22050;double duration=fanfare?1.35:.3;int n=(int)(rate*duration);using(var stream=new MemoryStream()){var w=new BinaryWriter(stream);w.Write(Encoding.ASCII.GetBytes("RIFF"));w.Write(36+n*2);w.Write(Encoding.ASCII.GetBytes("WAVEfmt "));w.Write(16);w.Write((short)1);w.Write((short)1);w.Write(rate);w.Write(rate*2);w.Write((short)2);w.Write((short)16);w.Write(Encoding.ASCII.GetBytes("data"));w.Write(n*2);double[] melody={523.25,659.25,783.99,1046.5,783.99,1046.5};for(int i=0;i<n;i++){double t=(double)i/rate;double local=fanfare?t%.225:t;double freq=fanfare?melody[Math.Min(5,(int)(t/.225))]:1046.5;double envelope=Math.Min(1,local/.008)*Math.Exp(-local*12);double sample=Math.Sin(t*2*Math.PI*freq)+.22*Math.Sin(t*4*Math.PI*freq);w.Write((short)(sample*envelope*10000*Math.Max(0,Math.Min(100,volume))/100));}return stream.ToArray();}}
+ static byte[] MakeSound(int volume,bool fanfare){
+  int rate=22050;double duration=fanfare?2.8:.3;int n=(int)(rate*duration);
+  // Original celebratory phrase: brisk brass-like lead, bass, and a sustained major chord.
+  double[] notes={392,523.25,659.25,783.99,587.33,698.46,880,1046.5,987.77,783.99,659.25,1046.5};
+  double[] lengths={.12,.12,.18,.30,.12,.12,.18,.30,.12,.12,.24,.88};
+  using(var stream=new MemoryStream()){var w=new BinaryWriter(stream);w.Write(Encoding.ASCII.GetBytes("RIFF"));w.Write(36+n*2);w.Write(Encoding.ASCII.GetBytes("WAVEfmt "));w.Write(16);w.Write((short)1);w.Write((short)1);w.Write(rate);w.Write(rate*2);w.Write((short)2);w.Write((short)16);w.Write(Encoding.ASCII.GetBytes("data"));w.Write(n*2);
+   int note=0;double onset=0;for(int i=0;i<n;i++){
+    double t=(double)i/rate,sample;
+    if(!fanfare)sample=(Math.Sin(t*2*Math.PI*1046.5)+.22*Math.Sin(t*4*Math.PI*1046.5))*Math.Min(1,t/.008)*Math.Exp(-t*12)*.30;
+    else{
+     while(note<notes.Length-1&&t>=onset+lengths[note]){onset+=lengths[note];note++;}
+     double local=t-onset,len=lengths[note],freq=notes[note];
+     double env=Math.Min(1,local/.012)*Math.Min(1,Math.Max(0,(len-local)/.07));
+     double phase=2*Math.PI*freq*local;
+     double lead=(Math.Sin(phase)+.30*Math.Sin(phase*2)+.12*Math.Sin(phase*3))*.26*env;
+     double chord=(Math.Sin(t*2*Math.PI*261.63)+Math.Sin(t*2*Math.PI*329.63)+Math.Sin(t*2*Math.PI*392))*.065;
+     double beat=t%.3;double bass=Math.Sin(t*2*Math.PI*(t<1.5?130.81:196))*.13*Math.Exp(-beat*9);
+     double tail=Math.Min(1,t/.018)*Math.Min(1,Math.Max(0,(duration-t)/.30));
+     sample=(lead+chord+bass)*tail;
+    }
+    w.Write((short)(Math.Max(-.95,Math.Min(.95,sample))*32767*Math.Max(0,Math.Min(100,volume))/100));
+   }return stream.ToArray();
+  }
+ }
 }
 }

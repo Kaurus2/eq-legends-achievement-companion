@@ -5,7 +5,7 @@ Private source repository for the Classic Windows desktop Companion.
 ## For guildmates
 Download the ZIP from **Releases**, extract the whole folder, and run the executable.
 Start with `docs/START HERE - Quick Guide.txt` or the illustrated PDF in `docs`.
-Select your own achievement export and optional combat log in Configuration.
+Choose your game folder in Configuration, then select a discovered character profile. Manual paths are available under Advanced file settings. The current quick guide covers the redesigned controls; the illustrated PDF shows an earlier layout.
 Access to this private repository is required to download its releases.
 
 ## Features
@@ -51,3 +51,12 @@ No license has been selected; this private repository does not grant public reus
 
 ## Focus-aware transparency
 The tracker is fully visible while focused. Switching to the game applies your saved 15-100% opacity. Live progress may brighten it temporarily; it remains fully visible while you use it.
+
+## September 13 update
+- Character profiles pair exports and combat logs, with separate snapshots and personal notes.
+- Blue-and-gold light/dark themes, a compact profile header, Pin, and remembered window placement.
+- Slim transparent-track scrollbars and live opacity preview; release to save the unfocused opacity.
+- Compact connected-file status, with manual paths under Advanced file settings.
+- Responsive progress overview and click-again tile deselection.
+- Bixie drone, minotaur slaver/guard/lord/hero, and rock dervish kill matching, plus counter-text parsing fix.
+- Original retro-RPG completion fanfare. Live updates and popups remain independent.

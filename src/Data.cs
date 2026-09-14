@@ -30,7 +30,7 @@ public class Research {
  public Research(){Farms=new List<Farm>();Risk="Unknown";Tier="Automatic";Era="Unknown";Class=Race=Notes=PersonalNotes=Sources=Bottleneck="";Difficulty=3;Travel=3;}
 }
 public class ResearchFile {public int Version {get;set;} public List<Research> Items {get;set;} public List<string> AppliedUpdates {get;set;} public ResearchFile(){Version=1;Items=new List<Research>();AppliedUpdates=new List<string>();}}
-public class Settings {public bool TransparencyEnabled {get;set;} public double TrackerOpacity {get;set;} public bool TileLayoutInitialized {get;set;} public bool RecentFirst {get;set;} public LiveOptions Live {get;set;} public string SourcePath {get;set;} public bool FiltersHidden {get;set;} public bool TableOnly {get;set;} public Settings(){SourcePath="";TrackerOpacity=.75;}}
+public class Settings {public bool DarkMode {get;set;} public string GameFolder {get;set;} public string ActiveProfile {get;set;} public List<CharacterProfile> Profiles {get;set;} public bool WindowPlacementSaved {get;set;} public double WindowLeft {get;set;} public double WindowTop {get;set;} public double WindowWidth {get;set;} public double WindowHeight {get;set;} public bool WindowMaximized {get;set;} public bool AlwaysOnTop {get;set;} public bool TransparencyEnabled {get;set;} public double TrackerOpacity {get;set;} public bool TileLayoutInitialized {get;set;} public bool RecentFirst {get;set;} public LiveOptions Live {get;set;} public string SourcePath {get;set;} public bool FiltersHidden {get;set;} public bool TableOnly {get;set;} public Settings(){SourcePath="";TrackerOpacity=.75;}}
 public class Row {
  public Achievement A; public Research R; public bool Required {get;set;} public bool Optional {get;set;} public double Score {get;set;}
  public string Achievement {get{return A.Name;}} public string Category {get{return A.Category;}}
@@ -111,6 +111,3 @@ public static class Data {
  public static void Atomic(string path,string content){Directory.CreateDirectory(Path.GetDirectoryName(path));string tmp=path+".tmp";File.WriteAllText(tmp,content,new UTF8Encoding(false));if(File.Exists(path)){var backup=Path.Combine(Path.GetDirectoryName(path),"backups");Directory.CreateDirectory(backup);File.Replace(tmp,path,Path.Combine(backup,Path.GetFileName(path)+"."+DateTime.Now.ToString("yyyyMMdd-HHmmss-fff")+".bak"));}else File.Move(tmp,path);}
 }
 }
-
-
-

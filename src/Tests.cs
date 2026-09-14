@@ -5,6 +5,13 @@ using System.Collections.Generic;
 namespace LegendsCompanion {
 public static class Tests {
  static void LiveTests(){LiveMonitor.CheckPopupIndependence();
+  var families=Data.Parse("Slayer: Skill\nI\tFor the Hive!\nI\t\tBixies\t52/100\nI\tAmazing!\nI\t\tMinotaurs and Tizmak.\t18/100\nI\tSpin Me Right Round\nI\t\tDervishes\t42/100\n");
+  var familyEngine=new KillProgress();
+  foreach(string mob in new[]{"a bixie","a bixie drone","a minotaur slaver","Minotaur Guard","Minotaur Lord","a rock dervish"}){
+   var notice=familyEngine.Process("[Sun Sep 13 19:13:23 2026] You have slain "+mob+"!",families,new List<MobMatch>());
+   Assert(notice.Count==1,"observed creature variant matched: "+mob);
+   Assert(notice[0].Name==(mob.ToLowerInvariant().Contains("bixie")?"For the Hive!":mob.Contains("dervish")?"Spin Me Right Round":"Amazing!"),"correct achievement for "+mob);
+  }
   var all=Data.Parse("Slayer: Skill\nI\tBones\nI\t\tSkeletons.\t9/100\nI\tPeople\nI\t\tHumans.\t2/100\n");var engine=new KillProgress();var maps=new List<MobMatch>();
   Assert(engine.Process("[Sat Sep 12 12:00:00 2026] You have slain a skeleton!",all,maps).Count==1,"own exact mob kill matched");
   Assert(all[0].Requirements[0].Current==9,"live estimates never modify export counters");
@@ -55,9 +62,3 @@ public static class Tests {
  }
 }
 }
-
-
-
-
-
-

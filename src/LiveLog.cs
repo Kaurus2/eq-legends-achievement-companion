@@ -41,11 +41,14 @@ public class KillProgress {
  public static string Message(string line){if(line.StartsWith("[",StringComparison.Ordinal)){int i=line.IndexOf("] ",StringComparison.Ordinal);if(i>=0)return line.Substring(i+2);}return line;}
  public static string Kill(string line){string s=Message(line);return s.StartsWith("You have slain ",StringComparison.Ordinal)&&s.EndsWith("!",StringComparison.Ordinal)?s.Substring(15,s.Length-16):"";}
  static string MobKey(string value){return Regex.Replace((value??"").Trim().ToLowerInvariant(),@"^(a|an|the)\s+","");}
- // Exact type names only: no substring guesses from camp notes or ambiguous bandit names.
+ // Explicit observed variants map to creature families; ambiguous bandit races remain excluded.
  static bool Family(string mob,string requirement){string singular=MobKey(mob);if(singular=="bandit"||singular=="brigand")return false;
- string plural=singular.EndsWith("y")?singular.Substring(0,singular.Length-1)+"ies":singular+"s";
+ if(singular=="bixie drone")singular="bixie";
+ if(singular=="minotaur slaver"||singular=="minotaur guard"||singular=="minotaur lord"||singular=="minotaur hero")singular="minotaur";
+ if(singular=="rock dervish")singular="dervish";
+ string plural=singular=="dervish"?"dervishes":singular.EndsWith("y")?singular.Substring(0,singular.Length-1)+"ies":singular+"s";
  if(singular=="tentacle tormentor")plural="tentacle terrors"; if(singular=="fae drake")plural="fay drakes";
- return Regex.Split(requirement.ToLowerInvariant(),@",|\band\b|\.").Any(t=>t.Trim()==plural||t.Trim()==singular);
+ return Regex.Split(requirement.Split('\t')[0].ToLowerInvariant(),@",|\band\b|\.").Any(t=>t.Trim()==plural||t.Trim()==singular);
  }
  public List<LiveNotice> Process(string line,List<Achievement> all,List<MobMatch> matches){var result=new List<LiveNotice>();string msg=Message(line);const string prefix="You have completed achievement: ";if(msg.StartsWith(prefix,StringComparison.Ordinal)){string name=msg.Substring(prefix.Length).Trim();if(name.Length>0&&completed.Add(Data.Normalize(name)))result.Add(new LiveNotice{Name=name,Detail="Confirmed by the game log · Refresh your achievement export to update the table",Complete=true});return result;}
  string mob=Kill(line);if(mob=="")return result;
@@ -85,12 +88,3 @@ public class LiveMonitor:IDisposable {public event Action<List<LiveNotice>> Noti
  label("The overlay stays above other windows and lets clicks pass through. Use windowed or borderless game mode. Monitoring begins at the end of the log, so old kills are not replayed. Restarting monitoring clears session estimates.");var buttons=new WrapPanel();p.Children.Add(buttons);var test=new Button{Content="Test popup + bing",Padding=new Thickness(12,6,12,6),Margin=new Thickness(0,8,8,0)};test.Click+=(s,e)=>Test(new LiveOptions{Corner=(string)corner.SelectedItem??"Top center",Volume=(int)volume.Value});buttons.Children.Add(test);var completionTest=new Button{Content="Test completion",Padding=new Thickness(12,6,12,6),Margin=new Thickness(0,8,8,0)};completionTest.Click+=(s,e)=>TestCompletion(new LiveOptions{Corner=(string)corner.SelectedItem??"Top center",Volume=(int)volume.Value,Celebrations=celebrate.IsChecked==true});buttons.Children.Add(completionTest);var apply=new Button{Content="Save settings",Padding=new Thickness(12,6,12,6),Margin=new Thickness(0,8,8,0)};apply.Click+=(s,e)=>{grid.CommitEdit(DataGridEditingUnit.Cell,true);grid.CommitEdit(DataGridEditingUnit.Row,true);var valid=items.Where(m=>!String.IsNullOrWhiteSpace(m.Mob)||!String.IsNullOrWhiteSpace(m.Achievement)).ToList();if(valid.Any(m=>String.IsNullOrWhiteSpace(m.Mob)||!achievements().Any(a=>a.Category.StartsWith("Slayer:")&&String.Equals(a.Name,m.Achievement.Trim(),StringComparison.OrdinalIgnoreCase)))){MessageBox.Show(w,"Each match needs a mob name and an exact Slayer achievement name from your loaded export.");return;}options.PopupsEnabled=popups.IsChecked==true;options.Celebrations=celebrate.IsChecked==true;options.Enabled=enabled.IsChecked==true;options.Path=path.Text.Trim();options.Volume=(int)volume.Value;options.Corner=(string)corner.SelectedItem??"Top center";options.Matches=valid.Select(m=>new MobMatch{Mob=m.Mob.Trim(),Achievement=m.Achievement.Trim()}).ToList();save();ApplySettings();w.Close();};buttons.Children.Add(apply);w.ShowDialog();}
 }
 }
-
-
-
-
-
-
-
-
-
