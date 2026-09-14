@@ -48,3 +48,10 @@ public partial class MainWindow {
  void PulseTile(Border tile){if(!SystemParameters.ClientAreaAnimation)return;var brush=new SolidColorBrush(Colors.Goldenrod);tile.BorderBrush=brush;brush.BeginAnimation(SolidColorBrush.ColorProperty,new ColorAnimation(Colors.Goldenrod,Colors.LightYellow,TimeSpan.FromMilliseconds(650)){AutoReverse=true,RepeatBehavior=new RepeatBehavior(2)});}
 }
 }
+
+
+
+
+
+
+

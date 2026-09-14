@@ -70,3 +70,8 @@ The ZIP remains available for first-time users.
 
 Also includes pet kill estimates learned from the pet's attack acknowledgment, brownie/kobold/clockwork variants,
 requirements-aware mob search, stable refresh ordering, compact filters, and a themed More menu.
+## v2026.09.14.2
+Bottom-left version/check status, installed-version patch notes, automatic checks at startup/every six hours,
+and a gold Start update button. Installation remains manual. The oversized Settings update button is removed.
+Includes the grouped expandable summary, Focus totals, search placeholder, Zone optimized Results,
+expanded Settings with a bottom shadow, muted opacity slider, and new clockwork gear.

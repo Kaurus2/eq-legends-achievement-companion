@@ -111,3 +111,7 @@ public static class Data {
  public static void Atomic(string path,string content){Directory.CreateDirectory(Path.GetDirectoryName(path));string tmp=path+".tmp";File.WriteAllText(tmp,content,new UTF8Encoding(false));if(File.Exists(path)){var backup=Path.Combine(Path.GetDirectoryName(path),"backups");Directory.CreateDirectory(backup);File.Replace(tmp,path,Path.Combine(backup,Path.GetFileName(path)+"."+DateTime.Now.ToString("yyyyMMdd-HHmmss-fff")+".bak"));}else File.Move(tmp,path);}
 }
 }
+
+
+
+

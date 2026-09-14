@@ -91,3 +91,12 @@ public class LiveMonitor:IDisposable {public event Action<List<LiveNotice>> Noti
  label("The overlay stays above other windows and lets clicks pass through. Use windowed or borderless game mode. Monitoring begins at the end of the log, so old kills are not replayed. Restarting monitoring clears session estimates.");var buttons=new WrapPanel();p.Children.Add(buttons);var test=new Button{Content="Test popup + bing",Padding=new Thickness(12,6,12,6),Margin=new Thickness(0,8,8,0)};test.Click+=(s,e)=>Test(new LiveOptions{Corner=(string)corner.SelectedItem??"Top center",Volume=(int)volume.Value});buttons.Children.Add(test);var completionTest=new Button{Content="Test completion",Padding=new Thickness(12,6,12,6),Margin=new Thickness(0,8,8,0)};completionTest.Click+=(s,e)=>TestCompletion(new LiveOptions{Corner=(string)corner.SelectedItem??"Top center",Volume=(int)volume.Value,Celebrations=celebrate.IsChecked==true});buttons.Children.Add(completionTest);var apply=new Button{Content="Save settings",Padding=new Thickness(12,6,12,6),Margin=new Thickness(0,8,8,0)};apply.Click+=(s,e)=>{grid.CommitEdit(DataGridEditingUnit.Cell,true);grid.CommitEdit(DataGridEditingUnit.Row,true);var valid=items.Where(m=>!String.IsNullOrWhiteSpace(m.Mob)||!String.IsNullOrWhiteSpace(m.Achievement)).ToList();if(valid.Any(m=>String.IsNullOrWhiteSpace(m.Mob)||!achievements().Any(a=>a.Category.StartsWith("Slayer:")&&String.Equals(a.Name,m.Achievement.Trim(),StringComparison.OrdinalIgnoreCase)))){MessageBox.Show(w,"Each match needs a mob name and an exact Slayer achievement name from your loaded export.");return;}options.PopupsEnabled=popups.IsChecked==true;options.Celebrations=celebrate.IsChecked==true;options.Enabled=enabled.IsChecked==true;options.Path=path.Text.Trim();options.Volume=(int)volume.Value;options.Corner=(string)corner.SelectedItem??"Top center";options.Matches=valid.Select(m=>new MobMatch{Mob=m.Mob.Trim(),Achievement=m.Achievement.Trim()}).ToList();save();ApplySettings();w.Close();};buttons.Children.Add(apply);w.ShowDialog();}
 }
 }
+
+
+
+
+
+
+
+
+

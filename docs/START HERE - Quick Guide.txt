@@ -20,7 +20,7 @@ Updated September 14, 2026
 UPGRADING
 Close the app, replace only the executable in your existing folder, then reopen it.
 Keep your existing data folder: it contains settings, character profiles, research, and notes.
-To update: More > Check for updates (also in Configuration), then Update & restart. Nothing checks or installs automatically. The app downloads and verifies the executable, closes, replaces it, and reopens. Your data stays in place; the previous executable is saved as .previous. This is an achievement companion, with no DPS meter.
+To update: click the version status in the bottom-left corner, then Start update. Update checks run at startup and every six hours. Installation only begins when you choose Start update. The app downloads and verifies the executable, closes, replaces it, and reopens. Your data stays in place; the previous executable is saved as .previous. This is an achievement companion, with no DPS meter.
 
 The illustrated PDF documents an earlier layout; use this quick guide for the current controls.
 
@@ -30,3 +30,14 @@ Issue a pet attack command after starting the Companion. A new pet response repl
 Other players' finishing blows are excluded. Keep chat/log filters enabled for pet responses.
 Search checks achievement requirements and all candidate mobs, not just the selected farming option.
 Refreshes keep recent ordering; only achievements gaining progress are promoted when Recent progress first is on.
+BOTTOM-LEFT UPDATE STATUS
+The footer shows the installed version and time since the last check.
+Click it to check again; the information button opens patch notes for the installed version.
+A gold Start update button appears when a newer version is available.
+If checking fails, the footer offers Retry. Downloads and installation always need your click.
+
+COMPACT LAYOUT
+The Focus progress line stays visible. Expand Achievement summary for the detailed text and grouped bars.
+Zone optimized Results is above the search field. Search includes achievement requirements and candidate mobs.
+Recent progress first is inside Settings. Settings opens to its content height and can push achievements below view.
+The muted opacity slider is in the title bar when space permits, and moves below it in compact windows.

@@ -10,9 +10,9 @@ using System.Windows;
 using System.Windows.Controls;
 namespace LegendsCompanion {
 public class ReleaseAsset {public string name {get;set;} public string browser_download_url {get;set;} public string digest {get;set;} public long size {get;set;}}
-public class ReleaseInfo {public string tag_name {get;set;} public bool draft {get;set;} public bool prerelease {get;set;} public List<ReleaseAsset> assets {get;set;}}
+public class ReleaseInfo {public string body {get;set;} public string tag_name {get;set;} public bool draft {get;set;} public bool prerelease {get;set;} public List<ReleaseAsset> assets {get;set;}}
 public static class CompanionUpdater {
- public const string Version="2026.09.14.1";
+ public const string Version="2026.09.14.2";
  const string Repo="https://api.github.com/repos/Kaurus2/eq-legends-achievement-companion/releases/latest";
  public const string AssetName="EQ-Legends-Achievement-Companion.exe";
  static WebClient Client(){ServicePointManager.SecurityProtocol|=SecurityProtocolType.Tls12;var c=new WebClient();c.Headers["User-Agent"]="EQ-Legends-Achievement-Companion/"+Version;return c;}
@@ -45,14 +45,42 @@ public static class CompanionUpdater {
 }
 public partial class MainWindow {
  bool checkingUpdate,installingUpdate;ReleaseInfo availableRelease;Button updateButton;
+ Button versionStatus;System.Windows.Threading.DispatcherTimer updateTimer;DateTime checkedAt;bool lastCheckFailed;
  void BuildUpdater(){
-  updateButton=new Button{Content="Update available",Visibility=Visibility.Collapsed,Padding=new Thickness(7,4,7,4),Margin=new Thickness(0,0,4,4)};trackerToolbar.Children.Add(updateButton);updateButton.Click+=async(s,e)=>await InstallUpdate();
-  configContent.Children.Add(Button("Check for updates",()=>{var check=CheckUpdates(true);}));
+  var root=(Panel)status.Parent;root.Children.Remove(status);
+  var footer=new WrapPanel{Margin=new Thickness(0,3,0,0)};DockPanel.SetDock(footer,Dock.Bottom);root.Children.Insert(0,footer);
+  footer.SetBinding(ToolTipProperty,new System.Windows.Data.Binding("Text"){Source=status});
+  versionStatus=new Button{Padding=new Thickness(5,3,5,3),BorderThickness=new Thickness(0),Background=System.Windows.Media.Brushes.Transparent,Foreground=Palette.Muted};
+  versionStatus.Click+=async(s,e)=>await CheckUpdates(true);footer.Children.Add(versionStatus);
+  var info=new Button{Content="ⓘ",ToolTip="Patch notes",Width=26,Padding=new Thickness(2),BorderThickness=new Thickness(0),Background=System.Windows.Media.Brushes.Transparent};
+  info.Click+=(s,e)=>ShowText("Patch notes — v"+CompanionUpdater.Version,
+   "v"+CompanionUpdater.Version+@"
+
+• Compact bottom-left version status with background checks and patch notes.
+• Gold Start update button appears when a newer release is found; installation stays manual.
+• Focus progress stays above the collapsed summary; both bars are grouped beside the expanded text.
+• Zone optimized Results and search placeholder; Recent progress first moved into Settings.
+• Settings expands with a clear boundary and bottom shadow.
+• Muted title-bar opacity slider and new clockwork gear.
+
+Previous release: pet tracking, mob search, stable export refresh, and verified updates.");
+  footer.Children.Add(info);
+  updateButton=new Button{Content="Start update",Visibility=Visibility.Collapsed,Padding=new Thickness(8,3,8,3),Margin=new Thickness(5,0,0,0),Background=Palette.Highlight,Foreground=Palette.Gold,BorderBrush=Palette.Gold};
+  footer.Children.Add(updateButton);updateButton.Click+=async(s,e)=>await InstallUpdate();
+
+  UpdateVersionStatus();
+  if(!Environment.GetCommandLineArgs().Any(a=>a=="--test"||a=="--preview")&&!Home.Contains("test-output")){
+   Loaded+=async(s,e)=>await CheckUpdates(false);
+   updateTimer=new System.Windows.Threading.DispatcherTimer{Interval=TimeSpan.FromMinutes(1)};
+   updateTimer.Tick+=async(s,e)=>{UpdateVersionStatus();if(checkedAt!=DateTime.MinValue&&DateTime.UtcNow-checkedAt>TimeSpan.FromHours(6))await CheckUpdates(false);};
+   updateTimer.Start();Closed+=(s,e)=>updateTimer.Stop();
+  }
  }
- async Task CheckUpdates(bool manual){if(checkingUpdate||installingUpdate)return;checkingUpdate=true;if(manual)status.Text="Checking GitHub for updates…";try{
-  var release=await Task.Run(()=>CompanionUpdater.Latest());if(CompanionUpdater.Newer(release.tag_name)&&!release.draft&&!release.prerelease){availableRelease=release;updateButton.Content="Update & restart — "+release.tag_name;updateButton.Visibility=Visibility.Visible;status.Text="Update available. Click the update button when you are ready.";}
+ void UpdateVersionStatus(){if(versionStatus==null)return;string label=checkingUpdate?"Checking…":lastCheckFailed?"Couldn't check · Retry":checkedAt==DateTime.MinValue?"Check for updates":"Checked "+(DateTime.UtcNow-checkedAt<TimeSpan.FromMinutes(1)?"just now":DateTime.UtcNow-checkedAt<TimeSpan.FromHours(1)?((int)(DateTime.UtcNow-checkedAt).TotalMinutes)+"m ago":((int)(DateTime.UtcNow-checkedAt).TotalHours)+"h ago");
+  versionStatus.Content="v"+CompanionUpdater.Version+@" · "+label;versionStatus.ToolTip="Click to check for updates. "+status.Text;} async Task CheckUpdates(bool manual){if(checkingUpdate||installingUpdate)return;checkingUpdate=true;UpdateVersionStatus();if(manual)status.Text="Checking GitHub for updates…";try{
+  var release=await Task.Run(()=>CompanionUpdater.Latest());checkedAt=DateTime.UtcNow;lastCheckFailed=false;if(CompanionUpdater.Newer(release.tag_name)&&!release.draft&&!release.prerelease){availableRelease=release;updateButton.Content="Start update";updateButton.ToolTip="Install "+release.tag_name+" and restart";updateButton.Visibility=Visibility.Visible;status.Text="Update available. Click the update button when you are ready.";}
   else if(manual)status.Text="You have the latest version ("+CompanionUpdater.Version+").";
- }catch(Exception e){if(manual)status.Text="Could not check for updates: "+e.Message;}finally{checkingUpdate=false;}}
+ }catch(Exception e){checkedAt=DateTime.UtcNow;lastCheckFailed=true;if(manual)status.Text="Could not check for updates: "+e.Message;}finally{checkingUpdate=false;UpdateVersionStatus();}}
  async Task InstallUpdate(){if(installingUpdate||availableRelease==null)return;
   if(MessageBox.Show(this,"Download "+availableRelease.tag_name+" and restart the Companion? Your data stays in place.","Update & restart",MessageBoxButton.YesNo)!=MessageBoxResult.Yes)return;
   installingUpdate=true;updateButton.IsEnabled=false;try{
