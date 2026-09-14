@@ -6,6 +6,25 @@ namespace LegendsCompanion {
 public static class Tests {
  static void LiveTests(){LiveMonitor.CheckPopupIndependence();
   var families=Data.Parse("Slayer: Skill\nI\tFor the Hive!\nI\t\tBixies\t52/100\nI\tAmazing!\nI\t\tMinotaurs and Tizmak.\t18/100\nI\tSpin Me Right Round\nI\t\tDervishes\t42/100\n");
+  var brownies=Data.Parse("Slayer: Conquest\nI\tShorter People\nI\t\tBixies, Brownies, Dryads, Fairies, and Pixies.\t217/1000\nSlayer: Skill\nI\tJumjummery\nI\t\tBrownies\t7/100\n");
+  var brownieEngine=new KillProgress();
+  foreach(string brownie in new[]{"a mountain brownie","brownie scout"}){
+   var updates=brownieEngine.Process("You have slain "+brownie+"!",brownies,new List<MobMatch>());
+   Assert(updates.Count==2&&updates.Any(n=>n.Name=="Shorter People"),"brownie variant advances all matching achievements");
+  }
+  var kobolds=Data.Parse("Slayer: Conquest\nI\tKobolded Killer\nI\t\tKobolds\t528/1000\nSlayer: General\nI\tMore Kobolds\nI\t\tKobolds\t528/5000\n");
+  var koboldEngine=new KillProgress();
+  foreach(string mob in new[]{"a kobold","a burly kobold","a greater kobold","a greater kobold shaman","a kobold hunter","a kobold king","a kobold noble","a kobold priest","a kobold champion","kobold predator"})
+   Assert(koboldEngine.Process("You have slain "+mob+"!",kobolds,new List<MobMatch>()).Count==2,"kobold variant advances matching achievements: "+mob);
+  Assert(koboldEngine.Process("You have slain a greater kobold shaman pet!",kobolds,new List<MobMatch>()).Count==0,"unverified pet credit not assumed");
+  var petEngine=new KillProgress();
+  petEngine.Process("Jabekab told you, 'Attacking a minotaur slaver Master.'",families,new List<MobMatch>());
+  Assert(petEngine.Process("A minotaur slaver has been slain by Jabekab!",families,new List<MobMatch>()).Single().Name=="Amazing!","own pet credited");
+  Assert(petEngine.Process("A minotaur slaver has been slain by Otherpet!",families,new List<MobMatch>()).Count==0,"other pet ignored");
+  petEngine.Process("Newpet told you, 'Attacking Minotaur Guard Master.'",families,new List<MobMatch>());
+  Assert(petEngine.Process("Minotaur Guard has been slain by Newpet!",families,new List<MobMatch>()).Count==1,"new summoned pet recognized");
+  Assert(petEngine.Process("Minotaur Guard has been slain by Jabekab!",families,new List<MobMatch>()).Count==0,"old pet superseded");
+  petEngine.Reset();Assert(petEngine.Process("Minotaur Guard has been slain by Newpet!",families,new List<MobMatch>()).Count==0,"ownership clears on log reset");
   var familyEngine=new KillProgress();
   foreach(string mob in new[]{"a bixie","a bixie drone","a minotaur slaver","Minotaur Guard","Minotaur Lord","a rock dervish"}){
    var notice=familyEngine.Process("[Sun Sep 13 19:13:23 2026] You have slain "+mob+"!",families,new List<MobMatch>());

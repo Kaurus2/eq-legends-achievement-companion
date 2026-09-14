@@ -37,12 +37,15 @@ public class LogTail {
 public class LiveNotice {public string Name,Detail,Mob;public int? Current,Target;public bool Complete;}
 public class KillProgress {
  Dictionary<string,int> counts=new Dictionary<string,int>();HashSet<string> completed=new HashSet<string>();
- public void Reset(){counts.Clear();completed.Clear();}
+ public string PetName="";public void Reset(){counts.Clear();completed.Clear();PetName="";}
  public static string Message(string line){if(line.StartsWith("[",StringComparison.Ordinal)){int i=line.IndexOf("] ",StringComparison.Ordinal);if(i>=0)return line.Substring(i+2);}return line;}
  public static string Kill(string line){string s=Message(line);return s.StartsWith("You have slain ",StringComparison.Ordinal)&&s.EndsWith("!",StringComparison.Ordinal)?s.Substring(15,s.Length-16):"";}
  static string MobKey(string value){return Regex.Replace((value??"").Trim().ToLowerInvariant(),@"^(a|an|the)\s+","");}
  // Explicit observed variants map to creature families; ambiguous bandit races remain excluded.
  static bool Family(string mob,string requirement){string singular=MobKey(mob);if(singular=="bandit"||singular=="brigand")return false;
+ if(new[]{"burly kobold","greater kobold","greater kobold shaman","kobold hunter","kobold king","kobold noble","kobold priest","kobold champion","kobold predator"}.Contains(singular))singular="kobold";
+ if(singular=="rebel clockwork"&&requirement.StartsWith("Clockwork:",StringComparison.OrdinalIgnoreCase))return true;
+ if(singular=="mountain brownie"||singular=="brownie scout")singular="brownie";
  if(singular=="bixie drone")singular="bixie";
  if(singular=="minotaur slaver"||singular=="minotaur guard"||singular=="minotaur lord"||singular=="minotaur hero")singular="minotaur";
  if(singular=="rock dervish")singular="dervish";
@@ -50,8 +53,8 @@ public class KillProgress {
  if(singular=="tentacle tormentor")plural="tentacle terrors"; if(singular=="fae drake")plural="fay drakes";
  return Regex.Split(requirement.Split('\t')[0].ToLowerInvariant(),@",|\band\b|\.").Any(t=>t.Trim()==plural||t.Trim()==singular);
  }
- public List<LiveNotice> Process(string line,List<Achievement> all,List<MobMatch> matches){var result=new List<LiveNotice>();string msg=Message(line);const string prefix="You have completed achievement: ";if(msg.StartsWith(prefix,StringComparison.Ordinal)){string name=msg.Substring(prefix.Length).Trim();if(name.Length>0&&completed.Add(Data.Normalize(name)))result.Add(new LiveNotice{Name=name,Detail="Confirmed by the game log · Refresh your achievement export to update the table",Complete=true});return result;}
- string mob=Kill(line);if(mob=="")return result;
+ public List<LiveNotice> Process(string line,List<Achievement> all,List<MobMatch> matches){var result=new List<LiveNotice>();string msg=Message(line);var petReply=Regex.Match(msg,@"^([A-Za-z]+) told you, 'Attacking .+ Master\.'$");if(petReply.Success){PetName=petReply.Groups[1].Value;return result;}const string prefix="You have completed achievement: ";if(msg.StartsWith(prefix,StringComparison.Ordinal)){string name=msg.Substring(prefix.Length).Trim();if(name.Length>0&&completed.Add(Data.Normalize(name)))result.Add(new LiveNotice{Name=name,Detail="Confirmed by the game log · Refresh your achievement export to update the table",Complete=true});return result;}
+ string mob=Kill(line);if(mob==""&&!String.IsNullOrEmpty(PetName)){var petKill=Regex.Match(msg,@"^(.+) has been slain by "+Regex.Escape(PetName)+@"!$");if(petKill.Success)mob=petKill.Groups[1].Value;}if(mob=="")return result;
  foreach(var a in all.Where(x=>!x.Complete&&x.Category.StartsWith("Slayer:")&&!completed.Contains(Data.Normalize(x.Name)))){
  var req=a.Requirements.Where(r=>!r.Optional&&!r.Complete&&r.Current.HasValue&&r.Target.HasValue).ToList();if(req.Count!=1)continue;
  bool custom=matches.Any(m=>MobKey(m.Mob)==MobKey(mob)&&String.Equals(m.Achievement,a.Name,StringComparison.OrdinalIgnoreCase));if(!custom&&!Family(mob,req[0].Text))continue;
@@ -69,7 +72,7 @@ public class LiveMonitor:IDisposable {public event Action<List<LiveNotice>> Noti
  void Tick(){try{
   if(!options.Enabled||tail==null)return;
   if(pending!=null&&!pending.IsCompleted)return;
-  bool changed=lastBaseline!=baseline();if(changed){lastBaseline=baseline();progress=new KillProgress();epoch++;queue.Clear();if(ResetProgress!=null)ResetProgress();if(toast!=null)toast.Hide();}
+  bool changed=lastBaseline!=baseline();if(changed){lastBaseline=baseline();progress=new KillProgress{PetName=progress.PetName};epoch++;queue.Clear();if(ResetProgress!=null)ResetProgress();if(toast!=null)toast.Hide();}
   if(pending!=null){var completedTask=pending;pending=null;var result=completedTask.GetAwaiter().GetResult();if(result.Epoch==epoch){if(generation!=result.Generation){generation=result.Generation;queue.Clear();if(ResetProgress!=null)ResetProgress();}foreach(var notice in result.Notices){var retained=queue.Where(n=>n.Name!=notice.Name).ToList();queue.Clear();foreach(var n in retained)queue.Enqueue(n);if(queue.Count<50)queue.Enqueue(notice);}}}
   var currentTail=tail;var currentProgress=progress;var currentAchievements=achievements();var matches=(options.Matches??new List<MobMatch>()).ToList();int currentEpoch=epoch;
   pending=Task.Run(()=>{var b=new LogBatch{Epoch=currentEpoch};int before=currentTail.Generation;var lines=currentTail.Read();if(before!=currentTail.Generation)currentProgress.Reset();foreach(var line in lines)b.Notices.AddRange(currentProgress.Process(line,currentAchievements,matches));b.Generation=currentTail.Generation;return b;});

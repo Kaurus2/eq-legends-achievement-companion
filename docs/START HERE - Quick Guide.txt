@@ -1,5 +1,5 @@
 EQ LEGENDS ACHIEVEMENT COMPANION — QUICK GUIDE
-Updated September 13, 2026
+Updated September 14, 2026
 
 1. Extract the ZIP to a folder and run EQ Legends Achievement Companion.exe.
 2. Open the gear. Choose your EverQuest Legends game folder and click Find characters.
@@ -20,6 +20,13 @@ Updated September 13, 2026
 UPGRADING
 Close the app, replace only the executable in your existing folder, then reopen it.
 Keep your existing data folder: it contains settings, character profiles, research, and notes.
-This release has no automatic updater and no DPS meter.
+To update: More > Check for updates (also in Configuration), then Update & restart. Nothing checks or installs automatically. The app downloads and verifies the executable, closes, replaces it, and reopens. Your data stays in place; the previous executable is saved as .previous. This is an achievement companion, with no DPS meter.
 
 The illustrated PDF documents an earlier layout; use this quick guide for the current controls.
+
+PET KILLS AND SEARCH
+Pet kills are estimated after the log records your pet's "Attacking ... Master." response.
+Issue a pet attack command after starting the Companion. A new pet response replaces the old name.
+Other players' finishing blows are excluded. Keep chat/log filters enabled for pet responses.
+Search checks achievement requirements and all candidate mobs, not just the selected farming option.
+Refreshes keep recent ordering; only achievements gaining progress are promoted when Recent progress first is on.

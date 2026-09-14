@@ -80,7 +80,7 @@ public partial class MainWindow {
   parent.Children.Add(box);progressOverview.SizeChanged+=(s,e)=>LayoutProgressOverview();LayoutProgressOverview();
  }
  void LayoutProgressOverview(){
-  bool wide=progressOverview.ActualWidth>=700;if(overviewWide==wide)return;overviewWide=wide;
+  bool wide=progressOverview.ActualWidth>=700;progressOverview.MinHeight=wide?66:104;if(overviewWide==wide)return;overviewWide=wide;
   progressOverview.ColumnDefinitions.Clear();progressOverview.RowDefinitions.Clear();
   if(wide){
    foreach(double width in new[]{24.0,1.0,24.0,1.0})progressOverview.ColumnDefinitions.Add(new ColumnDefinition{Width=new GridLength(width,width==1?GridUnitType.Star:GridUnitType.Pixel)});

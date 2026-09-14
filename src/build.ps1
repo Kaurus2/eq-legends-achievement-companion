@@ -16,6 +16,7 @@ $eqlArgs += (Join-Path $PSScriptRoot 'CompactToast.cs')
 $eqlArgs += (Join-Path $PSScriptRoot 'WindowFrame.cs')
 $eqlArgs += (Join-Path $PSScriptRoot "Profiles.cs")
 $eqlArgs += (Join-Path $PSScriptRoot "Theme.cs")
+$eqlArgs += (Join-Path $PSScriptRoot "Updater.cs")
 $eqlArgs += "/reference:System.Windows.Forms.dll"
 & (Join-Path $eqlFramework 'csc.exe') $eqlArgs
 if ($LASTEXITCODE -ne 0) { throw 'Compilation failed.' }

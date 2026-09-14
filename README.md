@@ -1,12 +1,12 @@
 # EQ Legends Achievement Companion
 
-Private source repository for the Classic Windows desktop Companion.
+Source repository for the Classic Windows desktop Companion.
 
 ## For guildmates
 Download the ZIP from **Releases**, extract the whole folder, and run the executable.
 Start with `docs/START HERE - Quick Guide.txt` or the illustrated PDF in `docs`.
 Choose your game folder in Configuration, then select a discovered character profile. Manual paths are available under Advanced file settings. The current quick guide covers the redesigned controls; the illustrated PDF shows an earlier layout.
-Access to this private repository is required to download its releases.
+The repository and release downloads are public.
 
 ## Features
 - Compact achievement tiles and a single-column tracker.
@@ -60,3 +60,13 @@ The tracker is fully visible while focused. Switching to the game applies your s
 - Responsive progress overview and click-again tile deselection.
 - Bixie drone, minotaur slaver/guard/lord/hero, and rock dervish kill matching, plus counter-text parsing fix.
 - Original retro-RPG completion fanfare. Live updates and popups remain independent.
+
+## v2026.09.14.1
+Use **More > Check for updates**, then **Update & restart**. Update checks and installation are manual.
+Downloads are restricted to this repository's HTTPS release assets and verified against GitHub's SHA-256 digest.
+Updates replace the executable, keep a .previous backup, and preserve the data folder.
+Future releases must attach EQ-Legends-Achievement-Companion.exe with GitHub's SHA-256 asset digest.
+The ZIP remains available for first-time users.
+
+Also includes pet kill estimates learned from the pet's attack acknowledgment, brownie/kobold/clockwork variants,
+requirements-aware mob search, stable refresh ordering, compact filters, and a themed More menu.

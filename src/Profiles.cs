@@ -68,7 +68,7 @@ public partial class MainWindow {
  void ScanProfiles(){try{if(!ResolveEdits())return;var discovered=DiscoverProfiles(gameFolder.Text.Trim());RememberProfile();settings.GameFolder=Path.GetFullPath(gameFolder.Text.Trim());MergeProfiles(discovered);Data.Save(settingsPath,settings);RefreshProfilePicker();profileStatus.Text=discovered.Count+" characters found. Missing exports: export achievements in game. Missing logs: use /log on.";if(ActiveProfile!=null)SwitchProfile(ActiveProfile,true);else if(discovered.Count==1)SwitchProfile(settings.Profiles.First(p=>p.Key==discovered[0].Key));}catch(Exception e){profileStatus.Text="Could not scan folder: "+e.Message;}}
  void SwitchProfile(CharacterProfile p,bool reload=false){
   if(p==ActiveProfile&&!reload)return;if(!ResolveEdits()){RefreshProfilePicker();return;}if(p!=ActiveProfile)RememberProfile();
-  if(live!=null){live.Dispose();live=null;}ClearLiveTiles();Edit(null);binding=true;grid.UnselectAllCells();grid.SelectedItem=null;binding=false;ShrinkDetails();
+  if(live!=null){live.Dispose();live=null;}recentStamps.Clear();stableTileOrder.Clear();ClearLiveTiles();Edit(null);binding=true;grid.UnselectAllCells();grid.SelectedItem=null;binding=false;ShrinkDetails();
   settings.ActiveProfile=p.Key;settings.SourcePath=p.ExportPath;settings.Live=p.Live==null?new LiveOptions():Data.Json().Deserialize<LiveOptions>(Data.Json().Serialize(p.Live));settings.Live.Path=p.LogPath;
   source.Text=p.ExportPath;combatPath.Text=p.LogPath;liveEnabled.IsChecked=settings.Live.Enabled;popupsEnabled.IsChecked=settings.Live.PopupsEnabled;
   achievements.Clear();joined.Clear();filtered.Clear();loadedHash=candidateHash="";loadedExportStamp=0;lastSuccess="Never";RefreshFilters();Apply();
