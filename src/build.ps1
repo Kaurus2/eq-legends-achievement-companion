@@ -20,6 +20,9 @@ $eqlArgs += (Join-Path $PSScriptRoot "Updater.cs")
 $eqlArgs += (Join-Path $PSScriptRoot "SavedFilters.cs")
 $eqlArgs += "/reference:System.Windows.Forms.dll"
 $eqlArgs += "/resource:" + (Join-Path $eqlAppRoot "assets\clockwork-gear-hd.png") + ",ClockworkGear"
+$eqlArgs += (Join-Path $PSScriptRoot 'CleanResearch.cs')
+$eqlArgs += (Join-Path $PSScriptRoot 'MobNames.cs')
+$eqlArgs += '/resource:' + (Join-Path $eqlAppRoot 'data/cleaned-research.json') + ',CleanResearch'
 & (Join-Path $eqlFramework 'csc.exe') $eqlArgs
 if ($LASTEXITCODE -ne 0) { throw 'Compilation failed.' }
 

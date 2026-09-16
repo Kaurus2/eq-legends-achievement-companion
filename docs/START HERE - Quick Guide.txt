@@ -1,5 +1,5 @@
 EQ LEGENDS ACHIEVEMENT COMPANION - QUICK START
-Version 2026.09.15.1
+Version 2026.09.16.1
 
 1. Extract the whole release ZIP. Run EQ Legends Achievement Companion.exe.
 2. Open the clockwork gear. Choose your game folder, then Find characters.
@@ -32,7 +32,7 @@ Live counts are estimates. Refresh the achievement export periodically for the
 confirmed game counters. Owned-pet kills use its logged attack acknowledgment.
 Generic bandit names do not identify race; the app does not guess their credit.
 Location candidates are not guarantees. The failed Wood Elf/High Elf bandit
-recommendations were withdrawn pending verification.
+suggestions remain pending achievement-credit verification.
 
 UPDATES AND HELP
 The footer checks GitHub automatically. Click Start update when offered, then
@@ -43,3 +43,8 @@ latest PDF and shared documentation. More > App Guide opens the PDF if present.
 Read docs/EQ Legends Achievement Companion - Easy Guide.pdf for screenshots.
 Video: https://www.youtube.com/watch?v=4GrrluSXVvk
 Downloads: https://github.com/Kaurus2/eq-legends-achievement-companion/releases
+
+NEW: Mob names
+Open an achievement, type a mob name and click + or press Enter. Names save automatically; use the remove button to delete. This reference list does not change live tracking. Keep data/mob-names.json when updating.
+
+BANESTRIKE focus shows three separate +1 rank milestones, based on required entries in your latest export.

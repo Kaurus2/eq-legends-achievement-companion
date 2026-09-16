@@ -12,7 +12,7 @@ namespace LegendsCompanion {
 public class ReleaseAsset {public string name {get;set;} public string browser_download_url {get;set;} public string digest {get;set;} public long size {get;set;}}
 public class ReleaseInfo {public string body {get;set;} public string tag_name {get;set;} public bool draft {get;set;} public bool prerelease {get;set;} public List<ReleaseAsset> assets {get;set;}}
 public static class CompanionUpdater {
- public const string Version="2026.09.15.1";
+ public const string Version="2026.09.16.1";
  const string Repo="https://api.github.com/repos/Kaurus2/eq-legends-achievement-companion/releases/latest";
  public const string AssetName="EQ-Legends-Achievement-Companion.exe";
  static WebClient Client(){ServicePointManager.SecurityProtocol|=SecurityProtocolType.Tls12;var c=new WebClient();c.Headers["User-Agent"]="EQ-Legends-Achievement-Companion/"+Version;return c;}

@@ -54,7 +54,7 @@ public class KillProgress {
  if(new[]{"kerran `amir","kerran 'amir","kerran mujahed","kerran pasdar","kerran tiger spahi"}.Contains(singular))singular="kerran";
  if(singular=="mountain brownie"||singular=="brownie scout")singular="brownie";
  if(singular=="bixie drone")singular="bixie";
- if(singular=="minotaur slaver"||singular=="minotaur guard"||singular=="minotaur lord"||singular=="minotaur hero")singular="minotaur";
+ if(singular=="gorge minotaur"||singular=="chasm minotaur"||singular=="minotaur slaver"||singular=="minotaur guard"||singular=="minotaur lord"||singular=="minotaur hero")singular="minotaur";
  if(singular=="rock dervish")singular="dervish";
  string plural=singular=="dervish"?"dervishes":singular.EndsWith("y")?singular.Substring(0,singular.Length-1)+"ies":singular+"s";
  if(singular=="tentacle tormentor")plural="tentacle terrors"; if(singular=="fae drake")plural="fay drakes";

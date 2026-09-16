@@ -20,6 +20,8 @@ Extract the entire release ZIP and run **EQ Legends Achievement Companion.exe**.
 - Search and multi-select categories, regions and zones; retain filters across restarts.
 - Use Auto shuffle for recent progress, or drag tiles into a saved per-character order.
 - Open a tile for farming alternatives, routes and personal notes.
+- Add mob names to any achievement with + or Enter; remove with ×. Names save automatically and survive updates.
+- Track three separate Banestrike milestones, each with its own remaining count.
 - Use independent live tracking, popup and sound switches with automatic Settings saving.
 - See stacked progress popups and completion effects; mute with the popup speaker icon.
 - Switch blue-and-gold light/dark themes, pin the window, and adjust unfocused opacity.
@@ -50,7 +52,9 @@ Up to three popups appear at once. Arrivals are staggered, each remains for eigh
 
 The achievement export is the confirmed baseline. Live counts are estimates from recognized kill names and owned-pet messages. Refresh the export periodically. Generic bandits do not identify their race, so the app does not guess their race credit.
 
-Location research includes community leads and explicit uncertainties, not guaranteed spawn, faction or credit information. The Wood Elf/High Elf bandit recommendations were withdrawn after a user reported no progress in a fresh export. No replacement farm is claimed as verified.
+Research now contains 488 cleaned achievement records, with 25 specific verification notes. Race-specific bandits remain suggestions pending confirmed achievement credit. The five-column main table keeps research details in the side panel.
+
+Mob names are a simple reference list, not automatic live-kill rules. Local additions are stored in data/mob-names.json and are not uploaded or included in public releases.
 
 Shared release data has personal notes and selections cleared. Character exports, combat logs, settings, caches and backups are not published. The app reads game files without editing them.
 

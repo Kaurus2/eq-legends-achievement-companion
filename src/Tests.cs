@@ -5,6 +5,15 @@ using System.Collections.Generic;
 namespace LegendsCompanion {
 public static class Tests {
  static void LiveTests(){LiveMonitor.CheckPopupIndependence();
+  var gorge=Data.Parse("Slayer: Conquest\nI\tLegendary Creatures\nI\t\tBixies, Brownies, Centaurs, Fairies, Griffins, Manticores, Minotaurs, Pixies, Satyr, and Sphinxes.\t1858/5000\nSlayer: Skill\nI\tAmazing!\nI\t\tMinotaurs and Tizmak.\t18/100\n");
+  foreach(string mob in new[]{"a gorge minotaur","A chasm minotaur"}){
+   var g=new KillProgress();var notices=g.Process("[Tue Sep 15 22:49:09 2026] You have slain "+mob+"!",gorge,new List<MobMatch>());
+   Assert(notices.Count==2&&notices.Single(n=>n.Name=="Legendary Creatures").Current==1859,"Gorge minotaur advances legendary and skill counters");
+   g.Process("Jebanab told you, 'Attacking "+mob+" Master.'",gorge,new List<MobMatch>());
+   Assert(g.Process(mob+" has been slain by Jebanab!",gorge,new List<MobMatch>()).Single(n=>n.Name=="Legendary Creatures").Current==1860,"Gorge minotaur owned pet credit");
+   Assert(g.Process(mob+" has been slain by Someoneelse!",gorge,new List<MobMatch>()).Count==0,"Gorge other player excluded");
+  }
+  Assert(new KillProgress().Process("You have slain a gorge minotaur pet!",gorge,new List<MobMatch>()).Count==0,"Unverified minotaur suffix excluded");
   var kerra=Data.Parse("Slayer: Skill\nI\tNot a Kerran the World!\nI\t\tKerrans\t5/100\nSlayer: Conquest\nI\tCatnipped In the Bud\nI\t\tKerrans and Vah Shir.\t5/1000\n");
   foreach(string mob in new[]{"a kerran `amir","a kerran mujahed","a kerran pasdar","Kerran tiger spahi"}){var k=new KillProgress();Assert(k.Process("You have slain "+mob+"!",kerra,new List<MobMatch>()).Count==2,"Kerran race variants");k.Process("Jebanab told you, 'Attacking "+mob+" Master.'",kerra,new List<MobMatch>());Assert(k.Process(mob+" has been slain by Jebanab!",kerra,new List<MobMatch>()).Count==2,"Kerran pet variants");}
   Assert(new KillProgress().Process("You have slain a kerran puma!",kerra,new List<MobMatch>()).Count==0,"Kerran animals not guessed");

@@ -22,7 +22,7 @@ public class Farm : System.ComponentModel.INotifyPropertyChanged { public event 
  public string PortRoute {get;set;} public string Kind {get;set;} public string Zone {get;set;} public string Region {get;set;} public string Mobs {get;set;} public string Portal {get;set;}
  public string Via {get;set;} public string Evidence {get;set;} public string Faction {get;set;} public Farm(){PortRoute=Zone=Region=Mobs=Portal=Via=Evidence="";Faction="Unknown";Kind="Alternative";}
 }
-public class Research {
+public class Research { public bool Cleaned {get;set;} public string RequiredFaction {get;set;} public string FactionHit {get;set;} public string Verification {get;set;} public string ResearchHistory {get;set;}
  public string Key {get;set;} public string Name {get;set;} public string Category {get;set;}
  public List<Farm> Farms {get;set;} public string Risk {get;set;} public string Tier {get;set;} public string Era {get;set;}
  public string Class {get;set;} public string Race {get;set;} public string Notes {get;set;} public string PersonalNotes {get;set;} public string Sources {get;set;}
@@ -37,16 +37,27 @@ public class Row {
  public string State {get{return A.Complete?"Complete":"Incomplete";}} public string Progress {get{return A.Progress.ToString("P0");}}
  public string Remaining {get{return A.Remaining.HasValue?A.Remaining.Value.ToString("N0"):"Unspecified";}}
  public List<Farm> DisplayOverride; public List<Farm> Candidates {get{return (R.Farms.Count>0?R.Farms:Guides.Destinations(A)).OrderByDescending(f=>f.Selected).ThenByDescending(f=>(f.Evidence??"").StartsWith("User EQL observation")).ThenBy(f=>(f.Faction??"").Contains("loss")?1:0).ToList();}} public List<Farm> Preferred {get{var c=Candidates;var stops=c.Where(f=>f.Kind=="Required stop").ToList();if(stops.Count>0)return stops;return c.Any(f=>f.Selected)?c.Where(f=>f.Selected).Take(1).ToList():c.Take(1).ToList();}} public List<Farm> Locations {get{return (DisplayOverride??Preferred).SelectMany(f=>(f.Zone??"").Split(new[]{';',','},StringSplitOptions.RemoveEmptyEntries).Select(z=>new Farm{PortRoute=f.PortRoute,Kind=f.Kind,Zone=Guides.Zone(z.Trim()),Region=Guides.Region(Guides.Zone(z.Trim()))!=""?Guides.Region(Guides.Zone(z.Trim())):f.Region,Mobs=f.Mobs,Portal=f.Portal,Via=f.Via,Evidence=f.Evidence,Faction=f.Faction,Selected=f.Selected})).ToList();}}
- public string PortsAndRoute {get{return Locations.Count==0?(Guides.NoFixedLocation(A)?"Not applicable":Candidates.Count==0?"No researched destination yet":"No destination matches the current filters"):String.Join("\n",Locations.Select(f=>(Locations.Count>1?f.Zone+"\n":"")+TravelGuide.ForFarm(f)));}} public string ResearchGaps {get{return Guides.Gaps(this);}}
+ public string PortsAndRoute {get{return Locations.Count==0?(Guides.NoFixedLocation(A)?"Not applicable":Candidates.Count==0?"No researched destination yet":"No destination matches the current filters"):String.Join("\n",Locations.Select(f=>(Locations.Count>1?f.Zone+"\n":"")+TravelGuide.ForFarm(f)));}} public string ResearchGaps {get{return R.Cleaned?(R.Verification??""):Guides.Gaps(this);}}
  public string Location {get{return Locations.Count==0?(Guides.NoFixedLocation(A)?"No fixed location":Candidates.Count>0?"No matching location":"Location needed"):String.Join("; ",Locations.Select(x=>Guides.Zone(x.Zone)).Distinct());}}
  public string Mobs {get {var named=Locations.Select(f=>f.Mobs).Where(s=>!String.IsNullOrWhiteSpace(s)).Distinct().ToList();if(named.Count>0)return String.Join("; ",named);return String.Join("; ",A.Requirements.Where(r=>String.IsNullOrEmpty(r.Reference)&&!r.Text.StartsWith("This achievement",StringComparison.OrdinalIgnoreCase)).Select(r=>r.Text.Split('\t')[0]));}}
  public string LocationEvidence {get{return Locations.Count==0?(Guides.NoFixedLocation(A)?"Not applicable":"Needs research"):R.Farms.Count==0?"Guide / TXT destination":R.Farms.All(f=>(f.Evidence??"").StartsWith("User EQL observation"))?"User observed":"Verify location / credit";}}
- public string CampFaction {get{return Locations.Count==0?(Guides.NoFixedLocation(A)?"Not applicable":"Unknown"):String.Join("; ",Locations.Select(f=>f.Zone+": "+(String.IsNullOrWhiteSpace(f.Faction)?"Unknown":f.Faction)));}}
- public string Risk {get{return R.Risk=="Unknown"&&(A.Category=="General: Level"||A.Category=="General: Skills"||A.Category.StartsWith("Tradeskill:"))?"Not applicable":R.Risk=="Unknown"&&Locations.Count>0&&Locations.All(f=>!String.IsNullOrWhiteSpace(f.Faction)&&f.Faction!="Unknown")?"See location notes":R.Risk;}} public string Era {get{return R.Era=="Unknown"&&A.Requirements.Any(q=>q.Text.Contains("Future Placeholder"))?"Quest placeholder (TXT)":R.Era;}}
+ public string CampFaction {get{if(R.Cleaned)return R.RequiredFaction??"";return Locations.Count==0?(Guides.NoFixedLocation(A)?"Not applicable":"Unknown"):String.Join("; ",Locations.Select(f=>f.Zone+": "+(String.IsNullOrWhiteSpace(f.Faction)?"Unknown":f.Faction)));}}
+ public string Risk {get{return R.Risk=="Unknown"&&(A.Category=="General: Level"||A.Category=="General: Skills"||A.Category.StartsWith("Tradeskill:"))?"Not applicable":R.Risk=="Unknown"&&Locations.Count>0&&Locations.All(f=>!String.IsNullOrWhiteSpace(f.Faction)&&f.Faction!="Unknown")?"See location notes":R.Risk;}} public string Era {get{if(R.Cleaned)return R.Era??"";return R.Era=="Unknown"&&A.Requirements.Any(q=>q.Text.Contains("Future Placeholder"))?"Quest placeholder (TXT)":R.Era;}}
  public string Tier {get {if(R.Tier!="Automatic")return R.Tier;if(!A.Category.StartsWith("Slayer:"))return "Checklist / progression";if(R.Era=="Unavailable"||R.Bottleneck!="")return "E - Defer / Bottleneck";if(R.Risk=="High")return "D - Faction Cleanup";if(A.Remaining.HasValue && A.Remaining<=10)return "A - Quick Win";if(A.Remaining.HasValue && A.Remaining<=50)return "B - Efficient";return "C - Grind / Stack";}}
  public string Why {get{return (Required?"Required Progressive; ":"")+Tier+"; "+(R.Era=="Unknown"?"verify era; ":"")+(Locations.Count==0?(Guides.NoFixedLocation(A)?"no fixed location":"research location"):Location);}}
 }
 public static class Data {
+ public static string BanestrikeSummary(List<Achievement> all){
+  var lines=new List<string>();
+  foreach(string name in new[]{"Progressive","Highly Decorated","A Force of Nature"}){
+   var a=all.FirstOrDefault(x=>x.Category=="Slayer: General"&&Normalize(x.Name)==Normalize(name));
+   if(a==null){lines.Add(name+": not included in this export");continue;}
+   var required=a.Requirements.Where(q=>!q.Optional&&!String.IsNullOrEmpty(q.Reference)).ToList();
+   int left=required.Count(q=>!q.Complete);
+   lines.Add(name+": "+(a.Complete?"Complete":required.Count==0?"requirements not included":left==0?"awaiting exported completion":left+" left → +1 "+(name=="Progressive"?"Banestrike rank":"rank")));
+  }
+  return String.Join("\n",lines);
+ }
  public static bool HasResearch(Research r){return r.Farms.Count>0 || !String.IsNullOrWhiteSpace(r.Notes) || !String.IsNullOrWhiteSpace(r.Sources) || !String.IsNullOrWhiteSpace(r.Class) || !String.IsNullOrWhiteSpace(r.Race) || !String.IsNullOrWhiteSpace(r.Bottleneck) || r.Risk!="Unknown" || r.Era!="Unknown" || r.Tier!="Automatic" || r.Difficulty!=3 || r.Travel!=3;}
  public static string Normalize(string s){return Regex.Replace((s??"").ToLowerInvariant(),"[^a-z0-9]","");}
  public static string Key(string c,string n){return Normalize(c)+"|"+Normalize(n);}
@@ -74,7 +85,7 @@ public static class Data {
   var rows=all.Select(a=>new Row{A=a,R=research.Items.FirstOrDefault(m=>m.Key==a.Key)??new Research{Key=a.Key,Name=a.Name,Category=a.Category},Required=required.Contains(Normalize(a.Name))&&a.Category.StartsWith("Slayer"),Optional=optional.Contains(Normalize(a.Name))&&a.Category.StartsWith("Slayer")}).ToList();
   foreach(var row in rows){if(row.R.Farms.Count==0){var options=Guides.SlayerAlternatives(row.A,all,research);if(options.Count>0){row.R=Json().Deserialize<Research>(Json().Serialize(row.R));row.R.Farms=options;}}}
   for(int pass=0;pass<3;pass++)foreach(var row in rows.Where(r=>r.Candidates.Count==0)){var options=Guides.ComponentDestinations(row,rows);if(options.Count>0){row.R=Json().Deserialize<Research>(Json().Serialize(row.R));row.R.Farms=options;}}
-  foreach(var row in rows){var tier=row.Tier[0];var stack=rows.Count(o=>!o.A.Complete && o.A.Key!=row.A.Key && row.R.Farms.Any(f=>o.R.Farms.Any(z=>z.Zone==f.Zone)));row.Score=(row.Required && p!=null && !p.Complete?1000:0)+(tier=='A'?500:tier=='B'?400:tier=='C'?250:tier=='D'?100:0)+row.A.Progress*100+Math.Min(75,stack*15)-row.R.Difficulty*20-row.R.Travel*10-(row.R.Risk=="High"?150:row.R.Risk=="Medium"?60:row.R.Risk=="Unknown"?40:0)-(row.R.Era=="Unknown"?100:0)-(row.R.Bottleneck!=""?200:0);}
+  foreach(var row in rows){var tier=String.IsNullOrEmpty(row.Tier)?(char)32:row.Tier[0];var stack=rows.Count(o=>!o.A.Complete && o.A.Key!=row.A.Key && row.R.Farms.Any(f=>o.R.Farms.Any(z=>z.Zone==f.Zone)));row.Score=(row.Required && p!=null && !p.Complete?1000:0)+(tier=='A'?500:tier=='B'?400:tier=='C'?250:tier=='D'?100:0)+row.A.Progress*100+Math.Min(75,stack*15)-row.R.Difficulty*20-row.R.Travel*10-(row.R.Risk=="High"?150:row.R.Risk=="Medium"?60:row.R.Risk=="Unknown"?40:0)-(row.R.Era=="Unknown"?100:0)-(row.R.Bottleneck!=""?200:0);}
   return rows;
  }
  public static ResearchFile Seed(List<Achievement> all){var file=new ResearchFile();foreach(var a in all){var r=new Research{Key=a.Key,Name=a.Name,Category=a.Category};var n=Normalize(a.Name);
@@ -95,7 +106,7 @@ public static class Data {
    if(r.Farms.Count>0||r.Notes!=""||r.Class!=""||r.Race!="")file.Items.Add(r);
   }return file;}
  public static JavaScriptSerializer Json(){return new JavaScriptSerializer{MaxJsonLength=16000000};}
- public static bool ApplyResearchUpdates(List<Achievement> all,ResearchFile file){
+ public static bool ApplyResearchUpdates(List<Achievement> all,ResearchFile file){if(CleanResearch.Apply(file))return true;if(file.AppliedUpdates.Contains(CleanResearch.Id))return false;
   const string id="2026-09-10-locations-and-camp-observations";if(file.AppliedUpdates==null)file.AppliedUpdates=new List<string>();bool corrected=false;const string correction="2026-09-15-elf-bandit-credit";
 if(!file.AppliedUpdates.Contains(correction)){
  foreach(var r in file.Items.Where(r=>r.Key=="slayerskill|woodyoucouldyou"||r.Key=="slayerskill|highlyuncivilized")){

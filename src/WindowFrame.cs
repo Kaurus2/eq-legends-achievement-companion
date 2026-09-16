@@ -84,11 +84,35 @@ public partial class MainWindow {
   counts=new TextBlock{Foreground=Palette.Text,VerticalAlignment=VerticalAlignment.Center,HorizontalAlignment=HorizontalAlignment.Stretch,TextAlignment=TextAlignment.Center,FontSize=12,Margin=new Thickness(5,0,5,0)};area.Children.Add(counts);
   return new Border{BorderBrush=Palette.Border,BorderThickness=new Thickness(1),CornerRadius=new CornerRadius(5),Background=Palette.Surface,Child=body,Margin=new Thickness(0,0,0,5)};
  }
+ Grid banestrikeSegments;FrameworkElement focusSummaryBar;ProgressBar[] milestoneBars=new ProgressBar[3];TextBlock[] milestoneCounts=new TextBlock[3];
+ static readonly string[] milestoneNames={"Progressive","Highly Decorated","A Force of Nature"};
+ FrameworkElement BuildBanestrikeSegments(){
+  banestrikeSegments=new Grid{Margin=new Thickness(0,0,0,5),Visibility=Visibility.Collapsed};
+  for(int i=0;i<3;i++){
+   banestrikeSegments.ColumnDefinitions.Add(new ColumnDefinition());
+   var content=new StackPanel{Margin=new Thickness(5)};
+   content.Children.Add(new TextBlock{Text=milestoneNames[i],FontSize=11,Height=30,TextWrapping=TextWrapping.Wrap,TextAlignment=TextAlignment.Center,Foreground=Palette.Text});
+   milestoneBars[i]=new ProgressBar{Minimum=0,Maximum=100,Height=6,Foreground=Palette.Blue,Background=Palette.Border};content.Children.Add(milestoneBars[i]);
+   milestoneCounts[i]=new TextBlock{FontSize=11,TextAlignment=TextAlignment.Center,Foreground=Palette.Gold,Margin=new Thickness(0,4,0,0)};content.Children.Add(milestoneCounts[i]);
+   var cell=new Border{BorderBrush=Palette.Border,BorderThickness=new Thickness(1),CornerRadius=new CornerRadius(5),Background=Palette.Surface,Margin=new Thickness(i==0?0:3,0,0,0),Child=content};Grid.SetColumn(cell,i);banestrikeSegments.Children.Add(cell);
+  }return banestrikeSegments;
+ }
+ void UpdateBanestrikeSegments(bool visible){
+  focusSummaryBar.Visibility=visible?Visibility.Collapsed:Visibility.Visible;banestrikeSegments.Visibility=visible?Visibility.Visible:Visibility.Collapsed;
+  for(int i=0;i<3;i++){
+   var a=achievements.FirstOrDefault(x=>x.Category=="Slayer: General"&&Data.Normalize(x.Name)==Data.Normalize(milestoneNames[i]));
+   var req=a==null?new System.Collections.Generic.List<Requirement>():a.Requirements.Where(q=>!q.Optional&&!String.IsNullOrEmpty(q.Reference)).ToList();int done=req.Count(q=>q.Complete);
+   milestoneBars[i].Value=a!=null&&a.Complete?100:req.Count==0?0:100.0*done/req.Count;
+   milestoneBars[i].Foreground=a!=null&&a.Complete?Palette.Gold:Palette.Blue;
+   milestoneCounts[i].Text=a==null?"Not in export":a.Complete?"Complete":req.Count==0?"No checklist":(req.Count-done)+" left · +1 rank";
+   milestoneBars[i].ToolTip=milestoneNames[i]+": "+done+" / "+req.Count+" required achievements complete";
+  }
+ }
  string summaryDetails="";TextBlock focusBarTitle;
  void BuildProgressOverview(StackPanel parent){
   progressOverview=new Grid{Margin=new Thickness(4,0,8,4)};var bars=new StackPanel();
   var focus=SummaryBar("Focus",Palette.Gold,out baneBar,out baneLabel);focusBarTitle=(TextBlock)((Grid)((Border)focus).Child).Children[0];focusBarTitle.TextTrimming=TextTrimming.CharacterEllipsis;focusBarTitle.ToolTip="Selected focus";
-  bars.Children.Add(focus);bars.Children.Add(SummaryBar("Overall",Palette.Blue,out overallBar,out overallLabel));progressOverview.Children.Add(bars);
+  focusSummaryBar=focus;bars.Children.Add(BuildBanestrikeSegments());bars.Children.Add(focus);bars.Children.Add(SummaryBar("Overall",Palette.Blue,out overallBar,out overallLabel));progressOverview.Children.Add(bars);
   tileCount.Visibility=Visibility.Collapsed;trackerHeader.Children.Add(progressOverview);Grid.SetRow(progressOverview,1);
   var heading=new StackPanel{Orientation=Orientation.Horizontal};heading.Children.Add(new TextBlock{Text="Achievement summary",VerticalAlignment=VerticalAlignment.Center});var info=Button("ⓘ",()=>ShowText("Export details",summaryDetails));info.ToolTip="Export details";info.Padding=new Thickness(5,0,5,0);heading.Children.Add(info);
   summaryExpander=new Expander{Header=heading,Content=summary,Margin=new Thickness(4),VerticalAlignment=VerticalAlignment.Top};var summaryRow=new Grid();summaryRow.ColumnDefinitions.Add(new ColumnDefinition());summaryRow.ColumnDefinitions.Add(new ColumnDefinition{Width=GridLength.Auto});summaryRow.Children.Add(summaryExpander);configContent.Children.Remove(recentCheck);recentCheck.Content="Auto shuffle";recentCheck.VerticalAlignment=VerticalAlignment.Top;recentCheck.Margin=new Thickness(5,8,5,0);recentCheck.FontSize=12;Grid.SetColumn(recentCheck,1);summaryRow.Children.Add(recentCheck);headerSummary.Content=summaryRow;
@@ -101,10 +125,12 @@ public partial class MainWindow {
  }
  void UpdateFocusLine(){
   if(tileCount==null||group==null||baneBar==null)return;var rows=joined.Where(GroupMatch).ToList();int done=rows.Count(r=>r.A.Complete),total=rows.Count;string focus=Pick(group);
+  UpdateBanestrikeSegments(focus=="BANESTRIKE");
   focusBarTitle.Text=focus=="ALL"?"All focus":System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(focus.ToLowerInvariant());focusBarTitle.ToolTip=focus;
   baneBar.Value=total==0?0:100.0*done/total;baneLabel.Text=done+" complete · "+(total-done)+" remaining";
   int overall=achievements.Count(a=>a.Complete);overallBar.Value=achievements.Count==0?0:100.0*overall/achievements.Count;overallLabel.Text=overall+" complete · "+(achievements.Count-overall)+" remaining";
   summary.Text=focus+": "+(total-done)+" achievements remaining · "+rows.Where(r=>!r.A.Complete&&r.A.Remaining.HasValue).Sum(r=>r.A.Remaining.Value).ToString("N0")+" tracked actions left\nNearly finished: "+rows.Count(r=>!r.A.Complete&&r.A.Progress>=.9)+" at 90% or higher\nShowing "+filtered.Count+" achievements with your filters.";
+  if(focus=="BANESTRIKE")summary.Text=Data.BanestrikeSummary(achievements)+"\nShowing "+filtered.Count+" achievements with your filters.";
   baneBar.ToolTip=baneBar.Value.ToString("0.0")+"% complete";overallBar.ToolTip=overallBar.Value.ToString("0.0")+"% complete";
  }
  void UpdateProgressOverview(bool hasBane,int baneDone,int baneTotal,int done,int total,int kills){UpdateFocusLine();}

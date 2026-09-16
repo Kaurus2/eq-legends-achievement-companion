@@ -52,7 +52,7 @@ public static class Guides {
   foreach(var skill in all.Concat(TargetGroups).GroupBy(x=>x.Key).Select(g=>g.First()).Where(x=>x.Category=="Slayer: Skill"&&x.Requirements.Count==1)){var types=tokens(skill.Requirements[0].Text);if(types.Count==0||!types.All(t=>wanted.Contains(t)))continue;var source=file.Items.FirstOrDefault(r=>r.Key==skill.Key);if(source==null)continue;foreach(var f in source.Farms){if(result.Any(p=>p.Zone==f.Zone&&p.Mobs==f.Mobs))continue;var copy=Data.Json().Deserialize<Farm>(Data.Json().Serialize(f));copy.Selected=false;copy.Kind="Alternative";copy.Evidence="Target-group match to "+skill.Name+" in the TXT; confirm this objective's credit. "+copy.Evidence;result.Add(copy);}}
   return result;
  }
- public static string Gaps(Row r){var e=Catalog.FirstOrDefault(x=>x.Key==r.A.Key);if(e!=null&&!String.IsNullOrWhiteSpace(e.Gaps))return e.Gaps;
+ public static string Gaps(Row r){if(r.R.Cleaned)return r.R.Verification??"";var e=Catalog.FirstOrDefault(x=>x.Key==r.A.Key);if(e!=null&&!String.IsNullOrWhiteSpace(e.Gaps))return e.Gaps;
   if(r.A.Requirements.Any(x=>x.Text.Contains("Future Placeholder")))return "Quest requirements are a future placeholder in TXT";
   if(r.A.Requirements.Any(x=>x.Text.Contains("autocomplete when you unlock Human or Wood Elf")))return "Complete either Human or Wood Elf unlock; no separate location required";
    if(r.A.Category.StartsWith("Tradeskill:"))return "Current recipe path, suppliers and skill-cap availability";
