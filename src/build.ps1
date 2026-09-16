@@ -17,6 +17,7 @@ $eqlArgs += (Join-Path $PSScriptRoot 'WindowFrame.cs')
 $eqlArgs += (Join-Path $PSScriptRoot "Profiles.cs")
 $eqlArgs += (Join-Path $PSScriptRoot "Theme.cs")
 $eqlArgs += (Join-Path $PSScriptRoot "Updater.cs")
+$eqlArgs += (Join-Path $PSScriptRoot "SavedFilters.cs")
 $eqlArgs += "/reference:System.Windows.Forms.dll"
 $eqlArgs += "/resource:" + (Join-Path $eqlAppRoot "assets\clockwork-gear-hd.png") + ",ClockworkGear"
 & (Join-Path $eqlFramework 'csc.exe') $eqlArgs

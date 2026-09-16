@@ -5,6 +5,15 @@ using System.Collections.Generic;
 namespace LegendsCompanion {
 public static class Tests {
  static void LiveTests(){LiveMonitor.CheckPopupIndependence();
+  var kerra=Data.Parse("Slayer: Skill\nI\tNot a Kerran the World!\nI\t\tKerrans\t5/100\nSlayer: Conquest\nI\tCatnipped In the Bud\nI\t\tKerrans and Vah Shir.\t5/1000\n");
+  foreach(string mob in new[]{"a kerran `amir","a kerran mujahed","a kerran pasdar","Kerran tiger spahi"}){var k=new KillProgress();Assert(k.Process("You have slain "+mob+"!",kerra,new List<MobMatch>()).Count==2,"Kerran race variants");k.Process("Jebanab told you, 'Attacking "+mob+" Master.'",kerra,new List<MobMatch>());Assert(k.Process(mob+" has been slain by Jebanab!",kerra,new List<MobMatch>()).Count==2,"Kerran pet variants");}
+  Assert(new KillProgress().Process("You have slain a kerran puma!",kerra,new List<MobMatch>()).Count==0,"Kerran animals not guessed");
+  var clockworks=Data.Parse("Slayer: Skill\nI\tGnome Tested, Steamwork Approved!\nI\t\tClockwork: Beetles, Boars, Dragons, Rats, Snakes, Spiders, Gnomeworks, Copters, and Tin Soldiers.\t81/100\n");
+  var clockEngine=new KillProgress();
+  foreach(string mob in new[]{"a clockwork spider","A Clockwork Spider","a clock work spider","a clockwork rat","rebel clockwork","rogue clockwork","giant clockwork spider"})Assert(clockEngine.Process("You have slain "+mob+"!",clockworks,new List<MobMatch>()).Count==1,"clockwork variant: "+mob);
+  foreach(string mob in new[]{"a spider","a rat","a clockwork spider pet"})Assert(clockEngine.Process("You have slain "+mob+"!",clockworks,new List<MobMatch>()).Count==0,"unqualified clockwork target: "+mob);
+  clockEngine.Process("Zobtik told you, 'Attacking a clockwork spider Master.'",clockworks,new List<MobMatch>());
+  Assert(clockEngine.Process("A clockwork spider has been slain by Zobtik!",clockworks,new List<MobMatch>()).Count==1,"pet clockwork spider");
   var families=Data.Parse("Slayer: Skill\nI\tFor the Hive!\nI\t\tBixies\t52/100\nI\tAmazing!\nI\t\tMinotaurs and Tizmak.\t18/100\nI\tSpin Me Right Round\nI\t\tDervishes\t42/100\n");
   var brownies=Data.Parse("Slayer: Conquest\nI\tShorter People\nI\t\tBixies, Brownies, Dryads, Fairies, and Pixies.\t217/1000\nSlayer: Skill\nI\tJumjummery\nI\t\tBrownies\t7/100\n");
   var brownieEngine=new KillProgress();
@@ -14,7 +23,7 @@ public static class Tests {
   }
   var kobolds=Data.Parse("Slayer: Conquest\nI\tKobolded Killer\nI\t\tKobolds\t528/1000\nSlayer: General\nI\tMore Kobolds\nI\t\tKobolds\t528/5000\n");
   var koboldEngine=new KillProgress();
-  foreach(string mob in new[]{"a kobold","a burly kobold","a greater kobold","a greater kobold shaman","a kobold hunter","a kobold king","a kobold noble","a kobold priest","a kobold champion","kobold predator"})
+  foreach(string mob in new[]{"a kobold runt","a kobold scout","a kobold shaman","a kobold missionary","a kobold","a burly kobold","a greater kobold","a greater kobold shaman","a kobold hunter","a kobold king","a kobold noble","a kobold priest","a kobold champion","kobold predator"})
    Assert(koboldEngine.Process("You have slain "+mob+"!",kobolds,new List<MobMatch>()).Count==2,"kobold variant advances matching achievements: "+mob);
   Assert(koboldEngine.Process("You have slain a greater kobold shaman pet!",kobolds,new List<MobMatch>()).Count==0,"unverified pet credit not assumed");
   var petEngine=new KillProgress();
@@ -65,7 +74,7 @@ public static class Tests {
   foreach(var objective in actual){var row=new Row{A=objective,R=new Research()};Assert(!String.IsNullOrWhiteSpace(Guides.Text(row,actual)),"guidance exists for current objective");}
   Guides.Load(MainWindow.Home);
   var coverageRows=Data.Join(actual,Data.Load<ResearchFile>(Path.Combine(MainWindow.Home,"data","research.json")));
-  Assert(coverageRows.All(r=>Guides.NoFixedLocation(r.A)||r.Candidates.Count>0),"all current objectives have a destination or a no-fixed-location explanation: "+String.Join(", ",coverageRows.Where(r=>!Guides.NoFixedLocation(r.A)&&r.Candidates.Count==0).Select(r=>r.A.Name)));
+  Assert(coverageRows.All(r=>Guides.NoFixedLocation(r.A)||r.Candidates.Count>0||((r.A.Key=="slayerskill|woodyoucouldyou"||r.A.Key=="slayerskill|highlyuncivilized")&&r.R.Notes.Contains("withdrawn"))),"all current objectives have a destination or a no-fixed-location explanation: "+String.Join(", ",coverageRows.Where(r=>!Guides.NoFixedLocation(r.A)&&r.Candidates.Count==0).Select(r=>r.A.Name)));
   var dark=coverageRows.First(r=>r.A.Name=="Dark Ones");Assert(dark.Mobs.Contains("Bregna")&&dark.Mobs.Contains("Grobb")&&dark.Mobs.Contains("Belts"),"Dark Ones shows item source and turn-in");
   var sash=coverageRows.First(r=>r.A.Name=="Knights of Thunder");Assert(sash.Location=="West Karana"&&sash.Mobs.Contains("Chesgard")&&sash.Mobs.Contains("South Qeynos"),"item option filters on farm zone and displays turn-in zone");
   var iksar=coverageRows.First(r=>r.A.Name=="Race Unlock - Iksar");Assert(iksar.Mobs.Contains("Iktra"),"Iksar faction spelling resolves to its method");

@@ -74,21 +74,38 @@ public partial class MainWindow {
   if(!saved.WindowPlacementSaved||saved.WindowWidth!=340||saved.WindowHeight!=720||saved.WindowLeft!=80||Math.Abs(saved.WindowTop-90)>1)throw new Exception("Window placement save failed");
   Width=900;Height=800;Left=140;RestoreWindowPlacement();
   if(Width!=340||Height!=720||Left!=80||Math.Abs(Top-90)>1)throw new Exception("Window placement restore failed");
- } Grid progressOverview;ProgressBar baneBar,overallBar;TextBlock baneLabel,overallLabel,showingLabel;
- void BuildProgressOverview(StackPanel parent){
-  progressOverview=new Grid{Margin=new Thickness(4)};progressOverview.ColumnDefinitions.Add(new ColumnDefinition{Width=new GridLength(64)});progressOverview.ColumnDefinitions.Add(new ColumnDefinition());
-  var bars=new StackPanel{Orientation=Orientation.Horizontal,VerticalAlignment=VerticalAlignment.Top};
-  baneBar=new ProgressBar{Minimum=0,Maximum=100,Orientation=Orientation.Vertical,Height=70,Width=14,Margin=new Thickness(3),Foreground=Palette.Gold,Background=Palette.Border};
-  overallBar=new ProgressBar{Minimum=0,Maximum=100,Orientation=Orientation.Vertical,Height=70,Width=14,Margin=new Thickness(3),Foreground=Palette.Blue,Background=Palette.Border};
-  bars.Children.Add(baneBar);bars.Children.Add(overallBar);progressOverview.Children.Add(bars);Grid.SetColumn(summary,1);progressOverview.Children.Add(summary);
-  baneLabel=new TextBlock();overallLabel=new TextBlock();showingLabel=new TextBlock();
-  parent.Children.Add(new Expander{Header="Achievement summary",Content=progressOverview,Margin=new Thickness(0,0,0,5)});
+ } Expander summaryExpander;bool summaryInHeader;Grid progressOverview;ProgressBar baneBar,overallBar;TextBlock baneLabel,overallLabel;
+ FrameworkElement SummaryBar(string title,Brush accent,out ProgressBar bar,out TextBlock counts){
+  var body=new Grid{Height=38};
+  body.ColumnDefinitions.Add(new ColumnDefinition{Width=new GridLength(92)});body.ColumnDefinitions.Add(new ColumnDefinition());
+  var name=new TextBlock{Text=title,Foreground=accent,FontWeight=FontWeights.SemiBold,VerticalAlignment=VerticalAlignment.Center,Margin=new Thickness(8,0,0,0)};body.Children.Add(name);
+  var area=new Grid();Grid.SetColumn(area,1);body.Children.Add(area);
+  bar=new ProgressBar{Minimum=0,Maximum=100,Margin=new Thickness(3),VerticalAlignment=VerticalAlignment.Stretch,Foreground=accent,Background=Palette.Border,Opacity=.30};area.Children.Add(bar);
+  counts=new TextBlock{Foreground=Palette.Text,VerticalAlignment=VerticalAlignment.Center,HorizontalAlignment=HorizontalAlignment.Stretch,TextAlignment=TextAlignment.Center,FontSize=12,Margin=new Thickness(5,0,5,0)};area.Children.Add(counts);
+  return new Border{BorderBrush=Palette.Border,BorderThickness=new Thickness(1),CornerRadius=new CornerRadius(5),Background=Palette.Surface,Child=body,Margin=new Thickness(0,0,0,5)};
  }
- void UpdateFocusLine(){if(tileCount==null||group==null)return;var focusRows=joined.Where(GroupMatch).ToList();int done=focusRows.Count(r=>r.A.Complete);tileCount.Text=Pick(group)+" · "+done+" / "+focusRows.Count+" complete · "+(focusRows.Count-done)+" remaining · Showing "+filtered.Count;} void UpdateProgressOverview(bool hasBane,int baneDone,int baneTotal,int done,int total,int kills){
-  if(baneBar==null)return;
-  baneBar.Value=baneTotal==0?0:100.0*baneDone/baneTotal;overallBar.Value=total==0?0:100.0*done/total;
-  baneLabel.Text=hasBane?"Banestrike  "+baneDone+" / "+baneTotal+"\n"+(baneTotal-baneDone)+" remaining · "+kills.ToString("N0")+" kills left":"Banestrike: not in this export";
-  overallLabel.Text="Overall  "+done+" / "+total+"\n"+overallBar.Value.ToString("0.0")+"% complete";
-  showingLabel.Text="Showing "+filtered.Count+" achievements";baneBar.ToolTip=baneLabel.Text;overallBar.ToolTip=overallLabel.Text;UpdateFocusLine();
- }}
-}
+ string summaryDetails="";TextBlock focusBarTitle;
+ void BuildProgressOverview(StackPanel parent){
+  progressOverview=new Grid{Margin=new Thickness(4,0,8,4)};var bars=new StackPanel();
+  var focus=SummaryBar("Focus",Palette.Gold,out baneBar,out baneLabel);focusBarTitle=(TextBlock)((Grid)((Border)focus).Child).Children[0];focusBarTitle.TextTrimming=TextTrimming.CharacterEllipsis;focusBarTitle.ToolTip="Selected focus";
+  bars.Children.Add(focus);bars.Children.Add(SummaryBar("Overall",Palette.Blue,out overallBar,out overallLabel));progressOverview.Children.Add(bars);
+  tileCount.Visibility=Visibility.Collapsed;trackerHeader.Children.Add(progressOverview);Grid.SetRow(progressOverview,1);
+  var heading=new StackPanel{Orientation=Orientation.Horizontal};heading.Children.Add(new TextBlock{Text="Achievement summary",VerticalAlignment=VerticalAlignment.Center});var info=Button("ⓘ",()=>ShowText("Export details",summaryDetails));info.ToolTip="Export details";info.Padding=new Thickness(5,0,5,0);heading.Children.Add(info);
+  summaryExpander=new Expander{Header=heading,Content=summary,Margin=new Thickness(4),VerticalAlignment=VerticalAlignment.Top};var summaryRow=new Grid();summaryRow.ColumnDefinitions.Add(new ColumnDefinition());summaryRow.ColumnDefinitions.Add(new ColumnDefinition{Width=GridLength.Auto});summaryRow.Children.Add(summaryExpander);configContent.Children.Remove(recentCheck);recentCheck.Content="Auto shuffle";recentCheck.VerticalAlignment=VerticalAlignment.Top;recentCheck.Margin=new Thickness(5,8,5,0);recentCheck.FontSize=12;Grid.SetColumn(recentCheck,1);summaryRow.Children.Add(recentCheck);headerSummary.Content=summaryRow;
+  trackerHeader.RowDefinitions.Add(new RowDefinition{Height=GridLength.Auto});trackerHeader.SizeChanged+=delegate{PlaceSummary();};Loaded+=delegate{PlaceSummary();};
+ }
+ void PlaceSummary(){
+  bool wide=trackerHeader.ActualWidth>=850;summaryInHeader=wide;
+  trackerHeader.ColumnDefinitions[0].Width=wide?new GridLength(350):new GridLength(1,GridUnitType.Star);trackerHeader.ColumnDefinitions[1].Width=wide?new GridLength(1,GridUnitType.Star):new GridLength(0);
+  Grid.SetColumn(headerSummary,wide?1:0);Grid.SetRow(headerSummary,wide?0:2);Grid.SetRowSpan(headerSummary,wide?2:1);
+ }
+ void UpdateFocusLine(){
+  if(tileCount==null||group==null||baneBar==null)return;var rows=joined.Where(GroupMatch).ToList();int done=rows.Count(r=>r.A.Complete),total=rows.Count;string focus=Pick(group);
+  focusBarTitle.Text=focus=="ALL"?"All focus":System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(focus.ToLowerInvariant());focusBarTitle.ToolTip=focus;
+  baneBar.Value=total==0?0:100.0*done/total;baneLabel.Text=done+" complete · "+(total-done)+" remaining";
+  int overall=achievements.Count(a=>a.Complete);overallBar.Value=achievements.Count==0?0:100.0*overall/achievements.Count;overallLabel.Text=overall+" complete · "+(achievements.Count-overall)+" remaining";
+  summary.Text=focus+": "+(total-done)+" achievements remaining · "+rows.Where(r=>!r.A.Complete&&r.A.Remaining.HasValue).Sum(r=>r.A.Remaining.Value).ToString("N0")+" tracked actions left\nNearly finished: "+rows.Count(r=>!r.A.Complete&&r.A.Progress>=.9)+" at 90% or higher\nShowing "+filtered.Count+" achievements with your filters.";
+  baneBar.ToolTip=baneBar.Value.ToString("0.0")+"% complete";overallBar.ToolTip=overallBar.Value.ToString("0.0")+"% complete";
+ }
+ void UpdateProgressOverview(bool hasBane,int baneDone,int baneTotal,int done,int total,int kills){UpdateFocusLine();}
+}}

@@ -1,77 +1,72 @@
 # EQ Legends Achievement Companion
 
-Source repository for the Classic Windows desktop Companion.
+A portable Windows achievement tracker for EverQuest Legends, with character profiles, farming locations and live combat-log estimates.
 
-## For guildmates
-Download the ZIP from **Releases**, extract the whole folder, and run the executable.
-Start with `docs/START HERE - Quick Guide.txt` or the illustrated PDF in `docs`.
-Choose your game folder in Configuration, then select a discovered character profile. Manual paths are available under Advanced file settings. The current quick guide covers the redesigned controls; the illustrated PDF shows an earlier layout.
-The repository and release downloads are public.
+[Download the latest release](https://github.com/Kaurus2/eq-legends-achievement-companion/releases/latest) · [Illustrated App Guide](docs/EQ%20Legends%20Achievement%20Companion%20-%20Easy%20Guide.pdf) · [Watch the gameplay video](https://www.youtube.com/watch?v=4GrrluSXVvk)
 
-## Features
-- Compact achievement tiles and a single-column tracker.
-- Click-to-open research panel; narrow windows expand and shrink back.
-- Multi-select filters and editable alternative farming locations.
-- Independent live tracking and popup switches.
-- Compact progress popups, completion tune/fireworks, and recent-progress sorting.
-- Whole-window opacity from 15% to 100% in Configuration.
-- Export refresh, personal notes, copy, CSV export and local backups.
+## See it in action
 
-## Build on Windows
-Requires Windows with .NET Framework 4.x WPF and its C# compiler installed.
-From the repository root in PowerShell:
+[![Compact tracker and live popups during gameplay](docs/images/gameplay.png)](https://www.youtube.com/watch?v=4GrrluSXVvk)
+
+User-provided gameplay demonstration. Click the image to watch on YouTube.
+
+## Get started
+
+Extract the entire release ZIP and run **EQ Legends Achievement Companion.exe**. Open the clockwork gear, choose your game folder, and select your character. Export achievements in game and enable `/log on` for live estimates. No installer is required.
+
+## What you can do
+
+- Keep a compact single-column tracker beside the game or expand into multiple columns.
+- Search and multi-select categories, regions and zones; retain filters across restarts.
+- Use Auto shuffle for recent progress, or drag tiles into a saved per-character order.
+- Open a tile for farming alternatives, routes and personal notes.
+- Use independent live tracking, popup and sound switches with automatic Settings saving.
+- See stacked progress popups and completion effects; mute with the popup speaker icon.
+- Switch blue-and-gold light/dark themes, pin the window, and adjust unfocused opacity.
+
+### Settings
+
+Settings opens inside the app, keeps the current theme, and pushes tracker content down. Expand **Popups & sound** for switches, volume and test buttons.
+
+<img src="docs/images/settings.png" alt="Themed Settings with inline popup and sound controls" width="400">
+
+### Filters and farming alternatives
+
+![Zone selection](docs/images/zone-filter.png)
+
+The zone checklist supports multiple selections. The current release adds a search box above the choices. **Zone optimized Results** uses matching location alternatives temporarily; turning it off restores the preferred selection.
+
+![Research panel with alternative locations and personal notes](docs/images/research.png)
+
+Research changes still use **Save research**. Personal notes do not alter the main table.
+
+### Progress notifications
+
+![Two stacked progress popups with speaker buttons](docs/images/popups.png)
+
+Up to three popups appear at once. Arrivals are staggered, each remains for eight seconds, and remaining notifications move up as others fade away.
+
+## Accuracy and data
+
+The achievement export is the confirmed baseline. Live counts are estimates from recognized kill names and owned-pet messages. Refresh the export periodically. Generic bandits do not identify their race, so the app does not guess their race credit.
+
+Location research includes community leads and explicit uncertainties, not guaranteed spawn, faction or credit information. The Wood Elf/High Elf bandit recommendations were withdrawn after a user reported no progress in a fresh export. No replacement farm is claimed as verified.
+
+Shared release data has personal notes and selections cleared. Character exports, combat logs, settings, caches and backups are not published. The app reads game files without editing them.
+
+## Updating
+
+The bottom-left footer automatically checks for a release. **Start update** appears when one is available; installation requires your click. The download is verified against GitHub's SHA-256 asset digest, and the old executable is backed up. Saved data is retained.
+
+The in-app updater replaces the executable only. Download the release ZIP for the latest illustrated guide and shared documentation. Use **More > App Guide** to open the installed PDF.
+
+## Build and test on Windows
+
+Requires .NET Framework 4.x WPF and its C# compiler.
 
 ```powershell
 .\src\build.ps1
+& '.\EQ Legends Achievement Companion.exe' --test
 ```
 
-The executable is generated in the repository root. Keep `data` beside it.
-No NuGet packages are required. Build output is ignored by Git.
-
-## Test
-Build first, then run the executable with `--test`. It writes `test-results.txt`
-or `error.log`. Tests use a synthetic achievement fixture, not a player's export.
-Tests create temporary integration files beneath the ignored `test-output` folder.
-
-## Data and privacy
-`data/research.json` is a distributable research baseline, with personal notes and
-preferred selections cleared. Runtime settings, cached exports and backups are
-ignored. Never commit combat logs, character exports, tokens or personal notes.
-Use a separate extracted release folder for actual play; running this source
-checkout can modify its tracked research baseline.
-
-Location research contains explicitly marked community leads and uncertainties.
-A location entry does not guarantee current spawn, faction safety or kill credit.
-Live estimates do not replace the manually generated achievement export counters.
-
-## Releases
-Release ZIPs contain the executable, shared data and user documentation only.
-Source remains in this repository; binaries are distributed as release assets.
-No license has been selected; this private repository does not grant public reuse.
-
-## Focus-aware transparency
-The tracker is fully visible while focused. Switching to the game applies your saved 15-100% opacity. Live progress may brighten it temporarily; it remains fully visible while you use it.
-
-## September 13 update
-- Character profiles pair exports and combat logs, with separate snapshots and personal notes.
-- Blue-and-gold light/dark themes, a compact profile header, Pin, and remembered window placement.
-- Slim transparent-track scrollbars and live opacity preview; release to save the unfocused opacity.
-- Compact connected-file status, with manual paths under Advanced file settings.
-- Responsive progress overview and click-again tile deselection.
-- Bixie drone, minotaur slaver/guard/lord/hero, and rock dervish kill matching, plus counter-text parsing fix.
-- Original retro-RPG completion fanfare. Live updates and popups remain independent.
-
-## v2026.09.14.1
-Use **More > Check for updates**, then **Update & restart**. Update checks and installation are manual.
-Downloads are restricted to this repository's HTTPS release assets and verified against GitHub's SHA-256 digest.
-Updates replace the executable, keep a .previous backup, and preserve the data folder.
-Future releases must attach EQ-Legends-Achievement-Companion.exe with GitHub's SHA-256 asset digest.
-The ZIP remains available for first-time users.
-
-Also includes pet kill estimates learned from the pet's attack acknowledgment, brownie/kobold/clockwork variants,
-requirements-aware mob search, stable refresh ordering, compact filters, and a themed More menu.
-## v2026.09.14.2
-Bottom-left version/check status, installed-version patch notes, automatic checks at startup/every six hours,
-and a gold Start update button. Installation remains manual. The oversized Settings update button is removed.
-Includes the grouped expandable summary, Focus totals, search placeholder, Zone optimized Results,
-expanded Settings with a bottom shadow, muted opacity slider, and new clockwork gear.
+Tests use an isolated data directory. Use a separate extracted release folder for play. Release packages contain the executable, shared data, and documentation; source is in this repository.

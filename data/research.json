@@ -643,24 +643,13 @@
       "Key": "slayerskill|woodyoucouldyou",
       "Name": "Wood You Could You?",
       "Category": "Slayer: Skill",
-      "Farms": [
-        {
-          "Zone": "Greater Faydark",
-          "Region": "Faydwer",
-          "Mobs": "Wood Elf bandits at (-1266, -700); select Wood Elf variant",
-          "Portal": "",
-          "Via": "",
-          "Evidence": "EQL web research, 2026-09-10. https://eqlwiki.com/A_bandit_(Greater_Faydark) | Bandits also include Half Elves; verify target race. Community source; current spawn and achievement credit require in-game confirmation.",
-          "Faction": "Wiki lists Fizzlethorp loss",
-          "Selected": false
-        }
-      ],
+      "Farms": [],
       "Risk": "High",
       "Tier": "Automatic",
       "Era": "Unknown",
       "Class": "",
       "Race": "",
-      "Notes": "Playable-race kills may damage city and unlock factions. Verify individual NPC factions.\r\nBandits also include Half Elves; verify target race.",
+      "Notes": "Playable-race kills may damage city and unlock factions. Verify individual NPC factions.\r\nBandits also include Half Elves; verify target race.\n2026-09-15: Previous bandit recommendation withdrawn: no credit after a fresh export in a user test. Verify the correct Wood Elf / High Elf race and server credit before farming. No replacement target verified.",
       "PersonalNotes": "",
       "Sources": "User-provided EQL faction caution\r\nhttps://eqlwiki.com/A_bandit_(Greater_Faydark)",
       "Bottleneck": "",
@@ -671,24 +660,13 @@
       "Key": "slayerskill|highlyuncivilized",
       "Name": "Highly Uncivilized",
       "Category": "Slayer: Skill",
-      "Farms": [
-        {
-          "Zone": "West Karana",
-          "Region": "Karanas",
-          "Mobs": "Bandits — Human, High Elf and Barbarian variants (select the needed race)",
-          "Portal": "",
-          "Via": "",
-          "Evidence": "User EQL observation, 2026-09-10: West Karana bandits include Humans, High Elves and Barbarians. Applies to the observed targets, not all bandits worldwide.",
-          "Faction": "No faction hit observed (user)",
-          "Selected": false
-        }
-      ],
+      "Farms": [],
       "Risk": "High",
       "Tier": "Automatic",
       "Era": "Unknown",
       "Class": "",
       "Race": "",
-      "Notes": "Playable-race kills may damage city and unlock factions. Verify individual NPC factions.",
+      "Notes": "Playable-race kills may damage city and unlock factions. Verify individual NPC factions.\n2026-09-15: Previous bandit recommendation withdrawn: no credit after a fresh export in a user test. Verify the correct Wood Elf / High Elf race and server credit before farming. No replacement target verified.",
       "PersonalNotes": "",
       "Sources": "User-provided EQL faction caution",
       "Bottleneck": "",
