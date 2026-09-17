@@ -7,6 +7,17 @@ Version 2026.09.16.1
 4. Export achievements in game with all categories/states. Enable /log on for a combat log.
 5. Enable live updates. It reads new log entries, not old kills.
 
+CREATE THE TWO GAME FILES
+While logged into your character:
+1. Combat log: click the chat input, type /log on, and press Enter.
+   Look for the logging-enabled message. Leave logging on while playing.
+2. Achievement export: open Inventory, click Achiev., then Output To File.
+   Include all categories and completed/incomplete achievements if options appear.
+3. In the Companion, open the gear, choose the game folder, click Find characters,
+   and select your character. Both files should show connected.
+4. Enable live updates to track new kills. Click Output To File again periodically
+   to update confirmed achievement progress. Logging alone does not export it.
+
 POPUPS & SOUND
 Expand this section inside Settings. Show popups and Play sounds are independent.
 Switches save automatically; release the volume slider to save volume.

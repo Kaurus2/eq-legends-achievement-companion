@@ -14,6 +14,18 @@ User-provided gameplay demonstration. Click the image to watch on YouTube.
 
 Extract the entire release ZIP and run **EQ Legends Achievement Companion.exe**. Open the clockwork gear, choose your game folder, and select your character. Export achievements in game and enable `/log on` for live estimates. No installer is required.
 
+## Create the game files
+
+While logged into your character:
+
+1. **Enable combat logging:** click the game chat input, type `/log on`, and press Enter. Check for the logging-enabled message.
+2. **Export achievements:** open **Inventory → Achiev. → Output To File**. Include all categories and completed/incomplete achievements if export options appear.
+3. In the Companion, open the gear, choose the game folder, click **Find characters**, and select your character. Check that both files show connected, then enable **live updates**.
+
+![Where to export achievements: Achiev. and Output To File](docs/images/export-achievements.png)
+
+Click **Output To File** again periodically to refresh confirmed progress. The combat log supplies live kill estimates; `/log on` does not create an achievement export.
+
 ## What you can do
 
 - Keep a compact single-column tracker beside the game or expand into multiple columns.
