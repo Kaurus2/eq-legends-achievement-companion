@@ -36,6 +36,7 @@ Click **Output To File** again periodically to refresh confirmed progress. The c
 - Open a tile for farming alternatives, routes and personal notes.
 - Add mob names to any achievement with + or Enter; remove with ×. Names save automatically and survive updates.
 - Track three separate Banestrike milestones, each with its own remaining count.
+- See recent kill rate and estimated time remaining in Slayer detail panels. Estimates learn after five qualifying kills over 30 seconds and pause after 90 seconds of inactivity. Fresh exports restart the sample.
 - Use independent live tracking, popup and sound switches with automatic Settings saving.
 - See stacked progress popups and completion effects; mute with the popup speaker icon.
 - Switch blue-and-gold light/dark themes, pin the window, and adjust unfocused opacity.

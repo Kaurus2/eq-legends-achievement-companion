@@ -5,6 +5,15 @@ using System.Collections.Generic;
 namespace LegendsCompanion {
 public static class Tests {
  static void LiveTests(){LiveMonitor.CheckPopupIndependence();
+  var paceTimes=new List<DateTime>();var paceStart=new DateTime(2026,9,16,12,0,0,DateTimeKind.Utc);DateTime[] paceSample=null;
+  for(int i=0;i<5;i++)paceSample=KillPace.Record(paceTimes,paceStart.AddSeconds(i*10));
+  var paceNotice=new LiveNotice{Current=51,Target=100,KillTimes=paceSample};
+  Assert(KillPace.Describe(paceNotice,paceStart.AddSeconds(40)).Contains("about 9 minutes"),"six kills per minute ETA");
+  Assert(KillPace.Describe(paceNotice,paceStart.AddSeconds(131)).Contains("Paused"),"idle ETA pauses");
+  paceNotice.KillTimes=KillPace.Record(paceTimes,paceStart.AddSeconds(140));Assert(KillPace.Describe(paceNotice,paceStart.AddSeconds(140)).Contains("Learning"),"resume relearns without idle gap");
+  paceNotice.Current=100;Assert(KillPace.Describe(paceNotice,paceStart).Contains("target reached"),"estimated completion distinguished");
+  paceNotice.Complete=true;Assert(KillPace.Describe(paceNotice,paceStart).Contains("complete in the game log"),"confirmed completion");
+  var bulkTimes=new List<DateTime>();for(int i=0;i<600;i++)KillPace.Record(bulkTimes,paceStart.AddMilliseconds(i));Assert(bulkTimes.Count==500,"pace memory bounded");
   var gorge=Data.Parse("Slayer: Conquest\nI\tLegendary Creatures\nI\t\tBixies, Brownies, Centaurs, Fairies, Griffins, Manticores, Minotaurs, Pixies, Satyr, and Sphinxes.\t1858/5000\nSlayer: Skill\nI\tAmazing!\nI\t\tMinotaurs and Tizmak.\t18/100\n");
   foreach(string mob in new[]{"a gorge minotaur","A chasm minotaur"}){
    var g=new KillProgress();var notices=g.Process("[Tue Sep 15 22:49:09 2026] You have slain "+mob+"!",gorge,new List<MobMatch>());

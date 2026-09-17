@@ -34,10 +34,10 @@ public class LogTail {
  f.Position=offset;var buffer=new byte[(int)Math.Min(262144,f.Length-offset)];int count=f.Read(buffer,0,buffer.Length);offset+=count;string text=pending+Encoding.Default.GetString(buffer,0,count);int last=text.LastIndexOf('\n');if(last>=0){lines.AddRange(text.Substring(0,last).Split('\n').Select(x=>x.TrimEnd('\r')));pending=text.Substring(last+1);}else pending=text;if(pending.Length>65536)pending="";Anchor(f);Status="Watching new log entries";
  }}catch(IOException){Status="Log temporarily unavailable — retrying";}catch(UnauthorizedAccessException){Status="Cannot read log — check file access";}return lines;}
 }
-public class LiveNotice {public string Name,Detail,Mob;public int? Current,Target;public bool Complete;}
+public class LiveNotice {public DateTime[] KillTimes;public string Name,Detail,Mob;public int? Current,Target;public bool Complete;}
 public class KillProgress {
- Dictionary<string,int> counts=new Dictionary<string,int>();HashSet<string> completed=new HashSet<string>();
- public string PetName="";public void Reset(){counts.Clear();completed.Clear();PetName="";}
+ Dictionary<string,List<DateTime>> killTimes=new Dictionary<string,List<DateTime>>();Dictionary<string,int> counts=new Dictionary<string,int>();HashSet<string> completed=new HashSet<string>();
+ public string PetName="";public void Reset(){killTimes.Clear();counts.Clear();completed.Clear();PetName="";}
  public static string Message(string line){if(line.StartsWith("[",StringComparison.Ordinal)){int i=line.IndexOf("] ",StringComparison.Ordinal);if(i>=0)return line.Substring(i+2);}return line;}
  public static string Kill(string line){string s=Message(line);return s.StartsWith("You have slain ",StringComparison.Ordinal)&&s.EndsWith("!",StringComparison.Ordinal)?s.Substring(15,s.Length-16):"";}
  static string MobKey(string value){return Regex.Replace((value??"").Trim().ToLowerInvariant(),@"^(a|an|the)\s+","");}
@@ -65,8 +65,8 @@ public class KillProgress {
  foreach(var a in all.Where(x=>!x.Complete&&x.Category.StartsWith("Slayer:")&&!completed.Contains(Data.Normalize(x.Name)))){
  var req=a.Requirements.Where(r=>!r.Optional&&!r.Complete&&r.Current.HasValue&&r.Target.HasValue).ToList();if(req.Count!=1)continue;
  bool custom=matches.Any(m=>MobKey(m.Mob)==MobKey(mob)&&String.Equals(m.Achievement,a.Name,StringComparison.OrdinalIgnoreCase));if(!custom&&!Family(mob,req[0].Text))continue;
- int n;counts.TryGetValue(a.Key,out n);counts[a.Key]=++n;
- result.Add(new LiveNotice{Name=a.Name,Mob=mob,Current=Math.Min(req[0].Target.Value,req[0].Current.Value+n),Target=req[0].Target.Value,Detail=mob+"  ·  +"+n+" estimated this session\nLast export: "+req[0].Current+" / "+req[0].Target+"  ·  credit not confirmed"});
+ int n;counts.TryGetValue(a.Key,out n);counts[a.Key]=++n;List<DateTime> times;if(!killTimes.TryGetValue(a.Key,out times)){times=new List<DateTime>();killTimes[a.Key]=times;}var sample=KillPace.Record(times,KillPace.Time(line));
+ result.Add(new LiveNotice{KillTimes=sample,Name=a.Name,Mob=mob,Current=Math.Min(req[0].Target.Value,req[0].Current.Value+n),Target=req[0].Target.Value,Detail=mob+"  ·  +"+n+" estimated this session\nLast export: "+req[0].Current+" / "+req[0].Target+"  ·  credit not confirmed"});
  }return result;}
 }
 public class LiveMonitor:IDisposable {public event Action<List<LiveNotice>> Notified;public event Action ResetProgress;public event Action SoundChanged;
