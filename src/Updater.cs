@@ -12,7 +12,7 @@ namespace LegendsCompanion {
 public class ReleaseAsset {public string name {get;set;} public string browser_download_url {get;set;} public string digest {get;set;} public long size {get;set;}}
 public class ReleaseInfo {public string body {get;set;} public string tag_name {get;set;} public bool draft {get;set;} public bool prerelease {get;set;} public List<ReleaseAsset> assets {get;set;}}
 public static class CompanionUpdater {
- public const string Version="2026.09.16.5";
+ public const string Version="2026.09.17.1";
  const string Repo="https://api.github.com/repos/Kaurus2/eq-legends-achievement-companion/releases/latest";
  public const string AssetName="EQ-Legends-Achievement-Companion.exe";
  static WebClient Client(){ServicePointManager.SecurityProtocol|=SecurityProtocolType.Tls12;var c=new WebClient();c.Headers["User-Agent"]="EQ-Legends-Achievement-Companion/"+Version;return c;}
@@ -56,14 +56,14 @@ public partial class MainWindow {
   info.Click+=(s,e)=>ShowText("Patch notes — v"+CompanionUpdater.Version,
    "v"+CompanionUpdater.Version+@"
 
-• Settings now saves switches automatically, with themed inline Popups & sound and test buttons.
-• Green/red connection indicators; App Guide opens the illustrated PDF when installed.
-• Filters expand fully and push tiles down. Auto shuffle sits beside Achievement summary.
-• Search Category, Farming region and Mob location choices without losing selections.
-• Manual tile order is saved per character when Auto shuffle is off.
-• Stacked popups fade and slide, with independent eight-second display times and a speaker toggle.
-• Improved clockwork, Steamfont kobold and Kerran name matching, including owned-pet kills.
-• Saved filters, clearer progress bars, new screenshots and a video demonstration.");
+• Saved mob names now match future kills for their Slayer achievement.
+• Add multiple names at once, one per line; click + or press Ctrl+Enter.
+• Tile headers show estimated time left, learning pace, or paused status.
+• Confirmed completion reapplies the current filters immediately.
+• Completion popups last 13 seconds, with a pulsing gold border and longer original victory tune.
+• Added confirmed named dwarf and halfling matches; Keldyn Dunfire is excluded.
+• Banestrike milestone bars now show their focus heading.
+• Updated App Guide with clickable contents, setup steps and live-tracking instructions.");
   footer.Children.Add(info);
   updateButton=new Button{Content="Start update",Visibility=Visibility.Collapsed,Padding=new Thickness(8,3,8,3),Margin=new Thickness(5,0,0,0),Background=Palette.Highlight,Foreground=Palette.Gold,BorderBrush=Palette.Gold};
   footer.Children.Add(updateButton);updateButton.Click+=async(s,e)=>await InstallUpdate();

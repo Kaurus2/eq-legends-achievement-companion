@@ -2,7 +2,7 @@
 
 A portable Windows achievement tracker for EverQuest Legends, with character profiles, farming locations and live combat-log estimates.
 
-[Download the latest release](https://github.com/Kaurus2/eq-legends-achievement-companion/releases/latest) · [Illustrated App Guide](docs/EQ%20Legends%20Achievement%20Companion%20-%20Easy%20Guide.pdf) · [Watch the gameplay video](https://www.youtube.com/watch?v=4GrrluSXVvk)
+[Download the latest release](https://github.com/Kaurus2/eq-legends-achievement-companion/releases/latest) · [Download App Guide (PDF)](https://github.com/Kaurus2/eq-legends-achievement-companion/releases/latest/download/EQ-Legends-Achievement-Companion-App-Guide.pdf) · [Watch the gameplay video](https://www.youtube.com/watch?v=4GrrluSXVvk)
 
 ## See it in action
 
@@ -34,9 +34,9 @@ Click **Output To File** again periodically to refresh confirmed progress. The c
 - Search and multi-select categories, regions and zones; retain filters across restarts.
 - Use Auto shuffle for recent progress, or drag tiles into a saved per-character order.
 - Open a tile for farming alternatives, routes and personal notes.
-- Add mob names to any achievement with + or Enter; remove with ×. Names save automatically and survive updates.
+- Add mob names one per line with + or Ctrl+Enter; remove with ×. Names save automatically and match future kills for incomplete Slayer achievements with one numeric counter.
 - Track three separate Banestrike milestones, each with its own remaining count.
-- See recent kill rate and estimated time remaining in Slayer detail panels. Estimates learn after five qualifying kills over 30 seconds and pause after 90 seconds of inactivity. Fresh exports restart the sample.
+- See recent kill rate and estimated time remaining on Slayer tiles and in detail panels. Estimates learn after five qualifying kills over 30 seconds and pause after 90 seconds of inactivity. Fresh exports restart the sample.
 - Use independent live tracking, popup and sound switches with automatic Settings saving.
 - See stacked progress popups and completion effects; mute with the popup speaker icon.
 - Switch blue-and-gold light/dark themes, pin the window, and adjust unfocused opacity.

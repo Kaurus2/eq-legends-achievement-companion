@@ -1,5 +1,5 @@
 EQ LEGENDS ACHIEVEMENT COMPANION - QUICK START
-Version 2026.09.16.1
+Version 2026.09.17.1
 
 1. Extract the whole release ZIP. Run EQ Legends Achievement Companion.exe.
 2. Open the clockwork gear. Choose your game folder, then Find characters.
@@ -22,7 +22,7 @@ POPUPS & SOUND
 Expand this section inside Settings. Show popups and Play sounds are independent.
 Switches save automatically; release the volume slider to save volume.
 Test popup and Test completion preview notifications without changing progress.
-Up to three popups stack, slide and fade. Each displays for eight seconds.
+Up to three popups stack, slide and fade. Progress displays for eight seconds; completions display for thirteen.
 Use the speaker icon to toggle sounds.
 
 FIND AND ARRANGE
@@ -56,6 +56,6 @@ Video: https://www.youtube.com/watch?v=4GrrluSXVvk
 Downloads: https://github.com/Kaurus2/eq-legends-achievement-companion/releases
 
 NEW: Mob names
-Open an achievement, type a mob name and click + or press Enter. Names save automatically; use the remove button to delete. This reference list does not change live tracking. Keep data/mob-names.json when updating.
+Open an achievement, enter one mob name per line, and click + or press Ctrl+Enter. Names save automatically and match future kills for incomplete Slayer achievements with one numeric counter. Use the remove button to delete. Keep data/mob-names.json when updating.
 
 BANESTRIKE focus shows three separate +1 rank milestones, based on required entries in your latest export.

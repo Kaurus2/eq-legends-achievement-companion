@@ -43,6 +43,8 @@ public class KillProgress {
  static string MobKey(string value){return Regex.Replace((value??"").Trim().ToLowerInvariant(),@"^(a|an|the)\s+","");}
  // Explicit observed variants map to creature families; ambiguous bandit races remain excluded.
  static bool Family(string mob,string requirement){string singular=MobKey(mob);if(singular=="bandit"||singular=="brigand")return false;
+ if(new[]{"gundl","margyl darklin","peg leg","crytil dunfire","blyle bundin","glynda smeltpot","glynn smeltpot","barma dunfire"}.Contains(singular))singular="dwarves";
+ if(new[]{"bink","gollee","leatherfoot medic","hamer","himmel","mardoon","rauner","jossle"}.Contains(singular))singular="halfling";
  if(new[]{"kobold runt","kobold scout","kobold shaman","kobold missionary","burly kobold","greater kobold","greater kobold shaman","kobold hunter","kobold king","kobold noble","kobold priest","kobold champion","kobold predator"}.Contains(singular))singular="kobold";
   if(requirement.StartsWith("Clockwork:",StringComparison.OrdinalIgnoreCase)){
   if(singular=="rebel clockwork"||singular=="rogue clockwork"||singular=="rogue cleaner"||singular=="runaway clockwork"||singular=="giant clockwork spider")return true;
@@ -71,6 +73,7 @@ public class KillProgress {
 }
 public class LiveMonitor:IDisposable {public event Action<List<LiveNotice>> Notified;public event Action ResetProgress;public event Action SoundChanged;
  LiveOptions options;Func<List<Achievement>> achievements;Func<string> baseline;string lastBaseline;LogTail tail;KillProgress progress=new KillProgress();DispatcherTimer timer;ToastStack toast;Queue<LiveNotice> queue=new Queue<LiveNotice>();DateTime next;int generation;int epoch;Task<LogBatch> pending;class LogBatch{public int Epoch,Generation;public List<LiveNotice> Notices=new List<LiveNotice>();}
+ public Func<List<MobMatch>> AdditionalMatches;
  public string Status {get{return !options.Enabled?"Live updates off":tail==null?"Choose a log file":tail.Status+(options.PopupsEnabled?"":" · popups off");}}
  public LiveMonitor(LiveOptions o,Func<List<Achievement>> a,Func<string> b){options=o;achievements=a;baseline=b;lastBaseline=b();Restart();timer=new DispatcherTimer{Interval=TimeSpan.FromMilliseconds(500)};timer.Tick+=(s,e)=>Tick();timer.Start();}
  string monitoringSettings="";string MonitoringKey(){return options.Enabled+"|"+options.Path+"|"+Data.Json().Serialize(options.Matches);}
@@ -81,7 +84,7 @@ public class LiveMonitor:IDisposable {public event Action<List<LiveNotice>> Noti
   if(pending!=null&&!pending.IsCompleted)return;
   bool changed=lastBaseline!=baseline();if(changed){lastBaseline=baseline();progress=new KillProgress{PetName=progress.PetName};epoch++;queue.Clear();if(ResetProgress!=null)ResetProgress();if(toast!=null)toast.Hide();}
   if(pending!=null){var completedTask=pending;pending=null;var result=completedTask.GetAwaiter().GetResult();if(result.Epoch==epoch){if(generation!=result.Generation){generation=result.Generation;queue.Clear();if(ResetProgress!=null)ResetProgress();}foreach(var notice in result.Notices){var retained=queue.Where(n=>n.Name!=notice.Name).ToList();queue.Clear();foreach(var n in retained)queue.Enqueue(n);if(queue.Count<50)queue.Enqueue(notice);}}}
-  var currentTail=tail;var currentProgress=progress;var currentAchievements=achievements();var matches=(options.Matches??new List<MobMatch>()).ToList();int currentEpoch=epoch;
+  var currentTail=tail;var currentProgress=progress;var currentAchievements=achievements();var matches=(options.Matches??new List<MobMatch>()).ToList();if(AdditionalMatches!=null)matches.AddRange(AdditionalMatches());int currentEpoch=epoch;
   pending=Task.Run(()=>{var b=new LogBatch{Epoch=currentEpoch};int before=currentTail.Generation;var lines=currentTail.Read();if(before!=currentTail.Generation)currentProgress.Reset();foreach(var line in lines)b.Notices.AddRange(currentProgress.Process(line,currentAchievements,matches));b.Generation=currentTail.Generation;return b;});
   if(queue.Count>0&&DateTime.UtcNow>=next){var batch=new List<LiveNotice>();while(queue.Count>0)batch.Add(queue.Dequeue());Show(batch);next=DateTime.UtcNow;}
  }catch(Exception e){if(tail!=null)tail.Status="Monitor retrying: "+e.Message;pending=null;}}

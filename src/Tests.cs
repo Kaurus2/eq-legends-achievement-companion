@@ -13,6 +13,11 @@ public static class Tests {
   paceNotice.KillTimes=KillPace.Record(paceTimes,paceStart.AddSeconds(140));Assert(KillPace.Describe(paceNotice,paceStart.AddSeconds(140)).Contains("Learning"),"resume relearns without idle gap");
   paceNotice.Current=100;Assert(KillPace.Describe(paceNotice,paceStart).Contains("target reached"),"estimated completion distinguished");
   paceNotice.Complete=true;Assert(KillPace.Describe(paceNotice,paceStart).Contains("complete in the game log"),"confirmed completion");
+  var named=Data.Parse("Slayer: Skill\nI\tAxe Me No Questions\nI\t\tDwarves\t0/100\nI\tFuzzyfeet\nI\t\tHalflings\t0/100\n");
+  foreach(var name in new[]{"Gundl","Margyl Darklin","Peg Leg","Crytil Dunfire","Blyle Bundin","Glynda Smeltpot","Glynn Smeltpot","Barma Dunfire"})Assert(new KillProgress().Process("You have slain "+name+"!",named,new List<MobMatch>()).Single().Name=="Axe Me No Questions","confirmed dwarf "+name);
+  foreach(var name in new[]{"Bink","Gollee","Leatherfoot medic","Hamer","Himmel","Mardoon","Rauner","Jossle"})Assert(new KillProgress().Process("You have slain "+name+"!",named,new List<MobMatch>()).Single().Name=="Fuzzyfeet","confirmed halfling "+name);
+  Assert(new KillProgress().Process("You have slain Keldyn Dunfire!",named,new List<MobMatch>()).Count==0,"crossed-out dwarf excluded");
+  Assert(KillPace.Compact(new LiveNotice{Current=51,Target=100,KillTimes=paceSample},paceStart.AddSeconds(40))=="~9 min left","compact tile ETA");
   var bulkTimes=new List<DateTime>();for(int i=0;i<600;i++)KillPace.Record(bulkTimes,paceStart.AddMilliseconds(i));Assert(bulkTimes.Count==500,"pace memory bounded");
   var gorge=Data.Parse("Slayer: Conquest\nI\tLegendary Creatures\nI\t\tBixies, Brownies, Centaurs, Fairies, Griffins, Manticores, Minotaurs, Pixies, Satyr, and Sphinxes.\t1858/5000\nSlayer: Skill\nI\tAmazing!\nI\t\tMinotaurs and Tizmak.\t18/100\n");
   foreach(string mob in new[]{"a gorge minotaur","A chasm minotaur"}){
