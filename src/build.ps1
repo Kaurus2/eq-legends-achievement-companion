@@ -22,6 +22,8 @@ $eqlArgs += "/reference:System.Windows.Forms.dll"
 $eqlArgs += "/resource:" + (Join-Path $eqlAppRoot "assets\clockwork-gear-hd.png") + ",ClockworkGear"
 $eqlArgs += (Join-Path $PSScriptRoot 'CleanResearch.cs')
 $eqlArgs += (Join-Path $PSScriptRoot 'MobNames.cs')
+$eqlArgs += (Join-Path $PSScriptRoot 'SetupWizard.cs')
+$eqlArgs += '/resource:' + (Join-Path $eqlAppRoot 'assets/export-achievements.png') + ',ExportInstructions'
 $eqlArgs += '/resource:' + (Join-Path $eqlAppRoot 'data/cleaned-research.json') + ',CleanResearch'
 & (Join-Path $eqlFramework 'csc.exe') $eqlArgs
 if ($LASTEXITCODE -ne 0) { throw 'Compilation failed.' }

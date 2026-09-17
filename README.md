@@ -14,6 +14,8 @@ User-provided gameplay demonstration. Click the image to watch on YouTube.
 
 Extract the entire release ZIP and run **EQ Legends Achievement Companion.exe**. Open the clockwork gear, choose your game folder, and select your character. Export achievements in game and enable `/log on` for live estimates. No installer is required.
 
+New installations open a themed setup guide automatically. It checks for both files, lets you select your character, and reports new log activity. Reopen it from **Settings > Setup guide**.
+
 ## Create the game files
 
 While logged into your character:
