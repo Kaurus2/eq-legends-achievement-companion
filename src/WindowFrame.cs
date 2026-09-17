@@ -84,7 +84,7 @@ public partial class MainWindow {
   counts=new TextBlock{Foreground=Palette.Text,VerticalAlignment=VerticalAlignment.Center,HorizontalAlignment=HorizontalAlignment.Stretch,TextAlignment=TextAlignment.Center,FontSize=12,Margin=new Thickness(5,0,5,0)};area.Children.Add(counts);
   return new Border{BorderBrush=Palette.Border,BorderThickness=new Thickness(1),CornerRadius=new CornerRadius(5),Background=Palette.Surface,Child=body,Margin=new Thickness(0,0,0,5)};
  }
- Grid banestrikeSegments;FrameworkElement focusSummaryBar;ProgressBar[] milestoneBars=new ProgressBar[3];TextBlock[] milestoneCounts=new TextBlock[3];
+ TextBlock milestoneFocusHeading;Grid banestrikeSegments;FrameworkElement focusSummaryBar;ProgressBar[] milestoneBars=new ProgressBar[3];TextBlock[] milestoneCounts=new TextBlock[3];
  static readonly string[] milestoneNames={"Progressive","Highly Decorated","A Force of Nature"};
  FrameworkElement BuildBanestrikeSegments(){
   banestrikeSegments=new Grid{Margin=new Thickness(0,0,0,5),Visibility=Visibility.Collapsed};
@@ -98,7 +98,7 @@ public partial class MainWindow {
   }return banestrikeSegments;
  }
  void UpdateBanestrikeSegments(bool visible){
-  focusSummaryBar.Visibility=visible?Visibility.Collapsed:Visibility.Visible;banestrikeSegments.Visibility=visible?Visibility.Visible:Visibility.Collapsed;
+  milestoneFocusHeading.Visibility=visible?Visibility.Visible:Visibility.Collapsed;focusSummaryBar.Visibility=visible?Visibility.Collapsed:Visibility.Visible;banestrikeSegments.Visibility=visible?Visibility.Visible:Visibility.Collapsed;
   for(int i=0;i<3;i++){
    var a=achievements.FirstOrDefault(x=>x.Category=="Slayer: General"&&Data.Normalize(x.Name)==Data.Normalize(milestoneNames[i]));
    var req=a==null?new System.Collections.Generic.List<Requirement>():a.Requirements.Where(q=>!q.Optional&&!String.IsNullOrEmpty(q.Reference)).ToList();int done=req.Count(q=>q.Complete);
@@ -112,7 +112,7 @@ public partial class MainWindow {
  void BuildProgressOverview(StackPanel parent){
   progressOverview=new Grid{Margin=new Thickness(4,0,8,4)};var bars=new StackPanel();
   var focus=SummaryBar("Focus",Palette.Gold,out baneBar,out baneLabel);focusBarTitle=(TextBlock)((Grid)((Border)focus).Child).Children[0];focusBarTitle.TextTrimming=TextTrimming.CharacterEllipsis;focusBarTitle.ToolTip="Selected focus";
-  focusSummaryBar=focus;bars.Children.Add(BuildBanestrikeSegments());bars.Children.Add(focus);bars.Children.Add(SummaryBar("Overall",Palette.Blue,out overallBar,out overallLabel));progressOverview.Children.Add(bars);
+  focusSummaryBar=focus;milestoneFocusHeading=new TextBlock{Text="Focus: Banestrike",Foreground=Palette.Gold,FontWeight=FontWeights.SemiBold,Margin=new Thickness(4,2,0,5),Visibility=Visibility.Collapsed};bars.Children.Add(milestoneFocusHeading);bars.Children.Add(BuildBanestrikeSegments());bars.Children.Add(focus);bars.Children.Add(SummaryBar("Overall",Palette.Blue,out overallBar,out overallLabel));progressOverview.Children.Add(bars);
   tileCount.Visibility=Visibility.Collapsed;trackerHeader.Children.Add(progressOverview);Grid.SetRow(progressOverview,1);
   var heading=new StackPanel{Orientation=Orientation.Horizontal};heading.Children.Add(new TextBlock{Text="Achievement summary",VerticalAlignment=VerticalAlignment.Center});var info=Button("ⓘ",()=>ShowText("Export details",summaryDetails));info.ToolTip="Export details";info.Padding=new Thickness(5,0,5,0);heading.Children.Add(info);
   summaryExpander=new Expander{Header=heading,Content=summary,Margin=new Thickness(4),VerticalAlignment=VerticalAlignment.Top};var summaryRow=new Grid();summaryRow.ColumnDefinitions.Add(new ColumnDefinition());summaryRow.ColumnDefinitions.Add(new ColumnDefinition{Width=GridLength.Auto});summaryRow.Children.Add(summaryExpander);configContent.Children.Remove(recentCheck);recentCheck.Content="Auto shuffle";recentCheck.VerticalAlignment=VerticalAlignment.Top;recentCheck.Margin=new Thickness(5,8,5,0);recentCheck.FontSize=12;Grid.SetColumn(recentCheck,1);summaryRow.Children.Add(recentCheck);headerSummary.Content=summaryRow;
