@@ -18,6 +18,14 @@ public static class Tests {
   foreach(var name in new[]{"Bink","Gollee","Leatherfoot medic","Hamer","Himmel","Mardoon","Rauner","Jossle"})Assert(new KillProgress().Process("You have slain "+name+"!",named,new List<MobMatch>()).Single().Name=="Fuzzyfeet","confirmed halfling "+name);
   Assert(new KillProgress().Process("You have slain Keldyn Dunfire!",named,new List<MobMatch>()).Count==0,"crossed-out dwarf excluded");
   Assert(KillPace.Compact(new LiveNotice{Current=51,Target=100,KillTimes=paceSample},paceStart.AddSeconds(40))=="~9 min left","compact tile ETA");
+  var cube=Data.Parse("Slayer: Skill\nI\tCubic\nI\t\tGelatinous Cubes\t19/50\n");var cubeMatches=new List<MobMatch>{new MobMatch{Mob="Phoboplasm",Achievement="Cubic"}};var party=new KillProgress();
+  Assert(party.Process("[Thu Sep 17 21:49:22 2026] Phoboplasm has been slain by Tenam!",cube,cubeMatches).Count==0,"other player without party XP excluded");
+  party.Process("[Thu Sep 17 21:49:22 2026] You gain party experience!",cube,cubeMatches);
+  Assert(party.Process("[Thu Sep 17 21:49:22 2026] Phoboplasm has been slain by Tenam!",cube,cubeMatches).Single().Current==20,"Phoboplasm group XP advances saved Cubic match");
+  Assert(party.Process("[Thu Sep 17 21:49:22 2026] Phoboplasm has been slain by Tenam!",cube,cubeMatches).Count==0,"party XP signal consumed once");
+  party.Process("[Thu Sep 17 21:49:22 2026] You gain party experience!",cube,cubeMatches);
+  Assert(party.Process("[Thu Sep 17 21:49:23 2026] Phoboplasm has been slain by Tenam!",cube,cubeMatches).Count==0,"stale party XP does not attribute another kill");
+  party.Reset();Assert(party.Process("[Thu Sep 17 21:49:22 2026] Phoboplasm has been slain by Tenam!",cube,cubeMatches).Count==0,"reset clears party XP");
   var bulkTimes=new List<DateTime>();for(int i=0;i<600;i++)KillPace.Record(bulkTimes,paceStart.AddMilliseconds(i));Assert(bulkTimes.Count==500,"pace memory bounded");
   var gorge=Data.Parse("Slayer: Conquest\nI\tLegendary Creatures\nI\t\tBixies, Brownies, Centaurs, Fairies, Griffins, Manticores, Minotaurs, Pixies, Satyr, and Sphinxes.\t1858/5000\nSlayer: Skill\nI\tAmazing!\nI\t\tMinotaurs and Tizmak.\t18/100\n");
   foreach(string mob in new[]{"a gorge minotaur","A chasm minotaur"}){

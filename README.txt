@@ -1,5 +1,5 @@
 EQ LEGENDS ACHIEVEMENT COMPANION - QUICK START
-Version 2026.09.17.1
+Version 2026.09.17.2
 
 1. Extract the whole release ZIP. Run EQ Legends Achievement Companion.exe.
 2. Open the clockwork gear. Choose your game folder, then Find characters.
@@ -59,3 +59,6 @@ NEW: Mob names
 Open an achievement, enter one mob name per line, and click + or press Ctrl+Enter. Names save automatically and match future kills for incomplete Slayer achievements with one numeric counter. Use the remove button to delete. Keep data/mob-names.json when updating.
 
 BANESTRIKE focus shows three separate +1 rank milestones, based on required entries in your latest export.
+
+GROUP KILLS
+A matching kill can count as an estimate when a nearby party-experience message has the same timestamp. A fresh achievement export confirms the game's credit.

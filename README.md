@@ -89,3 +89,5 @@ Requires .NET Framework 4.x WPF and its C# compiler.
 ```
 
 Tests use an isolated data directory. Use a separate extracted release folder for play. Release packages contain the executable, shared data, and documentation; source is in this repository.
+
+Group kills can contribute to live estimates when your log records party experience immediately before the kill at the same timestamp. Unrelated nearby kills remain excluded. A fresh export confirms actual achievement credit.
